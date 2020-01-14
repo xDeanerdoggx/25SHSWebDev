@@ -13,46 +13,45 @@
         <title>Web Dev User ## </title>
         
         <!-- Bootstrap core JS -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script type="text/javascript" src="https:////getbootstrap.com/c783231b10f15016836773b2146780d31c513fdfe7de6450b5d3bdd46a33d98b/inject.js"></script>
-        <!-- Bootstrap core CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/navbars/">
+        <!-- These are needed to get the responsive menu to work -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <!-- Custom styles for this template -->
         <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Lobster">
-        <link href="style.css" rel="stylesheet">
     </head>
     
     <body>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a class="navbar-brand" href="#">WebDev</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarsExample05">
-              <ul class="navbar-nav mr-auto">
-                  <li class="nav-item active">
-                      <a class="nav-link" href="http://shakonet.isd720.com">Home <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="aboutMe">About Me</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link disabled" href="music">Music</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link disabled" href="lists">Lists</a>
-                  </li>
-              </ul>
-              <form class="form-inline my-2 my-md-0">
-                  <input class="form-control" type="text" placeholder="Search">
-              </form>
-          </div>
-      </nav>
-             
-      <div id="content">
-          <br>
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">WebDev</a>
+                </div>
+                
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">About Me</a></li>
+                        <li><a href="#">Lists</a></li>
+                        <li><a href="#">Music</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav> 
+        
+        <div id="content">
           
           <h2>Home</h2>
           <p>
