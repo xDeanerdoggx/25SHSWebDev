@@ -1,56 +1,81 @@
-@import url(https://fonts.googleapis.com/css?family=Ubuntu);
-
-body{
-  text-align:center;
-  vertical-align:center;
-  background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+@import url(https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap);
+* {
+  box-sizing: border-box;
 }
 
-.image{
-  display:inline-block;
-  margin-top:30px;
-  transition: all 0.8s;
+#gallery {
+  font-family: "Orbitron", sans-serif;
+  line-height: 1.5em;
+  text-align: center;
 }
 
-.image:hover{
-transform:scale(1.1);
+img {
+  width: 100%;
 }
 
-.image:hover figcaption{
-opacity : 1;
-transition: opacity 0.8s;  
+a {
+  color: black;
 }
 
-figure{
-  font-family:'Ubuntu';
-  font-size:20px;
-  color:#282828;
-  margin:0;
-  margin-bottom:30px;
+.caption, h1, .date {
+  margin: 0;
+  text-align: center;
 }
 
-img{
-  border: 1px solid grey;
-  width: 300px;
-  height:300px;
-  box-shadow: 0px 0px 20px 0px black;
+.caption, .back h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.7em;
+  padding: 10px 10px 0 10px;
+}
+p.caption{
+  position: absolute;
+  bottom:1vh;
+}
+.date {
+  font-size: 0.75em;
 }
 
-
-figcaption{
-  opacity: 0;
-  text-align:center;
+.description {
+  font-size: 0.9em;
+  padding: 0 20px 20px 20px;
+  text-align: left;
 }
 
-span{
-  font-style:italic;
-  font-size:15px;
-}
-span:before{
-content:' - ';
+.container {
+  perspective: 1000px;
+  display: inline-block;
+  margin: 3%;
 }
 
-a{
-  text-decoration:none;
-  color:#52618d;
+.container:hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.container, .front, .back {
+  width: 250px;
+  height: 320px;
+}
+
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.front, .back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 320px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.front {
+  z-index: 2;
+}
+
+.back {
+  transform: rotateY(180deg);
 }
