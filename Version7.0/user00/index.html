@@ -36,10 +36,73 @@
 </head>
 
 <body>
-    <script>
-        alert('Go Sabers!');
-    </script>
     <main>
+        <div id="built-in-methods">
+            <!-- ALERT Method-->
+            <script>
+                alert('Go Sabers!');
+            </script>
+            <!--LENGTH-->
+            <script>
+                function getLength() {
+                    document.getElementById("length").innerHTML = document.title.length;
+                }
+            </script>
+            <!-- FOCUS Method-->
+            <script>
+                function getFocus() {
+                    document.getElementById("focusButton").focus();
+                }
+            </script>
+            <!-- CLICK Method-->
+            <script>
+                function clickSimulation() {
+                    document.getElementById("Check").click();
+                }
+            </script>
+            <script>
+                function getDate() {
+                    document.getElementById("date").innerHTML = Date();
+                }
+            </script>
+
+            <div class="container-fluid mt-3 mb-3">
+                <div class="row">
+                    <!--PRINT-->
+                    <div class="col-md-1">
+                        <button class="btn btn-dark btn-md" value="print this page" onclick="window.print()">Print this
+                            page</button>
+                    </div>
+                    <!--LENGTH-->
+                    <div class="col-md-3">
+                        <button class="btn btn-dark btn-md" onclick="getLength()">The title has this many
+                            characters</button>
+                    </div>
+                    <div class="col-md-1">
+                        <p id="length"></p>
+                    </div>
+                    <!--FOCUS-->
+                    <div class="col-md-1">
+                        <button class="btn btn-dark btn-md" onclick="getFocus()">Focus</button>
+                    </div>
+                    <!-- CLICK-->
+                    <div class="col-md-1">
+                        <form>
+                            <input type="checkbox" id="Check" onmouseover="clickSimulation()">
+                            <input type="checkbox" id="Check" onmouseover="clickSimulation()">
+                        </form>
+                    </div>
+                    <!--DATE-->
+                    <div class="col-md-1">
+                        <button class="btn btn-dark btn-md" onclick="getDate()">Get Date</button>
+                    </div>
+                    <div class="col-md-3">
+                        <p id="date"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <hr>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-5">
@@ -72,13 +135,18 @@
                 </div>
 
                 <div class="col-md-2 text-center">
-                    <button class="btn btn-danger btn-lg mt-3 container" onclick="firstSelector()">Try it 1</button>
+                    <button class="btn btn-danger btn-lg mt-3 container" onclick="firstSelector()">Try it
+                        1</button>
 
-                    <button class="btn btn-info btn-lg mt-3 container" onclick="secondSelector()">Try it 2</button>
+                    <button class="btn btn-info btn-lg mt-3 container" onclick="secondSelector()">Try it
+                        2</button>
 
-                    <button class="btn btn-secondary btn-lg mt-3 container" onclick="thirdSelector()">Try it 3</button>
+                    <button class="btn btn-secondary btn-lg mt-3 container" onclick="thirdSelector()">Try it
+                        3</button>
 
-                    <button class="btn btn-primary btn-lg mt-3 container" onclick="window.location.reload()">Try it 4</button>
+                    <button class="btn btn-primary btn-lg mt-3 container" onclick="window.location.reload()">Try
+                        it
+                        4</button>
                 </div>
 
                 <div class="col-md-5">
@@ -139,6 +207,9 @@
             }
         </script>
     </main>
+    <div id="container" style="height: 3000px; width: 1000px;">
+        <a href="#"><button type="button" id="focusButton" style="margin-top: 3000px;">You focused on me!</button></a>
+    </div>
 </body>
 
 </html>
