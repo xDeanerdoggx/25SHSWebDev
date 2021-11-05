@@ -123,11 +123,7 @@ else {
     <h1>eBay Search Results for <?php echo $query; ?></h1>
 
     <table>
-        <tr>
-            <td>
-                <?php echo $results;?>
-            </td>
-        </tr>
+        <?php echo $results;?>
     </table>
 
 </body>
