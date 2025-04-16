@@ -19,7 +19,62 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
+        #banner{
+        border: 5px outset rgb(13, 255, 0);
+        background-color: rgb(255, 0, 0);
+        text-align: center;
+        }
 
+                div#face {
+            width: 40vw;
+            height: 40vw;
+            max-width: 400px;
+            max-height: 400px;
+            margin: 0 auto;
+            position: relative;
+            background: rgb(255, 245, 53);
+            margin-top: 2rem;
+        }
+
+        div#face, div#face * {
+            border-radius: 50%;
+        }
+
+        .eye {
+            width: 25%;
+            height: 25%;
+            background: #ffdf86;
+            position: absolute;
+            top: 20%;
+        }
+
+        .left.eye {
+            left: 20%;
+        }
+
+        .right.eye {
+            right: 20%;
+        }
+
+        .pupil {
+            background: #8566ff;
+            width: 50%;
+            height: 50%;
+            position: relative;
+            left: 25%;
+            transform-origin: bottom;
+        }
+
+        #mouth {
+            position: relative;
+            width: 60%;
+            left: 20%;
+            height: 25%;
+            border: 1vw solid transparent;
+            border-radius: 50%;
+            top: 50%;
+            border-bottom-color: #ffb6fd;
+        }
     </style>
 </head>
 
@@ -33,6 +88,17 @@
                 This is my first webpage! I was able to code all the HTML and CSS in order to make it.
                 Watch out world of web design here I come!
             </p>
+
+            <h1>WE ABOUT TO FLIP THE BURGERS 🍔</h1>
+            <section>
+                <h2>Introduction to Burgers</h2>
+                <p>Warning: This content may contant spoilers to burger flipping</p>
+            </section>
+
+            <section>
+                <h2>The Oven 🔥</h2>
+                <p>We about to turn on the stove and cook the burger 🍔🔥</p>
+            </section>
 
             <h2>Put</h2>
 
@@ -56,10 +122,22 @@
             <abbr>Bottom Bun</abbr>
             <!-- Put your 8 examples of other elements ↑↑↑↑↑↑Above↑↑↑↑↑↑ here-->
         </div>
+        	
+        <time>5:00PM</time>
+        
         <div id="banner">
         </div>
         <div id="face">
-
+            <div class="left eye">
+                <div class="pupil">
+                </div>
+           </div>
+           <div class="right eye">
+                <div class="pupil">
+                </div>
+           </div>
+           <div id="mouth">
+           </div>
         </div>
     </main>
 
