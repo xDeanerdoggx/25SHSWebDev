@@ -6,14 +6,14 @@
     -->
 
 <head>
-    <link rel="stylesheet" href="CSS/style.css">
-    <title>Music for Web Dev User ## </title>
+
+    <title>Web Dev User ## </title>
 
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="SHS WebDev Version 3.0 - My Favorite Music">
+    <meta name="description" content="SHS WebDev Version 3.0 - Lists">
 
     <!-- CSS -->
     <!-- Bootstrap -->
@@ -23,7 +23,7 @@
     <!-- Animate -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <!-- Custom -->
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="CSS/style.css">
 
     <!-- JavaScript -->
     <!-- These are needed to get the responsive menu to work -->
@@ -37,9 +37,11 @@
             font-size: 12px;
             text-align: center;
         }
-        td {
-            color: #FF0000;
-        }
+
+        ul {
+            list-style-image:url("images/Poem.jpg");
+            width: 1000px;
+            }
     </style>
 </head>
 
@@ -78,64 +80,35 @@
             </div>
         </div>
     </nav>
-    <!---------------------------------- End the nav-bar ------------------------------------->
+    <!---------------------------------- End the nav-bar ------------->
 
     <main class="container-fluid mt-3">
 
-        <h1 class="text-left my-3" tabindex="0">Music</h1>
+        <h1 class="text-left my-3">My Lists</h1>
         <!-- Edit this line for the title of your page -->
-
+        
         <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Put your content below this line ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
-        <h2>My Top 5 Favorite Songs</h2>
-        <table id="songs">
-            <thead>
-                <tr>
-                    <th>Rank</th>
-                    <th>Artist</th>
-                    <th>Song</th>
-                    <th>Album Art</th>
-                </tr>
-            </thead>
-            <tr>
-                <td>1</td>
-                <td>Casey Edwards and Victor Borba</td>
-                <td>Bury The Light</td>
-                <td><img src="files///Users/310478/Documents/25SHSWebDev/Version3.0/user15/images/Bury.jpeg" alt="Bury The Light" width="400" height="400"></td>
-                 <!--So the File does work on browser address, but when used in visual studio code and used during the live service, img does not appear for some reason-->
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Mili</td>
-                <td>Poem Of A Machine</td>
-                <td><img src="images/Poem.jpg" alt="Poem Of A Machine" width="400" height="400"></td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Mili</td>
-                <td>Hero</td>
-                <td><img src="images/Hero.jpeg" alt="Hero" width="400" height="400"></td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Mili</td>
-                <td>Gone Angels</td>
-                <td><img src="images/Gone.png" alt="Gone Angels" width="400" height="400"></td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Simon Viklund</td>
-                <td>Break The Rules</td>
-                <td><img src="images/Rules.jpg" alt="Break The Rules" width="400" height="400"></td>
-            </tr>
-        </table>
-    </main>
-    <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Make sure all your content is above this line ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
+        <h2>Ordered list</h3>
+            <ol>
+                <li>Brick</li>
+                <li>Mud</li>
+                <li>Sticks</li>
+            </ol>
 
+        <h3>Unordered list</h3>
+            <ul>
+                <li>Burger</li>
+                <li>Mid</li>
+                <li>Fries</li>
+            </ul>
+
+        <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Make sure all your content is above this line ↑↑↑↑↑↑↑↑↑-->
+    </main>
 
     <!---------------------------------- Begin the footer ------------->
     <footer>
         <div>
-            Music can be found here <a href="https://music.amazon.com"> Amazon Music</a>
+            Webpage made by <a href="#" target="_blank">[John]</a>
         </div>
     </footer>
     <!---------------------------------- End the footer ------------->
