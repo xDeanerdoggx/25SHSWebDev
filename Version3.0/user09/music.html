@@ -3,18 +3,27 @@
 <!--Version 3.0
         Name:Jack Hicks
         Date: 10/23/2023
-        
+        Class: Web Dev 3
+        Assignment: Music
+        Description: This is my music page. It contains my top 5 favorite songs and their album covers.
+        I used a table to display the information.
+        I also added a link to Amazon Music where I can find the songs.
+        I used Bootstrap for styling and layout.
+        I used Font Awesome for icons.
     -->
+    
 
 <head>
 
-    <title>Web Dev User Jack Hicks </title>
+    <title>Music for Web Dev User #26 Jack Stensrud </title>
+    
+    <link rel="icon" type="image/sabs" href="images/favicon.ico"/>
 
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="SHS WebDev Version 3.0 - Lists">
+    <meta name="description" content="SHS WebDev Version 3.0 - My Favorite Music">
 
     <!-- CSS -->
     <!-- Bootstrap -->
@@ -33,10 +42,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href=""> <link rel="stylesheet" href="CSS/style.css">
+    <style type="text/css">
         footer {
-            font-size: 24px;
+            font-size: 12px;
             text-align: center;
+
+            td {
+     color: #FF0000;
+    }
+
         }
     </style>
 </head>
@@ -76,124 +90,72 @@
             </div>
         </div>
     </nav>
-    <!---------------------------------- End the nav-bar ------------->
+    <!---------------------------------- End the nav-bar ------------------------------------->
 
     <main class="container-fluid mt-3">
 
-        <h1 class="text-left my-3">Jack Hicks Lists</h1>
+        <h1 class="text-left my-3" tabindex="0">Music</h1>
         <!-- Edit this line for the title of your page -->
 
         <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Put your content below this line ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>WebDev Lists</title>
-  <style>
-    body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-nav {
-  background-color: #2e3237;
-  padding: 15px;
-  color: white;
-  display: flex;
-  align-items: center;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 15px;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-.container {
-  padding: 40px;
-}
-
-h1 {
-  font-size: 40px;
-}
-
-h2 {
-  font-size: 30px;
-  margin-top: 30px;
-}
-
-ol {
-  padding-left: 25px; /* Property for ordered list */
-}
-
-ul {
-  list-style-type: square; /* Property for unordered list */
-}
-
-footer {
-  margin-top: 50px;
-  text-align: center;
-  font-size: 14px;
-}
-
-footer a {
-  color: #007BFF;
-  text-decoration: none;
-}
-  </style>
-</head>
-  
-<body>
-  <nav>
-    <span style="font-weight: bold; font-size: 20px; margin-right: 20px;">WebDev</span>
-    <a href="#">Home</a>
-    <a href="#">About Me</a>
-    <a href="#">Music</a>
-    <a href="#">Lists</a>
-    <a href="#">Games</a>
-    <a href="#">Contact</a>
-  </nav>
-
-  <div class="container">
-    <h1>Lists</h1>
-
-    <h2>List 1 Best NBA teams right now. </h2>
-    <ol>
-      <li>Timberwolves</li>
-      <li>Oklahoma Thunder</li>
-      <li>Lakers</li>
-      <li>Bears</li>
-    </ol>
-
-    <h2>List 2 MLB Players.</h2>
-    <ul>
-      <li>Aaron Judge</li>
-      <li>Shohie Otani</li>
-      <li>Mike Trout</li>
-      <li>Bryce Harper</li>
-    </ul>
-
-    <footer>
-      Webpage made by <a href="#">Jack Hicks</a>
-    </footer>
-  </div>
-</body>
-</html>
-
-
-
-        <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Make sure all your content is above this line ↑↑↑↑↑↑↑↑↑-->
+        <h2>My Top 5 Favorite Songs</h2>
+       
+            
+        <table id="songs">
+      
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Artist</th>
+                    <th>Song</th>
+                    <th>Album Art</th>
+                </tr>
+            </thead>
+            <tr>
+                <td style="color:#00FF00; background-color:sienna;"></td>
+                <td>1</td>
+                <td>Zack Top</td>
+                <td>Sounds Like the Radio</td>
+                <td> <img src="images/music1.jpeg" alt= "Zack Top Album Cover"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Zack Bryan</td>
+                <td>Something in the Organs</td>
+                <td> <img src="images/music2.jpeg" alt="Zack Bryans Album Cover"></td>
+                    <td style="color:#00FF00; background-color:sienna;"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Polo G</td>
+                <td>Pop Out</td>
+                <td><img src="images/music3.jpeg" alt="Polo G's Album Cover"></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Lil Uzi Vert</td>
+                <td>Money Launder</td>
+                <td><img src="images/music4.jpeg" alt="Lil Uzi Vert Album Cover"></td></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Tyler the Creator</td>
+                <td>See you Again</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/en/5/51/Igor_-_Tyler%2C_the_Creator.jpg" alt="Tyler the Creator Album Cover"></td></td>
+            </tr>
+        </table>
     </main>
+    <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Make sure all your content is above this line ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
+
 
     <!---------------------------------- Begin the footer ------------->
-
+    <footer>
+        <div>
+            Music can be found here <a href="https://music.amazon.com"> Amazon Music</a>
+        </div>
+    </footer>
     <!---------------------------------- End the footer ------------->
+    
 </body>
 
 </html>
-
