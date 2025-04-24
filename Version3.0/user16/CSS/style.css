@@ -82,3 +82,16 @@ ol li {
 	border-collapse: collapse;
 	cellspacing: 2px;
 }
+
+h3.aboutme {
+	padding:50px;
+	background-color: lavender;
+	display: inline-block;
+	border: 1px solid red;
+  }
+
+  p.aboutme {
+	padding: 5px 50px 30px 5px;  /* Top  Right  Bottom  Left */
+	background-color: lavender; 
+	padding: 20px 10px;  /* Vertical  Horizontal */
+  }
