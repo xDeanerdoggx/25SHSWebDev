@@ -23,3 +23,11 @@ th {
 	color: #3aeb34;
 	background-color: #a8bacb;
 }
+h3 {
+	border: 1px solid #5D6063;
+	padding: 50px;
+	background-color: lavender;
+	display: inline-block;
+  }
+  
+  
