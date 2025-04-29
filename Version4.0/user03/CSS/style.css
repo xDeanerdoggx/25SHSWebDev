@@ -1,4 +1,16 @@
-table {
+t.title{
+	color: red;
+	font-family: 'Trebuchet MS', sans-serif; 
+  }
+  
+  .title-large {
+	font-size: 2rem;
+  }
+  
+  .title-small {
+	font-size: .5rem;
+  }
+  able {
 	font-family: "Marker Felt", "Comic Sans MS", fantasy;
 	color: #003366;
 	margin-left: auto;
