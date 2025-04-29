@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Dev User 14</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <style>
+        #face {
+            width: 300px;
+            height: 300px;
+            background-color: yellow;
+            border-radius: 50%;
+            position: relative;
+            margin: 50px auto;
+        }
+
+        .eye {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 80px;
+        }
+
+        .left.eye {
+            left: 70px;
+        }
+
+        .right.eye {
+            right: 70px;
+        }
+
+        .pupil {
+            width: 20px;
+            height: 20px;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+        }
+
+        #mouth {
+            width: 150px;
+            height: 75px;
+            border: 5px solid black;
+            border-radius: 0 0 150px 150px;
+            position: absolute;
+            bottom: 50px;
+            left: 75px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Banner -->
+    <div id="banner">
+        <h2>Welcome to My Website!</h2>
+        <p>Explore my favorite music and more.</p>
+    </div>
+
+    <!-- NavBar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="list.html">My List</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Web Dev User 14</h1>
+        
+        <!-- Smiley Face -->
+        <div id="face">
+            <div class="left eye">
+                <div class="pupil"></div>
+            </div>
+            <div class="right eye">
+                <div class="pupil"></div>
+            </div>
+            <div id="mouth"></div>
+        </div>
+
+        <article class="content-section">
+            <h3>About This Page</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </article>
+    </main>
+
+    <footer>
+        <p>© 2025 Jake L. All rights reserved.</p>
+    </footer>
+</body>
+</html> 
