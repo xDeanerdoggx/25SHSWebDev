@@ -4,15 +4,16 @@
         Name:
         Date Completed:
     -->
+
 <head>
 
-    <title>Hire Me For Your Web Development Needs</title>
+    <title>Gallery</title>
 
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="SHS WebDev Version 4.0 - Index">
+    <meta name="description" content="SHS WebDev Version 4.0 - Gallery">
 
     <!-- CSS -->
     <!-- Bootstrap -->
@@ -23,6 +24,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- Custom -->
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/gallery.css">
 
     <!-- JavaScript -->
     <!-- These are needed to get the responsive menu to work -->
@@ -30,11 +32,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 
+
     <!-- Custom styles for this template -->
     <style type="text/css">
         footer {
             font-size: 12px;
             text-align: center;
+        }
+        
+        #rainbow {
+            width: 100%;
         }
     </style>
 </head>
@@ -52,7 +59,7 @@
                 <ul class="navbar-nav me-auto">
                     <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Edit These Items in your NavBar ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
                     <li class="nav-item">
-                        <a href="#" class="nav-link active">Home</a>
+                        <a href="#" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
                         <a href="display.html" class="nav-link">Display</a>
@@ -61,7 +68,7 @@
                         <a href="portfolio.html" class="nav-link">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a href="gallery.html" class="nav-link">Gallery</a>
+                        <a href="gallery.html" class="nav-link active">Gallery</a>
                     </li>
                     <li class="nav-item">
                         <a href="mailto:sample@gmail.com?Subject=Hello" class="nav-link disabled" tabindex="-1">Contact</a>
@@ -78,73 +85,84 @@
 
     <main class="container-fluid mt-3">
 
-        <span class="title title-large">Example of a Heading Title</span>
+        <h1 class="text-left my-3 title" tabindex="0">Look at these things</h1>
         <!-- Edit this line for the title of your page -->
 
         <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Put your content below this line ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
-        <h3 id="topHeading">I'm a Web Developer</h3>
-        <table id="hireButtons">
-            <tr>
-                <td>
-                    <button>Hire me</button>
-                </td>
-                <td>
-                    <button class="button">Hire me</button>
-                </td>
-                <td>
-                    <button class="button button1">Hire me</button>
-                </td>
-                <td>
-                    <button class="button button2">Hire me</button>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <button class="button button2 red">Hire me</button>
-                </td>
-                <td>
-                    <!-- New button 1 here-->
-                    <td>
-                        <mybutton>Pip was here</mybutton>
-                      </td>
-                    <!-- New button 2 here-->
-                    <td>
-                        <button>This is the worst backround ever</button>
-                      </td>
-                    <!-- New button 3 here-->
-                    <td>
-                        <button>I'm so sorry</button>
-                      </td>
-            </tr>
-        </table>
-        <div class="pt-3">
-            <!-- spacing div-->
 
-            <span class="title title-small">Example of a Footer Title</span>
-
-            <div class="content">
-
-                <p>
-                    Page content..
-                </p>
-
-                <p>
-                    Some more page content..
-                </p>
-
+        <div id="gallery">
+            <p>Hover over them to see more</p>
+            <div class="container">
+                <div class="flipper">
+                    <div class="front">
+                        <img src="/Users/233997/Documents/GitHub/25SHSWebDev/Version4.0/user23/The_Barber_Past_StoryLog.png" alt="ATX_Motherboard">
+                        <p class="caption">The Barber</p>
+                    </div>
+                    <div class="back">
+                        <a href="https://limbuscompany.wiki.gg/wiki/The_Barber" target="_blank">
+                            <h2 class="mh-100">Wiki link</h2>
+                        </a>
+                        <p class="description">The Barber, otherwise known as Nicolina, is a Third Kindred Bloodfiend and the overseer of Area 1 of La Manchaland. She is an antagonist in Canto VII: The Dream Ending.</p>
+                    </div>
+                </div>
             </div>
 
-            <p id="morecontent">
-                Even more content
-            </p>
+            <div class="container">
+                <div class="flipper">
+                    <div class="front">
+                        <img src="/Users/233997/Documents/GitHub/25SHSWebDev/Version4.0/user23/Pilot_Clean_StoryLog.png" alt="RAM Stick">
+                        <p class="caption">Pilot</p>
+                    </div>
+                    <div class="back">
+                        <a href="https://limbuscompany.wiki.gg/wiki/Pilot" target="_blank">
+                            <h2>Wiki link</h2>
+                        </a>
+                        <p class="description">Pilot is a member of the LCCB and a supporting character introduced in Canto V: The Evil Defining.</p>
+                    </div>
+                </div>
+            </div>
 
-            <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Make sure all your content is above this line ↑↑↑↑↑↑↑↑↑-->
+            <div class="container">
+                <div class="flipper">
+                    <div class="front">
+                        <img src="/Users/233997/Documents/GitHub/25SHSWebDev/Version4.0/user23/Pip_Past_StoryLog.png" alt="NVIDIA GPU">
+                        <p class="caption">Pip</p>
+                    </div>
+                    <div class="back">
+                        <a href="https://limbuscompany.wiki.gg/wiki/Pip" target="_blank">
+                            <h2 class="">Wiki link</h2>
+                        </a>
+                        <p class="description">Pip was a crew member of the The Pequod and a supporting character in Canto V: The Evil Defining.
+
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="flipper">
+                    <div class="front">
+                        <img src="/Users/233997/Documents/GitHub/25SHSWebDev/Version4.0/user23/Aida_StoryLog.png" alt="NVIDIA GPU">
+                        <p class="caption">Aida</p>
+                    </div>
+                    <div class="back">
+                        <a href="https://limbuscompany.wiki.gg/wiki/Aida" target="_blank">
+                            <h2 class="">Wiki link</h2>
+                        </a>
+                        <p class="description"> Aida is the leader of Los Mariachis and is a minor antagonist in Canto II: The Unloving.
+
+
+                        </p>
+                    </div>
+        </div>
+
+        <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Make sure all your content is above this line ↑↑↑↑↑↑↑↑↑-->
     </main>
 
     <!---------------------------------- Begin the footer ------------->
     <footer>
-        <span class="title">Example of a Footer Title</span>
-        <div class="container py-4" id="footerTable">
+        <span class="title d-block">Example of a Footer Title</span>
+        <div class="container py-1" id="footerTable">
             <ul class="list-unstyled d-flex justify-content-center">
                 <li class="mx-3">
                     <i class="fa-brands fa-facebook fa-3x" aria-hidden="true"></i>
