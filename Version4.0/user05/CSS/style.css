@@ -1,4 +1,16 @@
-.button {
+.title{
+	color: red;
+	font-family: 'Trebuchet MS', sans-serif; 
+  }
+  
+  .title-large {
+	font-size: 2rem;
+  }
+  
+  .title-small {
+	font-size: .5rem;
+  }
+  .button {
 	background-color: #4CAF50;
 	border: none;
 	color: white;
@@ -32,6 +44,11 @@ table {
 	margin-right: auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	text-align: center;
 }
