@@ -1,21 +1,87 @@
-table {
-	font-family: "Marker Felt", "Comic Sans MS", fantasy;
-	color: #003366;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: left;
-	border-collapse: collapse;
-	cellspacing: 0px;
+/* Default button styling */
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
 }
 
-tr {
-	border: 1px solid #ffffff;
-	text-align: center;
-	background-color:#9FB6CD; 
+/* Button 1 */
+.button1 {
+    background-color: #4CAF50; /* Green */
+    color: white;
 }
 
-th {
-	text-align: center;
-	color: #ffffff;
-	background-color: #003366;
+/* Button 2 */
+.button2 {
+    background-color: #008CBA; /* Blue */
+    color: white;
+}
+
+/* Button 3 */
+.button3 {
+    background-color: #f44336; /* Red */
+    color: white;
+}
+
+/* Red button class */
+.red {
+    background-color: #FF6347; /* Tomato Red */
+}
+
+/* New Buttons */
+.button6 {
+    background-color: #FFC107; /* Yellow */
+    color: white;
+}
+
+.button7 {
+    background-color: #673AB7; /* Purple */
+    color: white;
+}
+
+.button8 {
+    background-color: #009688; /* Teal */
+    color: white;
+}
+
+/* Sub-classes for titles */
+.title {
+    color: red;
+    font-family: 'Trebuchet MS', sans-serif; 
+}
+
+.title-large {
+    font-size: 2rem;
+}
+
+.title-small {
+    font-size: .5rem;
+}
+
+/* Sub-classes for buttons */
+.button-largeRadius {
+    border-radius: 15px;
+}
+
+.button-smallRadius {
+    border-radius: 3px;
+}
+
+/* ID selectors */
+#hireButtons {
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+#footerTable {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+/* Universal selector */
+* {
+    color: green;
 }
