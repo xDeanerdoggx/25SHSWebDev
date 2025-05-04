@@ -1,87 +1,42 @@
-/* Default button styling */
-.button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-}
-
-/* Button 1 */
-.button1 {
-    background-color: #4CAF50; /* Green */
-    color: white;
-}
-
-/* Button 2 */
-.button2 {
-    background-color: #008CBA; /* Blue */
-    color: white;
-}
-
-/* Button 3 */
-.button3 {
-    background-color: #f44336; /* Red */
-    color: white;
-}
-
-/* Red button class */
-.red {
-    background-color: #FF6347; /* Tomato Red */
-}
-
-/* New Buttons */
-.button6 {
-    background-color: #FFC107; /* Yellow */
-    color: white;
-}
-
-.button7 {
-    background-color: #673AB7; /* Purple */
-    color: white;
-}
-
-.button8 {
-    background-color: #009688; /* Teal */
-    color: white;
-}
-
-/* Sub-classes for titles */
-.title {
-    color: red;
-    font-family: 'Trebuchet MS', sans-serif; 
-}
-
-.title-large {
-    font-size: 2rem;
-}
-
-.title-small {
-    font-size: .5rem;
-}
-
-/* Sub-classes for buttons */
-.button-largeRadius {
-    border-radius: 15px;
-}
-
-.button-smallRadius {
-    border-radius: 3px;
-}
-
-/* ID selectors */
-#hireButtons {
-    background-color: #f1f1f1;
-    padding: 20px;
-}
-
-#footerTable {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-}
-
-/* Universal selector */
+/* General Reset */
 * {
-    color: green;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Paragraph styling for Career Gurus */
+.paragraph {
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline;
+}
+
+/* Card Layout */
+.card {
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+    margin: 10px;
+}
+
+.card img {
+    width: 100%;
+}
+
+.nameplate {
+    font-size: 2vw;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+/* Styling to prevent text wrapping in cards */
+.card p.nameplate {
+    white-space: nowrap;
+}
+
+/* Additional Styles */
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
