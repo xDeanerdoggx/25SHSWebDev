@@ -1,36 +1,44 @@
-/* Part 1: Child Selector */
-#knowledge > * {
-	border: 3px red solid;
-  }
-  
-  /* Part 2: Adjacent Sibling Selector */
-  p + * {
-	background-color: #FFFF00;
-  }
-  
-  /* Part 3: Special List Styling */
-  .list-items li::marker {
-	color: red;
-	content: "😜 ";
-  }
-  
-  /* Part 4: Import rainbow.css */
-  @import url(rainbow.css);
-  
-  /* Part 5: User Action Pseudo-Class - Hover only rainbow table */
-  .rainbow td:hover {
-	background-color: black;
-  }
-  
-  /* Part 6: Extra Pseudo-Classes */
-  a:visited {
-	color: purple;
-  }
-  
-  input:focus {
-	border: 2px solid blue;
-  }
-  
-  li:first-child {
-	font-weight: bold;
-  }
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+/* Card Styling */
+.card {
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Keyframe Animation for Rotation */
+@keyframes cardAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(15deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Apply the Animation */
+.card {
+    animation: cardAnimation 2s infinite;
+}
+
+/* Hover Effect to Trigger Animation */
+.card:hover {
+    transform: scale(1.05);
+}
