@@ -133,3 +133,4 @@ button.purple:active {
 	scroll-behavior: smooth;
   }
   
+  @import url(rainbow.css);
