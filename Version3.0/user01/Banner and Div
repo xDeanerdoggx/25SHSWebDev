@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Div Page</title>
+    <style>
+        #banner {
+            border: 5px solid red;
+            background-color: lightblue;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #face {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            margin: 20px auto;
+            position: relative;
+            border-radius: 50%;
+        }
+
+        .eye {
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 40px;
+        }
+
+        .left {
+            left: 40px;
+        }
+
+        .right {
+            right: 40px;
+        }
+
+        .pupil {
+            width: 20px;
+            height: 20px;
+            background-color: black;
+            border-radius: 50%;
+            margin: 10px;
+        }
+
+        #mouth {
+            width: 100px;
+            height: 50px;
+            border-bottom: 5px solid black;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        section {
+            padding: 10px;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div id="banner">
+        Welcome to My Page!
+    </div>
+
+    <div id="face">
+        <div class="eye left">
+            <div class="pupil"></div>
+        </div>
+        <div class="eye right">
+            <div class="pupil"></div>
+        </div>
+        <div id="mouth"></div>
+    </div>
+
+    <section>
+        <h2>About This Page</h2>
+        <p>This page uses div elements to create a banner and a simple smiley face</p>
+    </section>
+
+</body>
+</html>
