@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display Demo – Jake's Site</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        .card {
+            display: inline-block;
+            width: 300px;
+            margin: 10px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .card img {
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .nameplate {
+            font-size: 2vw;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            color: #666;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <!-- Banner -->
+    <div id="banner">
+        <h2>Display Property Demo</h2>
+        <p>Exploring CSS display properties and card layouts.</p>
+    </div>
+
+    <!-- NavBar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="list.html">My List</a></li>
+            <li><a href="display.html" class="active">Display</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="paragraph">
+            <p>Career Gurus</p>
+        </div>
+
+        <section>
+            <div class="card">
+                <img src="images/card1.jpg" alt="Card 1">
+                <div class="nameplate">John Doe</div>
+                <p>Software Engineer</p>
+            </div>
+
+            <div class="card">
+                <img src="images/card2.jpg" alt="Card 2">
+                <div class="nameplate">Jane Smith</div>
+                <p>UX Designer</p>
+            </div>
+
+            <div class="card">
+                <img src="images/card3.jpg" alt="Card 3">
+                <div class="nameplate">Mike Johnson</div>
+                <p>Data Scientist</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <table id="footerTable">
+            <tr>
+                <td><p>© 2025 Jake L. All rights reserved.</p></td>
+            </tr>
+        </table>
+    </footer>
+</body>
+</html> 

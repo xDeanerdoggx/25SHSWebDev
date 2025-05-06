@@ -9,13 +9,23 @@ table {
 }
 
 tr {
-	border: 1px solid #ffffff;
+	border: 1px solid #00ff00;
 	text-align: center;
-	background-color:#9FB6CD; 
+	background-color:sienna; 
 }
 
 th {
 	text-align: center;
 	color: #ffffff;
 	background-color: #003366;
+}
+
+ul {
+	color:#00ff00;
+	background-color:aquamarine
+}
+
+ol {
+	color:blueviolet;
+	background-color:aqua
 }
