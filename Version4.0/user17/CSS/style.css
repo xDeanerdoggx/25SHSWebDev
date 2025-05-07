@@ -1,16 +1,5 @@
-table {#knowledge > * {p + * {div li::marker{div li::marker{@import url(rainbow.css);td:hover {td:hover {
-	background-color: rgb(255, 0, 0);
-  }
-	background-color: black;
-  }
-	content:"😜 ";
-  }
-	color: red;
-  }
-	background-color: #FFFF00;
-  }
-	border: 3px red solid;
-  }
+@import url(rainbow.css);
+table {
 	font-family: "Marker Felt", "Comic Sans MS", fantasy;
 	color: #003366;
 	margin-left: auto;
@@ -19,7 +8,21 @@ table {#knowledge > * {p + * {div li::marker{div li::marker{@import url(rainbow.
 	border-collapse: collapse;
 	cellspacing: 0px;
 }
+#knowledge > * {
+	border: 3px red solid;
+  }
+  
+  p + * {
+	background-color: #FFFF00;
+  }
 
+  div li::marker{
+	color: red;
+  }
+
+  div li::marker{
+	content:"😜 ";
+  }
 tr {
 	border: 1px solid #ffffff;
 	text-align: center;
@@ -31,3 +34,6 @@ th {
 	color: #ffffff;
 	background-color: #003366;
 }
+td:hover {
+	background-color: black;
+  }
