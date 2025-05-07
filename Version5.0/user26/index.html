@@ -50,21 +50,24 @@
 <body>
 
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top shadow">
         <div class="container-fluid">
-            <a href="http://shakonet.isd720.com" class="navbar-brand">WebDev</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <a href="http://shakonet.isd720.com" class="navbar-brand">
+                <i class="fas fa-code me-2"></i>WebDev
+            </a>
+    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav me-auto">
+    
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link active">Home</a>
+                        <a class="nav-link active" href="index.html"><i class="fas fa-home me-1"></i>Home</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Links
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-link me-1"></i>Links
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Action</a></li>
@@ -74,12 +77,28 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="form.html" class="nav-link">Contact</a>
+                        <a class="nav-link" href="form.html"><i class="fas fa-envelope me-1"></i>Contact</a>
                     </li>
                 </ul>
-                <form class="d-flex">
-                    <button class="btn btn-primary" type="button">Login</button>
+    
+                <!-- Search Bar -->
+                <form class="d-flex me-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit"><i class="fas fa-search"></i></button>
                 </form>
+    
+                <!-- User Dropdown -->
+                <div class="dropdown">
+                    <a class="btn btn-outline-light dropdown-toggle" href="#" role="button" id="userMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-user-circle me-1"></i>Profile
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenu">
+                        <li><a class="dropdown-item" href="#">Dashboard</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
@@ -213,3 +232,4 @@
 
 </body>
 </html>
+
