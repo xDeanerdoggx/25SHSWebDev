@@ -38,7 +38,7 @@
 }
 
 .footer-heading a:hover {
-    color: red;
+    color: rgb(137, 137, 137);
     transition: 0.3s ease-out;
 }
 
@@ -62,10 +62,10 @@ color: #b1b1b1;
 }
 
 #footer-email-btn {
-    width: 100px;
+    width: 230px;
     height: 40px;
     border-radius: 4px;
-    background-color: red;
+    background-color: #383b45;
     outline: none;
     border: none;
     color: white;
@@ -74,10 +74,42 @@ color: #b1b1b1;
 
 #footer-email-btn:hover {
     cursor: pointer;
-    background-color: #3378ef;
-    transition: all 0.4s ease-out;
+    background-color: #2a2d34;
+    transition: all 0.15s ease-out;
 }
 
 .btn-success {
     width: 20%;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.nav-links li a:hover {
+    color: rgb(137, 137, 137);
+    transition: 0.3s;
 }
