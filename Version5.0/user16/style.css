@@ -19,6 +19,7 @@
     justify-content: center;
     flex-wrap: wrap;
     margin: 0 auto;
+    padding-top: 1rem;
 }
 
 .footer-heading {
@@ -112,4 +113,21 @@ color: #b1b1b1;
 .nav-links li a:hover {
     color: rgb(137, 137, 137);
     transition: 0.3s;
+}
+
+p {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+}
+
+.terms {
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+
+p.terms-text {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 4rem;
 }
