@@ -5,6 +5,7 @@
     Date Completed:
 -->
 
+
 <head>
     <title>Bootstrap Examples</title>
 
@@ -56,43 +57,130 @@
 
     <body>
         <!---------------------------------- Begin the nav-bar ----------------------------------->
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a href="http://shakonet.isd720.com" class="navbar-brand">WebDev</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
 
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <ul class="navbar-nav me-auto">
-                        <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Edit These Items in your NavBar ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
-                        <li class="nav-item">
-                            <a href="#" class="nav-link active">Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Link
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="mailto:sample@gmail.com?Subject=Hello" class="nav-link disabled" tabindex="-1">Contact</a>
-                        </li>
-                        <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Edit These Items in your NavBar ↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
-                    </ul>
-                    <form class="d-flex">
-                        <button class="btn btn-primary" type="button">Login</button>
+        <!-- Navbar-->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid justify-content-between">
+                <!-- Left elements -->
+                <div class="d-flex">
+                    <!-- Brand -->
+                    <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#">
+                        <img src="images/favicon.ico" height="20" alt="MDB Logo" loading="lazy" style="margin-top: 2px;" />
+                    </a>
+
+                    <!-- Search form -->
+                    <form class="input-group w-auto my-auto d-none d-sm-flex">
+                        <input autocomplete="off" type="search" class="form-control rounded" placeholder="Search" style="min-width: 125px;" />
+                        <span class="input-group-text border-0 d-none d-lg-flex"><i class="fas fa-search"></i></span>
                     </form>
                 </div>
+                <!-- Left elements -->
+
+                <!-- Center elements -->
+                <ul class="navbar-nav flex-row d-none d-md-flex">
+                    <li class="nav-item me-3 me-lg-1 active">
+                        <a class="nav-link" href="#">
+                            <span><i class="fas fa-home fa-lg"></i></span>
+                            <span class="badge rounded-pill badge-notification bg-danger">1</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item me-3 me-lg-1">
+                        <a class="nav-link" href="#">
+                            <span><i class="fas fa-flag fa-lg"></i></span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item me-3 me-lg-1">
+                        <a class="nav-link" href="#">
+                            <span><i class="fas fa-video fa-lg"></i></span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item me-3 me-lg-1">
+                        <a class="nav-link" href="#">
+                            <span><i class="fas fa-shopping-bag fa-lg"></i></span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item me-3 me-lg-1">
+                        <a class="nav-link" href="#">
+                            <span><i class="fas fa-users fa-lg"></i></span>
+                            <span class="badge rounded-pill badge-notification bg-danger">2</span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- Center elements -->
+
+                <!-- Right elements -->
+                <ul class="navbar-nav flex-row">
+                    <li class="nav-item me-3 me-lg-1">
+                        <a class="nav-link d-sm-flex align-items-sm-center" href="#">
+                            <img src="images/favicon.ico" class="rounded-circle" height="22" alt="Black and White Portrait of a Man" loading="lazy" />
+                            <strong class="d-none d-sm-block ms-1">EJ</strong>
+                        </a>
+                    </li>
+                    <li class="nav-item me-3 me-lg-1">
+                        <a class="nav-link" href="#">
+                            <span><i class="fas fa-plus-circle fa-lg"></i></span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown me-3 me-lg-1">
+                        <a data-mdb-dropdown-init class="nav-link dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink" role="button" aria-expanded="false">
+                            <i class="fas fa-comments fa-lg"></i>
+
+                            <span class="badge rounded-pill badge-notification bg-danger">6</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item" href="#">Some news</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Another news</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown me-3 me-lg-1">
+                        <a data-mdb-dropdown-init class="nav-link dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink" role="button" aria-expanded="false">
+                            <i class="fas fa-bell fa-lg"></i>
+                            <span class="badge rounded-pill badge-notification bg-danger">12</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item" href="#">Some news</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Another news</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown me-3 me-lg-1">
+                        <a data-mdb-dropdown-init class="nav-link dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink" role="button" aria-expanded="false">
+                            <i class="fas fa-chevron-circle-down fa-lg"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item" href="#">Some news</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Another news</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- Right elements -->
             </div>
         </nav>
+        <!-- Navbar -->
         <!---------------------------------- End the nav-bar ------------------------------------->
         <!---------Jumbotron---------------------------------------------->
         <header class="p-5 bg-primary-subtle text-black" name="Jumbotron">
@@ -236,7 +324,7 @@
                                 <i class="fas fa-gem me-3"></i>Ezekiel Pelayo
                             </h6>
                             <p>
-                                Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Thanks for visiting!
                             </p>
                         </div>
                         <!-- Grid column -->
@@ -285,9 +373,9 @@
                         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                             <!-- Links -->
                             <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                            <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+                            <p><i class="fas fa-home me-3"></i> Minnesota, MN 55379, US</p>
                             <p>
-                                <i class="fas fa-envelope me-3"></i> info@example.com
+                                <i class="fas fa-envelope me-3"></i> 232050@Shakopeeschools.org
                             </p>
                             <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
                             <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
