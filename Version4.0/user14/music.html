@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music – Jake's Site</title>
+
+    <!-- external stylesheet -->
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <!-- internal style for all <td> -->
+    <style>
+        td {
+            color: #FF0000;
+        }
+        .album-cover {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+    </style>
+
+    <!-- favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- NavBar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="music.html" class="active">Music</a></li>
+            <li><a href="list.html">My List</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>My Favorite Songs (in no particular order)</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Artist</th>
+                    <th>Album</th>
+                    <th>Cover Art</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- this row uses inline styling to stand out -->
+                <tr style="background-color: lightgreen;">
+                    <td style="color:#00FF00; background-color:sienna;">#41</td>
+                    <td>Dave Matthews Band</td>
+                    <td>Crash</td>
+                    <td><img src="https://m.media-amazon.com/images/I/71DZQuTJ9yL.jpg" alt="Cover for #41 by Dave Matthews Band" class="album-cover"></td>
+                </tr>
+                <tr>
+                    <td>The Last Stop</td>
+                    <td>Dave Matthews Band</td>
+                    <td>Before These Crowded Streets</td>
+                    <td><img src="https://m.media-amazon.com/images/I/712kkn+CpXL.jpg" alt="Cover for The Last Stop by Dave Matthews Band" class="album-cover"></td>
+                </tr>
+                <tr>
+                    <td>(the whole album)</td>
+                    <td>Pink Floyd</td>
+                    <td>The Dark Side of The Moon</td>
+                    <td><img src="https://m.media-amazon.com/images/I/51hPSyv9hYL._UF1000,1000_QL80_.jpg" alt="Cover for The Dark Side of The Moon by Pink Floyd" class="album-cover"></td>
+                </tr>
+                <tr>
+                    <td>Wish You Were Here</td>
+                    <td>Pink Floyd</td>
+                    <td>Wish You Were Here</td>
+                    <td><img src="images/wishyouwerehere.png" alt="Cover for Wish You Were Here by Pink Floyd" class="album-cover"></td>
+                </tr>
+                <tr>
+                    <td>You Can Call Me Al</td>
+                    <td>Paul Simon</td>
+                    <td>Graceland</td>
+                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Graceland_cover_-_Paul_Simon.jpg" alt="Cover for Graceland by Paul Simon" class="album-cover"></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>© 2025 Jake L. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

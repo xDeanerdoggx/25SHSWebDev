@@ -7,7 +7,7 @@
 
 <head>
 
-    <title>User ## Version 2.0 </title>
+    <title>User 18 Version 2.0 </title>
 
     <!-- Meta -->
     <meta charset="utf-8">
@@ -19,7 +19,61 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
+#banner{
+    border: 5px outset red;
+    background-color: lightblue;
+    text-align: center;
+}
+div#face {
+    width: 40vw;
+    height: 40vw;
+    max-width: 400px;
+    max-height: 400px;
+    margin: 0 auto;
+    position: relative;
+    background: yellow;
+    margin-top: 2rem;
+}
 
+div#face, div#face * {
+    border-radius: 50%;
+}
+
+.eye {
+    width: 25%;
+    height: 25%;
+    background: #ffffff;
+    position: absolute;
+    top: 20%;
+}
+
+.left.eye {
+    left: 5%;
+}
+
+.right.eye {
+    right: 5%;
+}
+
+.pupil {
+    background: #000;
+    width: 90%;
+    height: 75%;
+    position: relative;
+    left: 10%;
+    transform-origin: bottom;
+}
+
+#mouth {
+    position: relative;
+    width: 80%;
+    left: 20%;
+    height: 20%;
+    border: 1vw solid transparent;
+    border-radius: 50%;
+    top: 50%;
+    border-bottom-color: #000;
+}
     </style>
 </head>
 
@@ -37,29 +91,51 @@
             <h2>Heading Examples</h2>
 
             <!-- Put your Headings ↓↓↓↓↓↓Below↓↓↓↓↓↓ here-->
-
+            <h1>H1</h1>
+            <h2>H2</h2>
+            <h3>H3</h3>
+            <h4>H4</h4>
+            <h5>H5</h5>
+            <h6>H6</h6>
             <!-- Put your Headings ↑↑↑↑↑↑Above↑↑↑↑↑↑ here-->
 
             <h2>Examples of "Other" HTML elements</h2>
 
             <!-- Put your 8 examples of other elements ↓↓↓↓↓↓Below↓↓↓↓↓↓ here-->
-
+            <p>This is a paragraph element.</p>
+            <a href="https://www.google.com" target="_blank">This is a link element</a>
+            <ul>
+                <li>Unordered List Item 1</li>
+                <li>Unordered List Item 2</li>
+            </ul>
+            <ol>
+                <li>Ordered List Item 1</li>
+                <li>Ordered List Item 2</li>
+            </ol>
+            <strong>This is bold text using the &lt;strong&gt; element.</strong>
+            <em>This is italic text using the &lt;em&gt; element.</em>
             <!-- Put your 8 examples of other elements ↑↑↑↑↑↑Above↑↑↑↑↑↑ here-->
         </div>
         <div id="banner">
         </div>
         <div id="face">
-
+            <div class="left eye">
+                <div class="pupil">
+                </div>
+           </div>
+           <div class="right eye">
+                <div class="pupil">
+                </div>
+           </div>
+           <div id="mouth">
+           </div>
         </div>
     </main>
 
-
     <footer>
-
         <p>
-            <center> Webpage made by <a href="#" target="_blank">[your name]</a></center>
+            <center> Webpage made by <a href="#" target="_blank">[Stephen Palm]</a></center>
         </p>
-
     </footer>
 </body>
 

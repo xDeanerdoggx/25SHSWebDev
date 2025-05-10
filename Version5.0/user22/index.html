@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Grid System Example -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-6">Column 1</div>
+            <div class="col-md-6">Column 2</div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">Column 1</div>
+            <div class="col-md-8">Column 2</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">Column 1</div>
+            <div class="col-md-9">Column 2</div>
+        </div>
+    </div>
+
+    <!-- Striped Table -->
+    <div class="container mt-4">
+        <h3>Striped Table</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Row</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Clark</td>
+                    <td>Kent</td>
+                    <td>clarkkent@mail.com</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>John</td>
+                    <td>Carter</td>
+                    <td>johncarter@mail.com</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Peter</td>
+                    <td>Parker</td>
+                    <td>peterparker@mail.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- List Group with Font Awesome Icons -->
+    <div class="container mt-4">
+        <h3>List Group</h3>
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action active">
+                <i class="fa fa-home"></i> Home
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+                <i class="fa fa-camera"></i> Pictures <span class="badge bg-secondary badge-pill badge-primary pull-right active">145</span>
+            </a>
+            <a href="https://www.spotify.com/" target="_blank" class="list-group-item list-group-item-action">
+                <i class="fa fa-music"></i> Music <span class="badge bg-secondary badge-pill badge-primary pull-right active">50</span>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+                <i class="fa fa-film"></i> Videos <span class="badge bg-secondary badge-pill badge-primary pull-right">8</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Button that links to another page -->
+    <div class="container mt-4">
+        <a href="form.html" class="btn btn-success btn-lg" role="button" aria-pressed="true">Form Page</a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.js"></script>
+</body>
+</html>

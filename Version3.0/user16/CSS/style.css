@@ -16,6 +16,82 @@ tr {
 
 th {
 	text-align: center;
-	color: #ffffff;
-	background-color: #003366;
+	color: #cdcdcd;
+	background-color: #3d4b5a;
 }
+
+
+ol {
+	max-width: 600px;
+	font-family: "Marker Felt", "Comic Sans MS", fantasy;
+	color: #003366;
+margin-left: auto;
+margin-right: auto;
+text-align: left;
+border-collapse: collapse;
+cellspacing: 2px;
+	
+}
+
+ul.mainlist {
+	
+	font-family: "Marker Felt", "Comic Sans MS", fantasy;
+	color: #003366;
+margin-left: auto;
+margin-right: auto;
+text-align: left;
+border-collapse: collapse;
+cellspacing: 2px;
+	
+	
+}
+
+h3.Lists {
+	max-width: 600px;
+	font-family: "Marker Felt", "Comic Sans MS", fantasy;
+	text-align: left;
+	color: #cdcdcd;
+	background-color: #3d4b5a;
+	margin-left: auto;
+	margin-right: auto;
+	cellspacing: 2px;
+}
+
+
+
+
+ul.mainlist li {
+	max-width: 600px;	
+	border: 1px solid #ffffff;
+	text-align: left;
+	background-color:#9FB6CD; 
+	font-family: "Marker Felt", "Comic Sans MS", fantasy;
+	margin-left: auto;
+	margin-right: auto;
+	border-collapse: collapse;
+	cellspacing: 2px;
+}
+
+ol li {
+	max-width: 600px;
+	border: 1px solid #ffffff;
+	text-align: left;
+	background-color:#9FB6CD; 
+	margin-left: auto;
+	margin-right: auto;
+	border-collapse: collapse;
+	cellspacing: 2px;
+}
+
+h3.aboutme {
+	padding:50px;
+	background-color: lavender;
+	display: inline-block;
+	border: 1px solid red;
+  }
+
+  p.aboutme {
+	padding: 5px 50px 30px 5px;  /* Top  Right  Bottom  Left */
+	background-color: lavender; 
+	padding: 20px 10px;  /* Vertical  Horizontal */
+  }

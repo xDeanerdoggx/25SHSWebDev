@@ -1,21 +1,265 @@
+/* Import rainbow styles */
+@import url('rainbow.css');
+
+/* Universal selector */
+* {
+    background-color: #fdfdfd;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Button styles */
+.button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.button-largeRadius {
+    border-radius: 20px;
+}
+
+.button-smallRadius {
+    border-radius: 5px;
+}
+
+.ghost {
+    background: transparent;
+    border: 2px solid #333;
+}
+
+.shadowed {
+    box-shadow: 0 4px 8px rgba(0,0,0,.2);
+}
+
+.animated {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+img {
+    width: 100%;
+  }
+  
+
+/* Title styles */
+.title {
+    color: red;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.title-large {
+    font-size: 2rem;
+}
+
+.title-small {
+    font-size: .5rem;
+}
+
+/* Table styles */
+#hireButtons {
+    background: #eef;
+    padding: 10px;
+}
+
+#footerTable {
+    border: 2px dashed gray;
+    padding: 8px;
+}
+
+/* Display styles */
+.paragraph p {
+    display: inline;
+}
+
+.card {
+    display: inline-block;
+    width: 300px;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.nameplate {
+    font-size: 2vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Advanced selectors */
+/* Child selector */
+#knowledge > * {
+    border: 3px solid red;
+}
+
+/* Adjacent sibling */
+p + * {
+    background: #FFFF00;
+}
+
+/* Marker pseudo-element */
+div li::marker {
+    color: red;
+    content: "🔥 ";
+}
+
+/* Table hover pseudo-class */
+#hireButtons td:hover {
+    background: black;
+}
+
+/* Additional pseudo-classes */
+a:visited {
+    color: purple;
+}
+
+nav li:hover a {
+    text-decoration: underline;
+}
+
+button:focus {
+    outline: 2px solid blue;
+}
+
+/* Banner Styles */
+#banner {
+    background-color: lightblue;
+    border: 5px outset red;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#banner h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#banner p {
+    color: #666;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav a.active {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+/* Content Section Styles */
+.content-section {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+/* Table Styles */
 table {
-	font-family: "Marker Felt", "Comic Sans MS", fantasy;
-	color: #003366;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: left;
-	border-collapse: collapse;
-	cellspacing: 0px;
+    font-family: "Marker Felt", "Comic Sans MS", fantasy;
+    color: #003366;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    border-collapse: collapse;
+    cellspacing: 0px;
 }
 
 tr {
-	border: 1px solid #ffffff;
-	text-align: center;
-	background-color:#9FB6CD; 
+    border: 1px solid #ffffff;
+    text-align: center;
+    background-color:#9FB6CD; 
 }
 
 th {
-	text-align: center;
-	color: #ffffff;
-	background-color: #003366;
+    text-align: center;
+    color: #ffffff;
+    background-color: #003366;
+}
+
+/* 2. Page‑wide background image (external styling) */
+body {
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* 3. Lists styling (external) */
+ol {
+    list-style-type: upper-roman;
+    margin: 2rem auto;
+    max-width: 600px;
+    padding-left: 1.5rem;
+}
+
+ul {
+    list-style-type: square;
+    margin: 2rem auto;
+    max-width: 600px;
+    padding-left: 1.5rem;
+}
+
+/* 1.4c — child selector demo */
+#knowledge > * {
+    border: 3px solid red;
+}
+
+/* 1.4c — adjacent sibling demo */
+p + * {
+    background-color: #FFFF00;
+}
+
+/* 1.4c — scoped marker styling */
+#knowledge li::marker {
+    color: red;
+    content: "🔥 ";
 }

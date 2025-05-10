@@ -1,66 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--Version 2.0
-        Name:
-        Date Completed:
-    -->
-
 <head>
+  <meta charset="UTF-8">
+  <title>High Smiley Face</title>
+  <style>
+    /* Banner Styling */
+    #banner {
+      border: 5px outset red;
+      background-color: lightblue;
+      text-align: center;
+      padding: 1rem;
+      font-family: Arial, sans-serif;
+    }
 
-    <title>User ## Version 2.0 </title>
+    /* Face Container */
+    #face {
+      width: 40vw;
+      height: 40vw;
+      max-width: 400px;
+      max-height: 400px;
+      margin: 2rem auto;
+      background: yellow;
+      position: relative;
+      border-radius: 50%;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
 
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="SHS WebDev Tags and DIV's">
+    /* Eyes */
+    .eye {
+      width: 25%;
+      height: 12%;
+      background: #ffcccc; /* red-tinted white for bloodshot effect */
+      position: absolute;
+      top: 25%;
+      border-radius: 50% / 60%;
+      box-shadow: inset 0 0 5px red;
+    }
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    .left.eye {
+      left: 15%;
+      transform: rotate(10deg); /* droopy look */
+    }
 
-    <style>
+    .right.eye {
+      right: 15%;
+      transform: rotate(-10deg);
+    }
 
-    </style>
+    .pupil {
+      background: black;
+      width: 20%;
+      height: 50%;
+      border-radius: 50%;
+      position: absolute;
+      top: 25%;
+      left: 40%;
+    }
+
+    /* Goofy High Smile */
+    #mouth {
+      position: absolute;
+      bottom: 20%;
+      left: 20%;
+      width: 60%;
+      height: 20%;
+      border-bottom: 5px solid black;
+      border-radius: 0 0 50% 50%;
+      transform: rotate(-10deg); /* crooked smile */
+    }
+  </style>
 </head>
-
 <body>
-    <main class="wideMargin">
 
-        <!-- Your 1st Heading-->
-        <h1>About Me</h1>
-        <div id="tags">
-            <p>
-                This is my first webpage! I was able to code all the HTML and CSS in order to make it.
-                Watch out world of web design here I come!
-            </p>
+  <!-- Banner -->
+  <div id="banner">
+    <h1>My Div Activity - High Smiley Face</h1>
+    <p>Using &lt;div&gt; elements to style a funny character</p>
+  </div>
 
-            <h2>Heading Examples</h2>
+  <!-- High Smiley Face -->
+  <div id="face">
+    <div class="eye left">
+      <div class="pupil"></div>
+    </div>
+    <div class="eye right">
+      <div class="pupil"></div>
+    </div>
+    <div id="mouth"></div>
+  </div>
 
-            <!-- Put your Headings ↓↓↓↓↓↓Below↓↓↓↓↓↓ here-->
-
-            <!-- Put your Headings ↑↑↑↑↑↑Above↑↑↑↑↑↑ here-->
-
-            <h2>Examples of "Other" HTML elements</h2>
-
-            <!-- Put your 8 examples of other elements ↓↓↓↓↓↓Below↓↓↓↓↓↓ here-->
-
-            <!-- Put your 8 examples of other elements ↑↑↑↑↑↑Above↑↑↑↑↑↑ here-->
-        </div>
-        <div id="banner">
-        </div>
-        <div id="face">
-
-        </div>
-    </main>
-
-
-    <footer>
-
-        <p>
-            <center> Webpage made by <a href="#" target="_blank">[your name]</a></center>
-        </p>
-
-    </footer>
 </body>
-
 </html>
