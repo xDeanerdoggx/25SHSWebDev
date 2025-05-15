@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Version 3.0
+        Name:
+        Date Completed:
+    -->
+
 <head>
 
     <title>Web Dev User 24 </title>
@@ -9,92 +16,137 @@
     <meta name="description" content="SHS WebDev Version 3.0">
 
     <!-- CSS -->
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- Animate -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <!-- Custom -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="CSS/style.css">
 
     <!-- JavaScript -->
     <!-- These are needed to get the responsive menu to work -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
     <!-- Custom styles for this template -->
     <style type="text/css">
+        menu {
+            margin: 0;
+            padding: 0;
+        }
+       
+        h3 {
+        padding: 50px;
+        background-color: lavender;
+        display: inline-block;
+    }
+    h3 {
+  padding:50px;
+  background-color: lavender;
+  display: inline-block;
+  border: 1px solid #5D6063;
+}
+
+        .wideMargin {
+            margin: 15px;
+        }
+       
+        p {   
+padding: 20px 10px;  /* Vertical  Horizontal */
+}
+
         footer {
             font-size: 12px;
             text-align: center;
         }
+        p {
+  padding: 5px 50px 30px 5px;  /* Top  Right  Bottom  Left */
+  background-color: lavender; 
+}
+strong {
+  margin: 50px;
+  background-color: lightblue;
+}
+{
+    border-bottom: 1px solid #5D6063;
+border-right: 3px dotted #0000ff;
+border-top: 5px inset;
+border-left: 3px dashed #e9e9e9;
+border: 1px solid red;3
+}
+p {
+  padding: 5px 50px 30px 5px;
+  margin-bottom: 50px;          /* Add this */
+}
+p{
+padding: 5px 50px 30px 5px;
+background-color: lavender;
+margin-top: 25px;
+margin-bottom: 50px;
+}
+<h3>CSS Box Model Demonstration</h3>
+<p>
+Paragraphs are blocks too. <em>However</em> things like &lt;em&gt; and &lt;strong&gt; elements are not.
+They are <strong>inline</strong> elements. 
+</p>
+
+<div style='padding-top: 1px'></div>  <!-- Add this -->
+
+<p>Block elements define the flow of the HTML document, while inline elements
+do not.
+</p>
+
     </style>
+
 </head>
 
 <body>
-    <!---------------------------------- Begin the nav-bar ------------->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <div class="container-fluid">
+    <!---------------------------------- Begin the nav-bar ------------------------------------------>
+    <menu>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
             <a href="http://shakonet.isd720.com" class="navbar-brand">WebDev</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav me-auto">
-                    <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Edit These Items in your NavBar ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="aboutMe.html" class="nav-link active">About Me</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="music.html" class="nav-link">Music</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="list.html" class="nav-link">Lists</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="mailto:sample@gmail.com?Subject=Hello" class="nav-link disabled" tabindex="-1">Contact</a>
-                    </li>
-                    <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Edit These Items in your NavBar ↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
-                </ul>
-                <form class="d-flex">
-                    <button class="btn btn-primary" type="button">Login</button>
-                </form>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Edit These Items in your Menu ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="aboutMe.html" class="nav-item nav-link active">About Me</a>
+                    <a href="music.html" class="nav-item nav-link">Music</a>
+                    <a href="list.html" class="nav-item nav-link">Lists</a>
+                    <a href="mailto:sample@gmail.com?Subject=Hello" class="nav-item nav-link disabled"
+                        tabindex="-1">Contact</a>
+                    <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Edit These Items in your Menu ↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
+                </div>
+                <div class="navbar-nav ml-auto">
+                    <a href="#" class="nav-item nav-link disabled">Login</a>
+                </div>
             </div>
-        </div>
-    </nav>
-    <!---------------------------------- End the nav-bar ------------------------------------->
+        </nav>
+        <!---------------------------------- End the nav-bar ------------------------------------->
+    </menu>
 
-    <main class="container-fluid mt-3">
+    <main class="wideMargin">
 
-        <h1 class="text-left my-3">About Me</h1>
-        <!-- Edit this line for the title of your page -->
+        <h1 class="text-left my-3">About Me</h1><!-- Edit this line for the title of your page -->
 
         <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Put your content below this line ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
-        <p>
-        
-            <ol>
-                <li>my favorite games (in no specific order) are cuphead, fnaf, sonic, mario, and gmod</li>
-                
-                <li>my favorite shows (arent on tv they are on youtube because i dont really watch tv) are Bfdi, 
-                    bfdia, bfb, tpot, murder drones, and a lot of other things on youtube </li> 
-            </ol>
-            
-        </p>
-    </main>
-    <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Make sure all your content is above this line ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
+        <h3>Headings Are Block Elements</h3>
 
+        <p>paragraphs are blocks, too.<em>However</em>, &lt;em&gt; and &lt;strong&gt;
+        elements are not. They are <strong>inline</strong> elements.</p>
+        
+        <p>Block elements define the flow of the HTML document, while inline elements
+        do not.</p>
+        <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Make sure all your content is above this line ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
+    </main>
 
     <!---------------------------------- Begin the footer ------------->
-    <footer>
+    <footer class="wideMargin">
         <div>
-            Webpage made by <a href="music.html" target="_blank">[Oscar]</a>
+            Webpage made by <a href="#" target="_blank">[oscar]</a>
         </div>
     </footer>
     <!---------------------------------- End the footer ------------->
 </body>
+
+</html>
