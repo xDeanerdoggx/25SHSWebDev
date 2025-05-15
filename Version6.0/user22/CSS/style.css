@@ -106,9 +106,17 @@ footer {
 
 /* Targeting the tagline inside a section or header */
 header .tagline, section .tagline {
-    color: #000000 !important; /* Force white color */
+    color: #f3efef !important; /* Force white color */
     font-size: 24px; /* Adjust the font size as needed */
     font-weight: bold; /* Optional: Makes the text bold */
+}
+
+body.standard-page {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 header h1 .tagline, section h2 .tagline {
