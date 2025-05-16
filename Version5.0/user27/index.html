@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom styles for striped table */
+        .table-striped > tbody > tr:nth-of-type(odd) > * {
+            --bs-table-color-type: var(--bs-table-striped-color);
+            --bs-table-bg-type: rgba(255, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <!-- Your Bootstrap content will go here -->
+        <h2>Grid Layouts</h2>
+
+        <div class="row mb-3">
+            <div class="col-md-6 bg-primary text-white">6 Columns</div>
+            <div class="col-md-6 bg-secondary text-white">6 Columns</div>
+        </div>
+        
+        <div class="row mb-3">
+            <div class="col-md-4 bg-success text-white">4 Columns</div>
+            <div class="col-md-8 bg-warning text-dark">8 Columns</div>
+        </div>
+        
+        <div class="row mb-3">
+            <div class="col-md-3 bg-danger text-white">3 Columns</div>
+            <div class="col-md-9 bg-info text-white">9 Columns</div>
+        </div>
+        <h2>Striped Table</h2>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Row</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Clark</td>
+                    <td>Kent</td>
+                    <td>clarkkent@mail.com</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>John</td>
+                    <td>Carter</td>
+                    <td>johncarter@mail.com</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Peter</td>
+                    <td>Parker</td>
+                    <td>peterparker@mail.com</td>
+                </tr>
+            </tbody>
+        </table>
+                <h2>List Group</h2>
+                <h2>Form Button</h2>
+                <a href="form.html" class="btn btn-success btn-lg" role="button" aria-pressed="true">Form Page</a>
+
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action active">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <i class="fas fa-camera"></i> Pictures <span class="badge bg-secondary">145</span>
+                    </a>
+                    <a href="https://www.spotify.com/" target="_blank" class="list-group-item list-group-item-action">
+                        <i class="fas fa-music"></i> Music <span class="badge bg-secondary">50</span>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <i class="fas fa-film"></i> Videos <span class="badge bg-secondary">8</span>
+                    </a>
+                </div>
+    </div>
+</body>
+</html>
