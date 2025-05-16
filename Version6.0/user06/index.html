@@ -2,53 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>LeBron James Hub</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #fff8dc;
-            color: #4b0082;
-            text-align: center;
-            padding: 40px;
-        }
-        h1 {
-            color: #ffcc00;
-        }
-        .nav-buttons {
-            margin-bottom: 30px;
-        }
-        .nav-button {
-            display: inline-block;
-            margin: 20px;
-            padding: 15px 30px;
-            background-color: #4b0082;
-            color: #ffcc00;
-            text-decoration: none;
-            font-size: 1.2em;
-            border-radius: 10px;
-        }
-        .nav-button:hover {
-            background-color: #663399;
-        }
-        .lebron-image {
-            max-width: 100%;
-            height: auto;
-            border-radius: 15px;
-        }
-    </style>
+    <title>LeBron James Fan Site</title>
+    <link rel="stylesheet" href="main.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Welcome to the LeBron James Website</h1>
-    <p>Explore the life, style, and family of King James:</p>
 
-    <div class="nav-buttons">
-        <a class="nav-button" href="Lebroncartoon.html">LeBron Cartoon</a>
-        <a class="nav-button" href="Lebronchildren.html">LeBron's Children</a>
-        <a class="nav-button" href="Lebronjersey.html">LeBron Jerseys</a>
-        <a class="nav-button" href="ReallifeLebron.html">Real Life LeBron</a>
-    </div>
+    <!-- Fixed Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">LeBron James</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="Lebroncartoon.html">Cartoon</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Lebronchildren.html">Children</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Lebronjersey.html">Jersey</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ReallifeLebron.html">Real Life</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <!-- LeBron image below buttons -->
-    <img class="lebron-image" src="images/sports.jpeg" alt="Wide image of LeBron James">
+    <!-- Header -->
+    <header class="text-center mt-5">
+        <h1>Welcome to the LeBron James Fan Site</h1>
+    </header>
+
+    <!-- Main Button Grid -->
+    <main class="container mt-5">
+        <div class="row text-center">
+            <div class="col-md-3 mb-4">
+                <a href="Lebroncartoon.html" class="btn btn-warning w-100">LeBron Cartoon</a>
+            </div>
+            <div class="col-md-3 mb-4">
+                <a href="Lebronchildren.html" class="btn btn-warning w-100">LeBron's Children</a>
+            </div>
+            <div class="col-md-3 mb-4">
+                <a href="Lebronjersey.html" class="btn btn-warning w-100">LeBron's Jersey</a>
+            </div>
+            <div class="col-md-3 mb-4">
+                <a href="ReallifeLebron.html" class="btn btn-warning w-100">Real Life LeBron</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center mt-5">
+        <p>&copy; 2025 LeBron James Fan Site</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
