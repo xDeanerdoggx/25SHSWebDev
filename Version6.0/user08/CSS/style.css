@@ -1,4 +1,4 @@
-p {
+p:not(p.welcome):not(.Attention) {
 	color:rgb(154, 0, 0);
     font-size:large;
 	background-color: rgb(0, 0, 0,0.75);
@@ -15,7 +15,8 @@ p {
   }
   p.welcome {
 font-size: xx-large;
-color: darkred;
+color: rgb(255, 8, 8);
+background-color: rgba(0, 0, 139, 0.3);
   }
   
   body {
@@ -68,8 +69,9 @@ img.ci {
 .container:hover .flipper {
     transform: rotateY(180deg);
   }
-  a {
+a {
     color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.3);
   }
   .caption, .back h1 {
     font-family: "Orbitron", sans-serif;
@@ -87,4 +89,17 @@ img.ci {
     font-size: 0.9em;
     padding: 0 20px 20px 20px;
     text-align: left;
+  }
+  aside {
+    width: 20%;
+    padding-left: 4%;
+    margin-left: 4%;
+    float: right;
+    background-image: url(/Version6.0/user08/images/R-S.jpeg);
+    background-size:cover;
+    background-repeat: no-repeat;
+  }
+  .Attention {
+    color: rgb(0, 0, 0);
+    font-size: large;
   }
