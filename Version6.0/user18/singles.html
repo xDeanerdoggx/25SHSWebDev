@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>musics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #121212;
+            color: #f0f0f0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1e1e1e;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .nav-links li a:hover {
+            color: #1db954;
+        }
+
+        .search-bar {
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        .search-bar input {
+            width: 50%;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            border-radius: 4px;
+            border: none;
+        }
+
+        .album-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+        .album-card {
+            background-color: #232323;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.2s ease;
+        }
+
+        .album-card:hover {
+            transform: scale(1.03);
+        }
+
+        .album-card img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .album-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .album-card p {
+            font-size: 0.9rem;
+            color: #cfcfcf;
+        }
+
+        .scores .score {
+            margin-top: 0.2rem;
+            font-size: 0.85rem;
+        }
+
+        .critic {
+            color: #4caf50;
+        }
+
+        .user {
+            color: #2196f3;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><a href="index.html" style="color: inherit; text-decoration: none;">musics</a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Albums</a></li>
+            <li><a href="singles.html">Singles</a></li>
+            <li><a href="eps.html">EPs</a></li>
+            <li><a href="genres.html">Genres</a></li>
+            <li><a href="unranked.html">Unranked</a></li>
+        </ul>
+    </nav>
+
+    <div class="search-bar">
+        <input type="text" placeholder="WIP">
+    </div>
+
+    <div class="album-grid">
+        <div class="album-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/4/44/KanyeWestCousins.png" alt="Album Cover">
+            <h3>Ye</h3>
+            <p>Cousins</p>
+            <div class="scores">
+                <div class="score critic">Critic: 1.3</div>
+                <div class="score user">Personal: N/A</div>
+            </div>
+        </div>
+
+        <div class="album-card">
+        <img src="https://i1.sndcdn.com/artworks-Z5p35nkXa8H4Tay1-YEsePw-t1080x1080.jpg" alt="Album Cover">
+        <h3>juno</h3>
+        <p>toxic</p>
+        <div class="scores">
+            <div class="score critic">Critic: 7.1</div>
+            <div class="score user">Personal: 7.4</div>
+            </div>
+        </div>
+
+        <div class="album-card">
+            <img src="https://i1.sndcdn.com/artworks-WWJdtTVC4ziKyEXt-OotgVQ-t500x500.jpg" alt="Drake - First Person Shooter">
+            <h3>Drake ft. J. Cole</h3>
+            <p>First Person Shooter</p>
+            <div class="scores">
+              <div class="score critic">Critic: 6.9</div>
+              <div class="score user">Personal: 7.8</div>
+            </div>
+          </div>
+          
+          <div class="album-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/5/57/Kendrick_Lamar_-_The_Heart_Part_5.jpg" alt="Kendrick - The Heart Part 5">
+            <h3>Kendrick Lamar</h3>
+            <p>The Heart Part 5</p>
+            <div class="scores">
+              <div class="score critic">Critic: 9.0</div>
+              <div class="score user">Personal: 9.4</div>
+            </div>
+          </div>
+          
+          <div class="album-card">
+            <img src="https://i1.sndcdn.com/artworks-TBjUME8hiycX-0-t500x500.jpg" alt="Travis Scott - K-POP">
+            <h3>Travis Scott ft. Bad Bunny & The Weeknd</h3>
+            <p>K-POP</p>
+            <div class="scores">
+              <div class="score critic">Critic: 6.7</div>
+              <div class="score user">Personal: 7.1</div>
+            </div>
+          </div>
+          
+          <div class="album-card">
+            <img src="https://i1.sndcdn.com/artworks-hRHsVDFwXUGB-0-t500x500.jpg" alt="Lil Uzi - Just Wanna Rock">
+            <h3>Lil Uzi Vert</h3>
+            <p>Just Wanna Rock</p>
+            <div class="scores">
+              <div class="score critic">Critic: 7.5</div>
+              <div class="score user">Personal: 5.3</div>
+            </div>
+          </div>
+          
+          <div class="album-card">
+            <img src="https://i1.sndcdn.com/artworks-awDkhvrsIScd-0-t500x500.jpg" alt="Doja Cat - Paint the Town Red">
+            <h3>Playboi Carti</h3>
+            <p>ALL RED</p>
+            <div class="scores">
+              <div class="score critic">Critic: 7.3</div>
+              <div class="score user">Personal: 7.1</div>
+            </div>
+          </div>
+          
+        <!-- Add more cards as needed -->
+    </div>
+</body>
+</html>

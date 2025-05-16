@@ -19,3 +19,39 @@ th {
 	color: #ffffff;
 	background-color: #003366;
 }
+@import url(rainbow.css);
+
+/* Step 4: Child Selector */
+#knowledge > * {
+  border: 3px red solid;
+}
+
+/* Step 6: Adjacent Sibling Selector */
+p + * {
+  background-color: #FFFF00;
+}
+
+/* Step 8: Special List Styling */
+#knowledge li::marker {
+  content: "😜 ";
+  color: red;
+}
+
+/* Step 11: Pseudo-Class - Hover for rainbow table only */
+#rainbow td:hover {
+  background-color: black;
+}
+
+/* Step 13: Three More Pseudo-Classes */
+a:visited {
+  color: purple;
+}
+
+button:hover {
+  background-color: green;
+  color: white;
+}
+
+li:first-child {
+  font-weight: bold;
+}

@@ -19,3 +19,171 @@ th {
 	color: #ffffff;
 	background-color: #003366;
 }
+table {
+    font-family: "Marker Felt", "Comic Sans MS", fantasy;
+    color: #003366;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+tr {
+    border: 1px solid #ffffff;
+    text-align: center;
+    background-color: #9FB6CD; 
+}
+
+th {
+    text-align: center;
+    color: #ffffff;
+    background-color: #003366;
+}
+
+/* Background image for the whole page */
+body {
+    background-image: url('path/to/your/image.jpg');
+    background-size: cover; /* Ensures the image covers the whole page */
+}
+
+/* Styling for Ordered List */
+ol {
+    list-style-type: decimal;
+    color: #555;
+}
+
+/* Styling for Unordered List */
+ul {
+    list-style-type: square;
+    color: #333;
+}
+
+/* Navbar styling */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #003366;
+    font-size: 18px;
+    padding: 10px 15px;
+    background-color: #F1F1F1;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #003366;
+    color: #ffffff;
+}
+
+/* Active link styling */
+nav ul li a.active {
+    background-color: #003366;
+    color: #ffffff;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="nav-link active">Home</a></li>
+            <li><a href="music.html" class="nav-link">Music</a></li>
+            <li><a href="list.html" class="nav-link">List</a></li>
+        </ul>
+    </nav>
+
+    <h1>Welcome to the Homepage</h1>
+    <p>This is the homepage of our website!</p>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Page</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="music.html" class="nav-link active">Music</a></li>
+            <li><a href="list.html" class="nav-link">List</a></li>
+        </ul>
+    </nav>
+
+    <h1>Welcome to the Music Page</h1>
+
+    <table>
+        <tr>
+            <th>Song</th>
+            <th>Artist</th>
+            <th>Genre</th>
+        </tr>
+        <tr>
+            <td>Bohemian Rhapsody</td>
+            <td>Queen</td>
+            <td>Rock</td>
+        </tr>
+        <tr style="background-color: #FFD700;">
+            <td>Shape of You</td>
+            <td>Ed Sheeran</td>
+            <td>Pop</td>
+        </tr>
+        <tr>
+            <td>Blinding Lights</td>
+            <td>The Weeknd</td>
+            <td>Pop</td>
+        </tr>
+    </table>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My List</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="music.html" class="nav-link">Music</a></li>
+            <li><a href="list.html" class="nav-link active">List</a></li>
+        </ul>
+    </nav>
+
+    <h1>My Bucket List</h1>
+
+    <h2>Places I Want to Visit</h2>
+    <ul>
+        <li>Paris</li>
+        <li>New York City</li>
+        <li>Tokyo</li>
+    </ul>
+
+    <h2>My Hopes and Dreams</h2>
+    <ol>
+        <li>Learn to code</li>
+        <li>Write a book</li>
+        <li>Start a business</li>
+    </ol>
+</body>
+</html>
