@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Web Development Candidates</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/Zena.jpeg" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+            body {
+                background-image: url('images/Realcow.jpeg');
+                background-size: 300px 200px;
+            }
+            .mx-3 {
+                    background-color: aqua;
+                }
+            .navbar .nav-link {
+                    color: rgb(255, 255, 255) !important;
+                }
+            .navbar .nav-link:hover {
+                    color: rgb(197, 197, 197) !important;
+                }
+            .nav-link.active {
+                color: #ffe100 !important; /* <-- Change to whatever color you want */
+            }
+
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+                td, th {
+                border: 1px solid #00f7ff;
+                text-align: left;
+                padding: 8px;
+            }
+
+                tr:nth-child(even) {
+                background-color: #ff6f004d;
+            }
+            tr:nth-child(odd) {
+                background-color: #4dff00;
+            }
+            table {
+                color: #ff0000; /* Replace with your desired font color */
+                font-size: xx-large;
+            }
+            
+            </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a href="http://shakonet.isd720.com" class="navbar-brand">Uh, insert something here?</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav me-auto">
+                    <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Edit These Items in your NavBar ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
+                    <li class="nav-item">
+                        <a href="glug.html" class="nav-link">Glug</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="game.html" class="nav-link">Game</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="food.html" class="nav-link">Food</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="music.html" class="nav-link">Music</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="gamerecom.html" class="nav-link active">Game recommendation</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h2 style="color: rgb(242, 0, 255);">Top 5 game recommendations</h2>
+    <table>
+    <tr>
+        <th>Name</th>
+        <th>Cost</th>
+        <th>Rating</th>
+    </tr>
+    <tr>
+        <td><img src="images/Payday.jpg" alt="LCorp" height=135 width=300></img><a href="https://payday.fandom.com/wiki/PAYDAY_2">Payday 2</a></th>
+        <td>$19.99</td>
+        <td>10/10</td>
+    </tr>
+    <tr>
+        <td><img src="images/UK.jpg" alt="LCorp" height=135 width=300></img><a href="https://ultrakill.fandom.com/wiki/Home">Ulrakill</a></th>
+        <td>$24.99</td>
+        <td>9.5</td>
+    </tr>
+    <tr>
+        <td><img src="images/Dmc5.jpg" alt="LCorp" height=135 width=300></img><a href="https://devilmaycry.fandom.com/wiki/Devil_May_Cry_5">Devil May Cry 5</a></th>
+        <td>$29.99</td>
+        <td>9.3/10</td>
+    </tr>
+    <tr>
+        <td><img src="images/LCorp.jpg" alt="LCorp" height=135 width=300></img><a href="https://lobotomycorp.fandom.com/wiki/Home">Lobotomy Coroporation</a></th>
+        <td>$24.99</td>
+        <td>9/10</td>
+    </tr>
+    <tr>
+        <td><img src="images/Repo.jpg" alt="LCorp" height=135 width=300></img><a href="https://repo-2025horror.fandom.com/wiki/Repo_Wiki">R.E.P.O</a></th>
+        <td>$9.99</td>
+        <td>8.7/10</td>
+    </tr>
+    </table>
+
+    <!-- Bootstrap footer -->
+    <footer class="bg-dark text-light pt-4 pb-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="glug.html" class="text-light">Glug</a></li>
+                        <li><a href="game.html" class="text-light">Game</a></li>
+                        <li><a href="food.html" class="text-light">Food</a></li>
+                        <li><a href="music.html" class="text-light">Music</a></li>
+                        <li><a href="gamerecom.html" class="text-light">Game recommendation</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
