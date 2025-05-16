@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>musics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #121212;
+            color: #f0f0f0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1e1e1e;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .nav-links li a:hover {
+            color: #1db954;
+        }
+
+        .search-bar {
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        .search-bar input {
+            width: 50%;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            border-radius: 4px;
+            border: none;
+        }
+
+        .album-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+        .album-card {
+            background-color: #232323;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.2s ease;
+        }
+
+        .album-card:hover {
+            transform: scale(1.03);
+        }
+
+        .album-card img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .album-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .album-card p {
+            font-size: 0.9rem;
+            color: #cfcfcf;
+        }
+
+        .scores .score {
+            margin-top: 0.2rem;
+            font-size: 0.85rem;
+        }
+
+        .critic {
+            color: #4caf50;
+        }
+
+        .user {
+            color: #2196f3;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><a href="index.html" style="color: inherit; text-decoration: none;">musics</a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Albums</a></li>
+            <li><a href="singles.html">Singles</a></li>
+            <li><a href="eps.html">EPs</a></li>
+            <li><a href="genres.html">Genres</a></li>
+            <li><a href="unranked.html">Unranked</a></li>
+        </ul>
+    </nav>
+
+    <div class="search-bar">
+        <input type="text" placeholder="WIP">
+    </div>
+
+    <div class="album-grid">
+        <div class="album-card">
+            <img src="https://m.media-amazon.com/images/I/51ILa-z228L._UXNaN_FMjpg_QL85_.jpg" alt="Album Cover">
+            <h3>otuka</h3>
+            <p>year of the cat</p>
+            <div class="scores">
+                <div class="score critic">Critic: 7.6</div>
+                <div class="score user">Personal: 8.1</div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="album-card">
+              <img src="https://i.scdn.co/image/ab67616d00001e020bbc7e0b467b7100b3304b5b" alt="Album Cover">
+              <h3>bunii</h3>
+              <p>opo</p>
+              <div class="scores">
+                <div class="score critic">Critic: 7.8</div>
+                <div class="score user">Personal: 8.9</div>
+              </div>
+            </div>
+          </div>
+        <!-- Add more cards as needed -->
+    </div>
+</body>
+</html>

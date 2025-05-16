@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>musics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #121212;
+      color: #f0f0f0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1e1e1e;
+      padding: 1rem 2rem;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links li a:hover {
+      color: #1db954;
+    }
+
+    .album-card {
+      background-color: #232323;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .album-card:hover {
+      transform: scale(1.03);
+    }
+
+    .album-card img {
+      width: 100%;
+      border-radius: 5px;
+      margin-bottom: 0.5rem;
+    }
+
+    .album-card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .album-card p {
+      font-size: 0.9rem;
+      color: #cfcfcf;
+    }
+
+    .scores .score {
+      margin-top: 0.2rem;
+      font-size: 0.85rem;
+    }
+
+    .critic {
+      color: #4caf50;
+    }
+
+    .user {
+      color: #2196f3;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo"><a href="index.html" style="color: inherit; text-decoration: none;">musics</a></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Albums</a></li>
+      <li><a href="singles.html">Singles</a></li>
+      <li><a href="eps.html">EPs</a></li>
+      <li><a href="genres.html">Genres</a></li>
+      <li><a href="unranked.html">Unranked</a></li>
+    </ul>
+  </nav>
+
+  <!-- Bootstrap Search Bar -->
+  <div class="container my-3">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="WIP
+      "button class="btn btn-success" type="button"></button>
+    </div>
+  </div>
+
+  <!-- Album Grid -->
+  <div class="container my-4">
+    <div class="row">
+      <!-- Each album card is wrapped in Bootstrap's grid column -->
+      <!-- You can paste each album card below inside a col-md-3 div -->
+
+      <!-- Example Card Block -->
+      <!-- Copy and paste below block for each album -->
+      <!-- Replace the content inside as needed -->
+      <!-- BEGIN ALBUM CARDS -->
+      <div class="col-md-3 mb-4">
+        <div class="album-card">
+          <img src="https://media.pitchfork.com/photos/65d4e96155ceda7ddb647329/master/w_1280%2Cc_limit/Kanye-West-808s-and-Heartbreak.jpg" alt="Album Cover">
+          <h3>Kanye West</h3>
+          <p>808s & Heartbreak</p>
+          <div class="scores">
+            <div class="score critic">Critic: 7.6</div>
+            <div class="score user">Personal: 8.2</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <div class="album-card">
+          <img src="https://images.genius.com/262e5fc662d74a34c57e49713748bd7b.1000x1000x1.png" alt="Album Cover">
+          <h3>bunii</h3>
+          <p>8:30 is too early</p>
+          <div class="scores">
+            <div class="score critic">Critic: 7.8</div>
+            <div class="score user">Personal: 9.3</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <div class="album-card">
+          <img src="https://upload.wikimedia.org/wikipedia/en/5/5b/The_Caretaker_-_Everywhere_at_the_End_of_Time_-_Stage_1_cover.jpg" alt="Album Cover">
+          <h3>The Caretaker</h3>
+          <p>Everywhere at the End of Time</p>
+          <div class="scores">
+            <div class="score critic">Critic: 7.3</div>
+            <div class="score user">Personal: 6.3</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <div class="album-card">
+          <img src="https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/fe/24/13/fe241380-68a5-b631-f1be-044d0016bfd1/289437.jpg/600x600bf-60.jpg" alt="Album Cover">
+          <h3>juno</h3>
+          <p>last year alive</p>
+          <div class="scores">
+            <div class="score critic">Critic: 7.3</div>
+            <div class="score user">Personal: 9.3</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <div class="album-card">
+          <img src="https://m.media-amazon.com/images/I/71+wh7h+c9L.jpg" alt="Album Cover">
+          <h3>Incubus</h3>
+          <p>Make Yourself</p>
+          <div class="scores">
+            <div class="score critic">Critic: 7.6</div>
+            <div class="score user">Personal: 8.4</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <div class="album-card">
+          <img src="https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2015/3/11/1426099817173/f1efb3f4-9a6d-4f78-8ca8-594ab646d198-bestSizeAvailable.jpeg?width=465&dpr=1&s=none&crop=none" alt="Album Cover">
+          <h3>Kendrick Lamar</h3>
+          <p>To Pimp a Butterfly</p>
+          <div class="scores">
+            <div class="score critic">Critic: 9.5</div>
+            <div class="score user">Personal: 9.2</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <div class="album-card">
+          <img src="https://i.scdn.co/image/ab67616d0000b27324f8c3ad20b7c6cfecb5832e" alt="Album Cover">
+          <h3>wave to earth</h3>
+          <p>0.1 flaws and all</p>
+          <div class="scores">
+            <div class="score critic">Critic: 8.4</div>
+            <div class="score user">Personal: 9.0</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <div class="album-card">
+          <img src="https://m.media-amazon.com/images/I/41846MD162L._UF1000,1000_QL80_.jpg" alt="Album Cover">
+          <h3>Lars Frederiksen</h3>
+          <p>Lars Frederiksen & The Bastards</p>
+          <div class="scores">
+            <div class="score critic">Critic: 8.0</div>
+            <div class="score user">Personal: 9.3</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <div class="album-card">
+          <img src="https://upload.wikimedia.org/wikipedia/en/9/97/Backatthelaundromat.jpg" alt="Album Cover">
+          <h3>U.S Bombs</h3>
+          <p>Back at The Laundromat</p>
+          <div class="scores">
+            <div class="score critic">Critic: 7.3</div>
+            <div class="score user">Personal: 9.0</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <div class="album-card">
+          <img src="https://images.genius.com/b6697a8b47470d981c30217e8f43f879.1000x1000x1.png" alt="Album Cover">
+          <h3>wifiskeleton</h3>
+          <p>surburban daredevil</p>
+          <div class="scores">
+            <div class="score critic">Critic: 7.2</div>
+            <div class="score user">Personal: 7.9</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <div class="album-card">
+          <img src="https://i.scdn.co/image/ab67616d0000b273fa4e0b3ca0ad54406a06a15d" alt="Album Cover">
+          <h3>Alice in Chains</h3>
+          <p>Jar of Flies</p>
+          <div class="scores">
+            <div class="score critic">Critic: 8.5</div>
+            <div class="score user">Personal: 7.8</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <div class="album-card">
+          <img src="https://upload.wikimedia.org/wikipedia/en/5/5c/Metallica_-_Kill_%27Em_All_cover.jpg" alt="Album Cover">
+          <h3>Metallica</h3>
+          <p>Kill Em' All</p>
+          <div class="scores">
+            <div class="score critic">Critic: 8.5</div>
+            <div class="score user">Personal: 8.1</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <div class="album-card">
+          <img src="https://i.scdn.co/image/ab67616d0000b27384e864c4464946acecf15f9c" alt="Album Cover">
+          <h3>wave to earth</h3>
+          <p>summer flows 0.02</p>
+          <div class="scores">
+            <div class="score critic">Critic: 8.1</div>
+            <div class="score user">Personal: 8.9</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <div class="album-card">
+          <img src="https://upload.wikimedia.org/wikipedia/en/7/7d/Above_%28Mad_Season_album%29.jpeg" alt="Album Cover">
+          <h3>Mad Season</h3>
+          <p>Above</p>
+          <div class="scores">
+            <div class="score critic">Critic: 5.0</div>
+            <div class="score user">Personal: 7.3</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <div class="album-card">
+          <img src="https://upload.wikimedia.org/wikipedia/en/1/14/Somewhere_City.webp" alt="Album Cover">
+          <h3>Origami Angel</h3>
+          <p>Somewhere City</p>
+          <div class="scores">
+            <div class="score critic">Critic: 7.5</div>
+            <div class="score user">Personal: 8.7</div>
+          </div>
+        </div>
+      </div>
+      <!-- END ALBUM CARDS -->
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
