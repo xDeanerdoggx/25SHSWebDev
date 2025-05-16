@@ -6,14 +6,67 @@
     -->
 
 <head>
+    <style> 
+    #knowledge > * {
+  border: 3px red solid;
+}
+p + * {
+  background-color: #FFFF00;
+}
+div li::marker{
+  color: red;
+}
+div li::marker{
+  content:"😜 ";
+}
+td:hover {
+  background-color: black;
+}
+/* Existing rule for all children in #knowledge */
+#knowledge > * {
+  border: 3px red solid;
+}
 
-    <title>Gallery</title>
+/* Apply yellow background to the sibling of a <p> */
+p + * {
+  background-color: #FFFF00;
+}
+
+/* Red marker and emoji for <li> in <div> */
+div li::marker {
+  color: red;
+  content: "😜 ";
+}
+
+/* Only rainbow table cells turn black on hover */
+#rainbow td:hover {
+  background-color: black;
+}
+
+/* Pseudo-class 1: Visited links turn purple */
+a:visited {
+  color: purple;
+}
+
+/* Pseudo-class 2: h1 gets background when focused */
+h1:focus {
+  background-color: lightblue;
+  outline: none;
+}
+
+/* Pseudo-class 3: Hover effect on list items */
+li:hover {
+  background-color: #e0f7fa;
+}
+</style>
+
+    <title>My Work as a Web Developer</title>
 
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="SHS WebDev Version 4.0 - Gallery">
+    <meta name="description" content="SHS WebDev Version 4.0 - Portfolio">
 
     <!-- CSS -->
     <!-- Bootstrap -->
@@ -33,6 +86,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 
 
+
     <!-- Custom styles for this template -->
     <style type="text/css">
         footer {
@@ -43,7 +97,6 @@
         #rainbow {
             width: 100%;
         }
-        @import url('https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap');
     </style>
 </head>
 
@@ -60,16 +113,16 @@
                 <ul class="navbar-nav me-auto">
                     <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Edit These Items in your NavBar ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Home</a>
+                        <a href="index.html" class="nav-link ">Home</a>
                     </li>
                     <li class="nav-item">
                         <a href="display.html" class="nav-link">Display</a>
                     </li>
                     <li class="nav-item">
-                        <a href="portfolio.html" class="nav-link">Portfolio</a>
+                        <a href="#" class="nav-link active">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a href="gallery.html" class="nav-link active">Gallery</a>
+                        <a href="gallery.html" class="nav-link">Gallery</a>
                     </li>
                     <li class="nav-item">
                         <a href="mailto:sample@gmail.com?Subject=Hello" class="nav-link disabled" tabindex="-1">Contact</a>
@@ -86,73 +139,53 @@
 
     <main class="container-fluid mt-3">
 
-        <h1 class="text-left my-3 title" tabindex="0">The Timberwolves</h1>
+        <h1 class="text-left my-3 title" tabindex="0">Check out my work!</h1>
         <!-- Edit this line for the title of your page -->
 
         <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Put your content below this line ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
-
-        <div id="gallery.css">
-            <p>Hover over the images to get their stats by clicking on the link. </p>
-            <div class="container">
-                <div class="flipper">
-                    <div class="front">
-                        <img src="images/naz.jpeg"ATX_Motherboard">
-                        <p class="caption">Naz Ried</p>
-                    </div>
-                    <div class="back">
-                        <a href="https://en.wikipedia.org/wiki/Naz_Reid" target="_blank">
-                            <h2 class="mh-100">Motherboard</h2>
-                        </a>
-                        <p class="description"> The man for the NBA and the best 6th man of all time</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="flipper">
-                    <div class="front">
-                        <img src="images/antman.jpeg" alt="Anthony Edwards">
-                        <p class="caption">Anthony Edwards he owns the Lakers and Lebron.</p>
-                    </div>
-                    <div class="back">
-                        <a href="https://en.wikipedia.org/wiki/Anthony_Edwards_(basketball)" target="_blank">
-                            <h2>Anthony Edwards</h2>
-                        </a>
-                        <p class="description">The next and best NBA player of all time!</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="flipper">
-                    <div class="front">
-                        <img src="images/mcdan.jpeg" alt="NVIDIA GPU">
-                        <p class="caption">Jaden Mcdaniels </p>
-                    </div>
-                    <div class="back">
-                        <a href="https://en.wikipedia.org/wiki/Jaden_McDaniels" target="_blank">
-                            <h2 class="">Jaden Mcdaniels</h2>
-                        </a>
-                        <p class="description"> The key player to the Timberwolves success</p>
-                </div>
-            </div>
+        <h3 id="topHeading">I'm a Web Developer</h3>
+        <div id="knowledge">
+            <li>CSS
+                <ul>
+                    <li>Classes</li>
+                    <li>Selectors</li>
+                    <li>ID's</li>
+                </ul>
+            </li>
+            <li>HTML
+                <ul>
+                    <li>Tables</li>
+                    <li>DIV's</li>
+                    <li>Nav Bar</li>
+                </ul>
+            </li>
         </div>
-
-        <div class="container">
-            <div class="flipper">
-                <div class="front">
-                    <img src="images/jul.jpeg" alt="Anthony Edwards">
-                    <p class="caption">Julius Randle.</p>
-                </div>
-                <div class="back">
-                    <a href="https://en.wikipedia.org/wiki/Julius_Randle" target="_blank">
-                        <h2>Julius Randle</h2>
-                    </a>
-                    <p class="description">The guy we thought who was going to a bust trade for Kat!</p>
-                </div>
-            </div>
+        <p>
+            These are the things I know in the <strong>WEB DEVELOPMENT</strong> <u>world</u>.
+        </p>
+        <p>
+            I will use my knowledge to create an amazing website for you and your needs.
+        </p>
+        <div>
+            <table id="rainbow">
+                <tr>
+                    <td class="background-red">
+                    </td>
+                    <td class="background-orange">
+                    </td>
+                    <td class="background-yellow">
+                    </td>
+                    <td class="background-green">
+                    </td>
+                    <td class="background-blue">
+                    </td>
+                    <td class="background-indigo">
+                    </td>
+                    <td class="background-violet">
+                    </td>
+                </tr>
+            </table>
         </div>
-
         <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Make sure all your content is above this line ↑↑↑↑↑↑↑↑↑-->
     </main>
 
