@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Version 4.0
+        Name:
+        Date Completed:
+    -->
+
+<head>
+
+    <title>Gallery</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="SHS WebDev Version 4.0 - Gallery">
+
+    <!-- CSS -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Custom -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/gallery.css">
+
+    <!-- JavaScript -->
+    <!-- These are needed to get the responsive menu to work -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom styles for this template -->
+    <style type="text/css">
+        footer {
+            font-size: 12px;
+            text-align: center;
+        }
+
+        #rainbow {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!---------------------------------- Begin the nav-bar ------------->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a href="http://shakonet.isd720.com" class="navbar-brand">WebDev</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="display.html" class="nav-link">Display</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="portfolio.html" class="nav-link">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="gallery.html" class="nav-link">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="mailto:sample@gmail.com?Subject=Hello" class="nav-link disabled" tabindex="-1">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <button class="btn btn-primary" type="button">Login</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!---------------------------------- End the nav-bar ------------------------------------->
+
+    <main class="container-fluid mt-3">
+        <h1 class="text-left my-3 title" tabindex="0">Some of my favorite songs.</h1>
+
+        <!-- GALLERY SECTION START -->
+        <div id="gallery" class="container">
+            <p class="text-center">Hover over the images to get more info.</p>
+            <div class="row g-4">
+                <!-- Card 1 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="flipper">
+                        <div class="front">
+                            <img src="https://i1.sndcdn.com/artworks-mUeiS8JdnJgE-0-t500x500.jpg" alt="Heads Off Gameplay SS" class="img-fluid">
+                            <p class="caption text-center">Single</p>
+                        </div>
+                        <div class="back">
+                            <a href="https://soundcloud.com/otukaa/break" target="_blank">
+                                <h2>break.</h2>
+                            </a>
+                            <p class="description">Released March 8th 2024, this track is an Alternative Rock track, this would be one of Otuka's more popular releases.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="flipper">
+                        <div class="front">
+                            <img src="https://i1.sndcdn.com/artworks-wXEZGaUjUZGW-0-t500x500.jpg" alt="BC" class="img-fluid">
+                            <p class="caption text-center">Single</p>
+                        </div>
+                        <div class="back">
+                            <a href="https://soundcloud.com/ericdoa/back-n-forth" target="_blank">
+                                <h2>backnforth</h2>
+                            </a>
+                            <p class="description">Released on Agust 13th 2021, this track is a single by ericadoa, known for making pop, rap and trap music.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="flipper">
+                        <div class="front">
+                            <img src="https://i.scdn.co/image/ab67616d0000b2736ed555dccea3be1fcb82b5a7" alt="BC again" class="img-fluid">
+                            <p class="caption text-center">Single</p>
+                        </div>
+                        <div class="back">
+                            <a href="https://soundcloud.com/jades714/switchingsides" target="_blank">
+                                <h2>switching sides</h2>
+                            </a>
+                            <p class="description">Released on July 15 2022, this track is single by Jades, this track would be another alternative pop track by Jades.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="flipper">
+                        <div class="front">
+                            <img src="https://i.scdn.co/image/ab67616d0000b273a9300afbeb8cd96fd718d90d" alt="NVIDIA GPU" class="img-fluid">
+                            <p class="caption text-center">Single</p>
+                        </div>
+                        <div class="back">
+                            <a href="https://soundcloud.com/jades714/complicated" target="_blank">
+                                <h2>complicated</h2>
+                            </a>
+                            <p class="description">Released on August 20 2021, this is another single by Jades, which leans in the pop category but I'd personally say that it is more alternative pop than regular pop.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- GALLERY SECTION END -->
+
+    </main>
+
+    <!---------------------------------- Begin the footer ------------->
+    <footer>
+        <span class="title d-block">Example of a Footer Title</span>
+        <div class="container py-1" id="footerTable">
+            <ul class="list-unstyled d-flex justify-content-center">
+                <li class="mx-3">
+                    <i class="fa-brands fa-facebook fa-3x" aria-hidden="true"></i>
+                </li>
+                <li class="mx-3">
+                    <i class="fa-brands fa-x-twitter fa-3x" aria-hidden="true"></i>
+                </li>
+                <li class="mx-3">
+                    <i class="fa-brands fa-instagram fa-3x" aria-hidden="true"></i>
+                </li>
+                <li class="mx-3">
+                    <i class="fa-brands fa-github fa-3x" aria-hidden="true"></i>
+                </li>
+                <li class="mx-3">
+                    <i class="fa-brands fa-tiktok fa-3x" aria-hidden="true"></i>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!---------------------------------- End the footer ------------->
+</body>
+
+</html>

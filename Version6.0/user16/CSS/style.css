@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Sawarabi Mincho', serif;
+}
+
+section {
+    height: 105vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg1 {
+    background-image: url('../images/bg1.jpg');
+}
+
+.bg2 {
+    background-image: url('../images/bg2.jpg');
+}
+
+.bg3 {
+    background-image: url('../images/bg3.jpg');
+}
+
+.bg4 {
+    background-image: url('../images/bg4.jpg');
+}
+
+nav.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: black;
+}
+  
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding-left: 1rem;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: rgb(172, 172, 172) !important;
+    
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Full-screen dark overlay */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start; /* aligns text to the left */
+    padding-left: 30px;
+  }
+
+  .main-text {
+    color: white;
+    text-align: left;
+    padding: 1rem;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+  }
+
+  .tokyo-p {
+    padding-right: 30rem;
+  }
+  
+
+  .big1 {
+    background-image: url('../images/bg1a.jpg'); 
+  }
+  
+  .big2 {
+    background-image: url('../images/bg2a.jpg'); 
+  }
+  
+  .big3 {
+    background-image: url('../images/bg3a.jpg'); 
+  }
+  
+  /* Maui */
+.maui1 { background-image: url('../images/bg1b.jpg'); }
+.maui2 { background-image: url('../images/bg2b.jpg'); }
+.maui3 { background-image: url('../images/bg3b.jpg'); }
+
+/* Oʻahu */
+.oahu1 { background-image: url('../images/bg1c.jpg'); }
+.oahu2 { background-image: url('../images/bg2c.jpg'); }
+.oahu3 { background-image: url('../images/bg3c.jpg'); }
+
+/* Kauaʻi */
+.kauai1 { background-image: url('../images/bg1d.jpg'); }
+.kauai2 { background-image: url('../images/bg2d.jpg'); }
+.kauai3 { background-image: url('../images/bg3d.jpg'); }
+
+.box-model-demo {
+    border: 5px solid rgba(41, 41, 41, 0.7);
+    padding: 15px;
+    margin: 20px;
+    border-radius: 20px;
+}

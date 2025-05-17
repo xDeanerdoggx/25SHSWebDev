@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Me – CSS Box Model</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <style>
+        /* Padding Examples */
+        .padding-shorthand {
+            padding: 20px; /* All sides */
+        }
+
+        .padding-individual {
+            padding-top: 10px;
+            padding-right: 20px;
+            padding-bottom: 15px;
+            padding-left: 25px;
+        }
+
+        /* Border Examples */
+        .border-solid {
+            border: 3px solid red;
+        }
+
+        .border-dotted {
+            border: 3px dotted blue;
+        }
+
+        .border-inset {
+            border: 3px inset green;
+        }
+
+        .border-dashed {
+            border: 3px dashed purple;
+        }
+
+        /* Margin Examples */
+        .margin-collapse {
+            margin: 20px 0;
+            background-color: lightgray;
+        }
+
+        .prevent-collapse {
+            padding-top: 1px;
+            margin: 20px 0;
+            background-color: lightblue;
+        }
+
+        /* Block vs Inline Margin */
+        .block-element {
+            margin: 20px;
+            background-color: lightgreen;
+        }
+
+        strong {
+            margin: 20px;
+            background-color: lightyellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- Banner -->
+    <div id="banner">
+        <h2>Welcome to My Website!</h2>
+        <p>Explore my favorite music and more.</p>
+    </div>
+
+    <!-- NavBar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="list.html">My List</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Understanding the CSS Box Model</h1>
+
+        <section class="padding-shorthand">
+            <h3>Padding (Shorthand)</h3>
+            <p>This section uses padding: 20px (shorthand for all sides).</p>
+        </section>
+
+        <section class="padding-individual">
+            <h3>Padding (Individual Properties)</h3>
+            <p>This section uses individual padding properties for each side.</p>
+        </section>
+
+        <section class="border-solid">
+            <h3>Border Styles</h3>
+            <p>This section has a solid red border.</p>
+        </section>
+
+        <section class="border-dotted">
+            <p>This section has a dotted blue border.</p>
+        </section>
+
+        <section class="border-inset">
+            <p>This section has an inset green border.</p>
+        </section>
+
+        <section class="border-dashed">
+            <p>This section has a dashed purple border.</p>
+        </section>
+
+        <!-- Margin Collapse Example -->
+        <div class="margin-collapse">
+            <p>First element with margin: 20px 0</p>
+        </div>
+        <div class="margin-collapse">
+            <p>Second element with margin: 20px 0 (collapses with first element)</p>
+        </div>
+
+        <!-- Preventing Margin Collapse -->
+        <div class="prevent-collapse">
+            <p>This element has padding-top: 1px to prevent margin collapse</p>
+        </div>
+        <div class="prevent-collapse">
+            <p>This element's margin doesn't collapse with the previous element</p>
+        </div>
+
+        <!-- Block vs Inline Margin -->
+        <div class="block-element">
+            <p>This is a block element with margin: 20px</p>
+        </div>
+        <p>This paragraph contains <strong>inline elements</strong> with margin: 20px (only horizontal margins apply)</p>
+    </main>
+
+    <footer>
+        <p>© 2025 Jake L. All rights reserved.</p>
+    </footer>
+</body>
+</html> 

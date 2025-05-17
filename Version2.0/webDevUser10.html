@@ -28,6 +28,26 @@
 
         <!-- Your 1st Heading-->
         <h1>About Me</h1>
+        <h2>Hello my name is marc</h2>
+        <h3>i am tall</h3>
+        <h4> i am a student at shakopee high school</h4>
+        <h5> i like cars</h5>
+        <h6> i amd the middle child</h6>
+        <del>hello sir</del> - puts a strike through the words
+        <ins>i amd 15</ins> - adds underline 
+        <sub>yooo</sub> -- subscript
+        <sup>emmit is not cool</sup> -- superscript
+        <small>hello guys</small> -- defines a small text
+        <progress value="22" max="100" > yea </progress > - represents the progress of a task
+            <hr> — will place a horizontal line (no closing tag needed)
+            <abbr title="World Health Organization" > WHO </abbr> -- used to show acronyms
+
+
+
+
+
+
+
         <div id="tags">
             <p>
                 This is my first webpage! I was able to code all the HTML and CSS in order to make it.
@@ -63,4 +83,120 @@
     </footer>
 </body>
 
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Me</title>
+    <style>
+        h3 {
+            padding: 50px;
+            background-color: lavender;
+            display: inline-block;
+            border: 1px solid #5D6063;
+            border-bottom: 1px solid #5D6063;
+            border-right: 3px dotted #0000ff;
+            border-top: 5px inset;
+            border-left: 3px dashed #e9e9e9;
+        }
+
+        p {
+            padding: 5px 50px 30px 5px;
+            margin-bottom: 50px;
+            margin-top: 25px;
+            background-color: lavender;
+        }
+
+        strong {
+            padding: 50px;
+            background-color: lightblue;
+        }
+
+        #banner {
+            border: 5px outset red;
+            background-color: lightblue;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.5em;
+        }
+
+        div#face {
+            width: 40vw;
+            height: 40vw;
+            max-width: 400px;
+            max-height: 400px;
+            margin: 0 auto;
+            position: relative;
+            background: yellow;
+            margin-top: 2rem;
+        }
+
+        div#face, div#face * {
+            border-radius: 50%;
+        }
+
+        .eye {
+            width: 25%;
+            height: 25%;
+            background: #fff;
+            position: absolute;
+            top: 20%;
+        }
+
+        .left.eye {
+            left: 20%;
+        }
+
+        .right.eye {
+            right: 20%;
+        }
+
+        .pupil {
+            background: #000;
+            width: 50%;
+            height: 50%;
+            position: relative;
+            left: 25%;
+            transform-origin: bottom;
+        }
+
+        #mouth {
+            position: relative;
+            width: 60%;
+            left: 20%;
+            height: 25%;
+            border: 1vw solid transparent;
+            border-radius: 50%;
+            top: 50%;
+            border-bottom-color: #000;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <h3>Welcome to My About Me Page</h3>
+        <p>This is a short description about myself. I enjoy coding, learning new technologies, and <strong>exploring web design</strong>.</p>
+
+        <div id="banner">This is the Banner Section!</div>
+
+        <div id="face">
+            <div class="left eye">
+                <div class="pupil"></div>
+            </div>
+            <div class="right eye">
+                <div class="pupil"></div>
+            </div>
+            <div id="mouth"></div>
+        </div>
+
+        <section>
+            <h2>About This Page</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </section>
+
+    </main>
+
+</body>
 </html>
