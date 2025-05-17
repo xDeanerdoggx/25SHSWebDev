@@ -1,0 +1,191 @@
+/* OsamaSon Theme - Refined and Modern */
+
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #212F3D; /* Deep dark blue for dramatic effect */
+    color: #ECF0F1; /* Light grey text for readability */
+    line-height: 1.6;
+    font-size: 16px;
+    padding: 0 20px;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+/* Header Styles */
+header {
+    background-color: #E74C3C; /* Bold red for impact */
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 4px solid #C0392B; /* A deeper red border for added emphasis */
+}
+
+header h1 {
+    font-size: 3em;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Slight shadow for depth */
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #34495E; /* Deep navy for contrast */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for floating effect */
+    text-align: center;
+    padding: 15px 0;
+}
+
+nav a {
+    color: #ECF0F1;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 25px;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #E74C3C;
+    color: #fff;
+}
+
+/* Main Content Styles */
+main {
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+h2 {
+    color: #E74C3C; /* Bold red for headers */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.25); /* A soft shadow for a glow effect */
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #BDC3C7;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #E74C3C;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #C0392B;
+    text-decoration: underline;
+}
+
+/* Card Component Styles */
+.card {
+    background-color: #2C3E50;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    font-size: 1.8em;
+    color: #ECF0F1;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1em;
+    color: #BDC3C7;
+}
+
+/* Button Styles */
+button {
+    background-color: #E74C3C;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #C0392B;
+    transform: translateY(-3px); /* Slight lift effect on hover */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #34495E;
+    color: #ECF0F1;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 1.1em;
+    margin-top: 50px;
+    border-top: 4px solid #E74C3C; /* Red border for emphasis */
+}
+
+/* Hover Effects on Links and Buttons */
+a:hover, button:hover {
+    color: #fff;
+    background-color: #E74C3C;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav a {
+        padding: 12px 20px;
+        font-size: 1.1em;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    footer {
+        font-size: 1em;
+        padding: 20px 10px;
+    }
+}

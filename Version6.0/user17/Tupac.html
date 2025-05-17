@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talent</title>
+    <link rel="stylesheet" href="OsamaSon.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Tupac</h1>
+    </header>
+
+        <!-- Navigation Bar -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">OsamaSon</a>
+            <a href="Michael Jackson.html">Michael Jackson</a>
+            <a href="Tupac.html">Tupac</a>
+            <a href="The Weeknd.html">The Weeknd</a>
+            <a href="taylorswift.html">Taylor Swift</a>
+            <a href="Kendrick lamar.html">Kendrick Lamar</a>
+            <a href="ytsearch.html">Youtube Search</a>
+
+    <!-- Main Content Section -->
+    <main>
+        <section class="intro">
+            <h2>Talent</h2>
+            <p>the song Talent showed how much Talent Tupac really had.</p>
+        </section>
+
+        <!-- Play Button -->
+        <div class="text-center">
+            <button id="playButton">Play "Talent" by Tupac</button>
+        </div>
+
+        <!-- Audio Element (make sure this is correct path) -->
+        <audio id="song" src="Talent.mp3" preload="auto"></audio>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Tupac. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const audio = document.getElementById('song');
+        const playButton = document.getElementById('playButton');
+
+        playButton.addEventListener('click', function () {
+            console.log("Button clicked!");  // Debugging to see if the button is being clicked
+            if (audio.paused) {
+                audio.play().then(() => {
+                    console.log("Audio is playing!");
+                    playButton.textContent = 'Pause Talent'; // Change button text to "Pause"
+                }).catch(error => {
+                    console.error("Error playing audio:", error);  // Log errors if there are any
+                });
+            } else {
+                audio.pause();
+                playButton.textContent = 'Play "Talent"'; // Change button text to "Play"
+            }
+        });
+    </script>
+
+</body>
+
+</html>
