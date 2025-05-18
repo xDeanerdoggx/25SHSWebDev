@@ -104,11 +104,11 @@ footer {
     }
 }
 
-/* Targeting the tagline inside a section or header */
+/* Tagline Styling */
 header .tagline, section .tagline {
-    color: #f3efef !important; /* Force white color */
-    font-size: 24px; /* Adjust the font size as needed */
-    font-weight: bold; /* Optional: Makes the text bold */
+    color: #f3efef !important;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 body.standard-page {
@@ -120,5 +120,33 @@ body.standard-page {
 }
 
 header h1 .tagline, section h2 .tagline {
-    color: #ffffff !important; /* Ensure white color for tagline inside specific elements */
+    color: #ffffff !important;
+}
+
+/* --------------------------- */
+/* ✅ Custom Classes and IDs   */
+/* --------------------------- */
+
+/* Custom user-created class */
+.custom-section {
+    border: 2px solid #777;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #2c2c2c;
+    margin-bottom: 30px;
+}
+
+/* Another custom class */
+.custom-text {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #b4f8c8;
+}
+
+/* User-created ID */
+#project-card {
+    background-color: #292929;
+    padding: 20px;
+    border-left: 5px solid #1e90ff;
+    margin-top: 20px;
 }
