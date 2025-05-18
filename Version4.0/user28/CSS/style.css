@@ -1,3 +1,5 @@
+@import url(rainbow.css);
+
 .button {
 	background-color: #4CAF50;
 	border: none;
@@ -75,4 +77,46 @@ h1, h2, h3, h4, h5, h6{
 	text-decoration:dashed;
 	color:brown;
 
+}
+
+td {
+	background-color: black;
+  }
+
+.background-green:hover {
+	background-color: black;
+}
+.background-blue:hover {
+	background-color: black;
+}
+.background-indigo:hover {
+	background-color: black;
+}
+
+.background-violet:hover {
+	background-color: black;
+}
+
+.background-yellow:link {
+	color:aqua
+}
+
+a:link {
+	color: black;
+}
+
+a:visited {
+	color: #00FF00;
+}
+
+.btn:hover {
+	background-color: darkgray;
+  }
+
+a:hover {
+	color: #2600ff;
+}
+
+li:nth-child(2) {
+	color: purple;
 }
