@@ -2,87 +2,76 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap 5 Page</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>Page with Footer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <!-- Grid System Example -->
-    <div class="container mt-4">
-        <div class="row">
-            <div class="col-md-6">Column 1</div>
-            <div class="col-md-6">Column 2</div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">Column 1</div>
-            <div class="col-md-8">Column 2</div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">Column 1</div>
-            <div class="col-md-9">Column 2</div>
-        </div>
+
+    <!-- Main content here -->
+    <div class="container mt-5">
+        <h1 class="text-center">Hello, this is the main content.</h1>
     </div>
 
-    <!-- Striped Table -->
-    <div class="container mt-4">
-        <h3>Striped Table</h3>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Row</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Email</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Clark</td>
-                    <td>Kent</td>
-                    <td>clarkkent@mail.com</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>John</td>
-                    <td>Carter</td>
-                    <td>johncarter@mail.com</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Peter</td>
-                    <td>Parker</td>
-                    <td>peterparker@mail.com</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center text-lg-start mt-5">
+        <div class="container p-4">
+            <div class="row">
+                <!-- About -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">About Us</h5>
+                    <p>
+                        This is a sample website footer created for Web Development class. Here you can put short info about your site or team.
+                    </p>
+                </div>
 
-    <!-- List Group with Font Awesome Icons -->
-    <div class="container mt-4">
-        <h3>List Group</h3>
-        <div class="list-group">
-            <a href="#" class="list-group-item list-group-item-action active">
-                <i class="fa fa-home"></i> Home
-            </a>
-            <a href="#" class="list-group-item list-group-item-action">
-                <i class="fa fa-camera"></i> Pictures <span class="badge bg-secondary badge-pill badge-primary pull-right active">145</span>
-            </a>
-            <a href="https://www.spotify.com/" target="_blank" class="list-group-item list-group-item-action">
-                <i class="fa fa-music"></i> Music <span class="badge bg-secondary badge-pill badge-primary pull-right active">50</span>
-            </a>
-            <a href="#" class="list-group-item list-group-item-action">
-                <i class="fa fa-film"></i> Videos <span class="badge bg-secondary badge-pill badge-primary pull-right">8</span>
-            </a>
+                <!-- Links -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Quick Links</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="#" class="text-white">Home</a></li>
+                        <li><a href="#" class="text-white">Projects</a></li>
+                        <li><a href="#" class="text-white">Contact</a></li>
+                        <li><a href="#" class="text-white">Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Contact</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-envelope me-2"></i> email@example.com</li>
+                        <li><i class="fas fa-phone me-2"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> City, State</li>
+                    </ul>
+                </div>
+
+                <!-- Social -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Follow Us</h5>
+                    <a href="#" class="btn btn-outline-light btn-floating m-1" role="button">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="btn btn-outline-light btn-floating m-1" role="button">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="btn btn-outline-light btn-floating m-1" role="button">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <!-- Button that links to another page -->
-    <div class="container mt-4">
-        <a href="form.html" class="btn btn-success btn-lg" role="button" aria-pressed="true">Form Page</a>
-    </div>
+        <div class="text-center p-3 bg-secondary">
+            © 2025 Your Name | Web Development Class
+        </div>
+    </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
