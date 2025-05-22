@@ -1,21 +1,123 @@
-table {
-	font-family: "Marker Felt", "Comic Sans MS", fantasy;
-	color: #003366;
+@import url(rainbow.css);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.button {
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	padding: 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+.button-largeRadius {
+	border-radius: 8px;
+}
+
+.button-smallRadius {
+	border-radius: 30%;
+}
+
+.red {
+	background-color: #ff0000;
+}
+
+td{
+	padding:20px;
+}
+
+table{
 	margin-left: auto;
 	margin-right: auto;
-	text-align: left;
-	border-collapse: collapse;
-	cellspacing: 0px;
 }
 
-tr {
-	border: 1px solid #ffffff;
-	text-align: center;
-	background-color:#9FB6CD; 
+h1, h2, h3, h4, h5, h6{
+	text-align:center;
 }
 
-th {
-	text-align: center;
-	color: #ffffff;
-	background-color: #003366;
+.yellow{
+	background-color: yellow;
+}
+
+.border{
+	border-radius: 20px;
+}
+
+.blue{
+	background-color: blue;
+	height: 40px;
+}
+
+.title{
+	color: red;
+	font-family: 'Trebuchet MS', sans-serif; 
+  }
+  
+  .title-large {
+	font-size: 2rem;
+  }
+  
+  .title-small {
+	font-size: .5rem;
+  }
+
+  #hireButtons {
+	background-color: rgb(68, 255, 0);
+	width: 200px;
+  }
+
+  #footerTable {
+	background-color: rgb(0, 229, 255);
+  }
+  *{
+    padding: 20px;
+	text-decoration:dashed;
+	color:brown;
+
+}
+
+td {
+	background-color: black;
+  }
+
+.background-green:hover {
+	background-color: black;
+}
+.background-blue:hover {
+	background-color: black;
+}
+.background-indigo:hover {
+	background-color: black;
+}
+
+.background-violet:hover {
+	background-color: black;
+}
+
+.background-yellow:link {
+	color:aqua
+}
+
+a:link {
+	color: black;
+}
+
+a:visited {
+	color: #00FF00;
+}
+
+.btn:hover {
+	background-color: darkgray;
+  }
+
+a:hover {
+	color: #2600ff;
+}
+
+li:nth-child(2) {
+	color: purple;
 }

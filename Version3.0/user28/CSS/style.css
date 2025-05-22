@@ -19,3 +19,13 @@ th {
 	color: #ffffff;
 	background-color: #003366;
 }
+body {
+	background-image: url('/Users/235110/Documents/25SHSWebDev/Version3.0/user28/images/yellow.jpeg')
+}
+ul {
+	list-style-type: upper-roman;
+  }
+
+  ol {
+	list-style-type: square;
+  }
