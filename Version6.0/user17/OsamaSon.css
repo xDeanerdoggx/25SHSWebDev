@@ -1,6 +1,6 @@
-/* OsamaSon Theme - Refined and Modern */
 
-/* Universal Reset */
+
+
 * {
     margin: 0;
     padding: 0;
@@ -31,11 +31,11 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #E74C3C; /* Bold red for impact */
+    background-color: #E74C3C;
     color: #fff;
     padding: 30px 20px;
     text-align: center;
-    border-bottom: 4px solid #C0392B; /* A deeper red border for added emphasis */
+    border-bottom: 4px solid #C0392B; 
 }
 
 header h1 {
@@ -48,8 +48,8 @@ header h1 {
 
 /* Navigation Styles */
 nav {
-    background-color: #34495E; /* Deep navy for contrast */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for floating effect */
+    background-color: #34495E; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
     text-align: center;
     padding: 15px 0;
 }
@@ -78,7 +78,7 @@ main {
 }
 
 h2 {
-    color: #E74C3C; /* Bold red for headers */
+    color: #E74C3C; 
     font-size: 2.5em;
     margin-bottom: 20px;
     letter-spacing: 1px;

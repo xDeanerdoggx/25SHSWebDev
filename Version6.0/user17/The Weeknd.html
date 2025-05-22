@@ -10,23 +10,23 @@
 
 <body>
 
-    <!-- Header Section -->
+    <!-- header section -->
     <header>
         <h1>The Weeknd</h1>
     </header>
 
-        <!-- Navigation Bar -->
+        <!-- bar -->
         <nav>
             <a href="index.html">Home</a>
-            <a href="about.html">OsamaSon</a>
-            <a href="Michael Jackson.html">Michael Jackson</a>
-            <a href="Tupac.html">Tupac</a>
-            <a href="The Weeknd.html">The Weeknd</a>
-            <a href="taylorswift.html">Taylor Swift</a>
-            <a href="Kendrick lamar.html">Kendrick Lamar</a>
-            <a href="ytsearch.html">Youtube Search</a>
+            <a href="about.html"><img src="OsamaSon.ico" alt="OsamaSon Icon" style="width:16px; height:16px;"> OsamaSon</a>
+            <a href="Michael Jackson.html"><img src="nh.ico" alt="Mj Icon" style="width:16px; height:16px;"> Michael Jackson</a>
+            <a href="Tupac.html"><img src="tupac.ico" alt="Tupac Icon" style="width:16px; height:16px;">Tupac</a>
+            <a href="The Weeknd.html"><img src="weeknd.ico" alt="The Weeknd Icon" style="width:16px; height:16px;">The Weeknd</a>
+            <a href="taylorswift.html"><img src="taylor.png" alt="taylor" style="width:20px; height:20px;">Taylor Swift</a>
+            <a href="Kendrick lamar.html"><img src="kendrick.ico" alt="Kendrick Lamar Icon" style="width:16px; height:16px;">Kendrick Lamar</a>
+            <a href="ytsearch.html"><img src="Magnifying_glass_icon.svg.ico" alt="magnifying Glass" style="width:16px; height:16px;">Youtube Search</a>
 
-    <!-- Main Content Section -->
+    
     <main>
         <section class="intro">
             <h2>Blinding Lights</h2>
@@ -38,12 +38,12 @@
             <button id="playButton">Play "Blinding Lights" by The Weeknd</button>
         </div>
 
-        <!-- Audio Element (make sure this is correct path) -->
+        <!-- audioh) -->
         <audio id="song" src="Blinding_Lights.mp3" preload="auto"></audio>
 
     </main>
 
-    <!-- Footer Section -->
+    <!--footer-->
     <footer>
         <p>&copy; 2025 Weeknd. All Rights Reserved.</p>
     </footer>
@@ -53,17 +53,17 @@
         const playButton = document.getElementById('playButton');
 
         playButton.addEventListener('click', function () {
-            console.log("Button clicked!");  // Debugging to see if the button is being clicked
+            console.log("Button clicked!");
             if (audio.paused) {
                 audio.play().then(() => {
                     console.log("Audio is playing!");
-                    playButton.textContent = 'Pause "Blinding Lights"'; // Change button text to "Pause"
+                    playButton.textContent = 'Pause "Blinding Lights"';
                 }).catch(error => {
-                    console.error("Error playing audio:", error);  // Log errors if there are any
+                    console.error("Error playing audio:", error); 
                 });
             } else {
                 audio.pause();
-                playButton.textContent = 'Play "Blinding Lights"'; // Change button text to "Play"
+                playButton.textContent = 'Play "Blinding Lights"';
             }
         });
     </script>
