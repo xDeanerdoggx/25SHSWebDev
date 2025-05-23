@@ -76,3 +76,16 @@ h1, h2, h3, h4, h5, h6{
     text-align:right;
     border: 2px solid black;
 }
+#knowledge > * {
+	border: 3px red solid;
+}
+p + * {
+	background-color: #FFFF00;
+	div li::marker{
+		color: red;
+	  }div li::marker{
+  color: red;
+}b 
+div li::marker{
+	content:"😜 ";
+  }
