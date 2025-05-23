@@ -1,0 +1,53 @@
+/* === Base Colors & Fonts === */
+body {
+    background-color: #e6f0e6; /* light greenish background */
+    color: #1a1a1a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* === Header === */
+  header {
+    background-image: url('../images/forest1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+    padding: 60px 20px;
+  }
+  
+  /* === Navbar === */
+  .navbar {
+    background-color: #4b5320 !important; /* camo green */
+  }
+  
+  .nav-link {
+    color: #fff !important;
+  }
+  
+  .nav-link:hover {
+    background-color: #3e442b !important; /* darker camo green */
+    color: #d4d4d4 !important;
+  }
+  
+  /* === Main Content === */
+  main {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* === Footer === */
+  footer {
+    background-color: #2e2e2e;
+    color: white;
+  }
+  
+  /* === Image Styling === */
+  img {
+    border-radius: 12px;
+    margin-top: 15px;
+  }
+  
