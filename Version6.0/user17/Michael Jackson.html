@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thriller</title>
+    <link rel="stylesheet" href="OsamaSon.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Michael Jackson</h1>
+    </header>
+
+        <!-- Navigation Bar -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html"><img src="OsamaSon.ico" alt="OsamaSon Icon" style="width:16px; height:16px;"> OsamaSon</a>
+            <a href="Michael Jackson.html"><img src="nh.ico" alt="Mj Icon" style="width:16px; height:16px;"> Michael Jackson</a>
+            <a href="Tupac.html"><img src="tupac.ico" alt="Tupac Icon" style="width:16px; height:16px;">Tupac</a>
+            <a href="The Weeknd.html"><img src="weeknd.ico" alt="The Weeknd Icon" style="width:16px; height:16px;">The Weeknd</a>
+            <a href="taylorswift.html"><img src="taylor.png" alt="taylor" style="width:20px; height:20px;">Taylor Swift</a>
+            <a href="Kendrick lamar.html"><img src="kendrick.ico" alt="Kendrick Lamar Icon" style="width:16px; height:16px;">Kendrick Lamar</a>
+            <a href="ytsearch.html"><img src="Magnifying_glass_icon.svg.ico" alt="magnifying Glass" style="width:16px; height:16px;">Youtube Search</a>
+
+    <!-- Main Content Section -->
+    <main>
+        <section class="intro">
+            <h2>Thriller</h2>
+            <p>One of Michael Jacksons biggest hits</p>
+        </section>
+
+        <!-- Play Button -->
+        <div class="text-center">
+            <button id="playButton">Play "Thriller" by Michael Jackson</button>
+        </div>
+
+        <!-- Audio Element (make sure this is correct path) -->
+        <audio id="song" src="Thriller copy.mp3" preload="auto"></audio>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Michael Jackson. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const audio = document.getElementById('song');
+        const playButton = document.getElementById('playButton');
+
+        playButton.addEventListener('click', function () {
+            console.log("Button clicked!");  // Debugging to see if the button is being clicked
+            if (audio.paused) {
+                audio.play().then(() => {
+                    console.log("Audio is playing!");
+                    playButton.textContent = 'Pause "Thriller"'; // Change button text to "Pause"
+                }).catch(error => {
+                    console.error("Error playing audio:", error);  // Log errors if there are any
+                });
+            } else {
+                audio.pause();
+                playButton.textContent = 'Play "Thriller"'; // Change button text to "Play"
+            }
+        });
+    </script>
+
+</body>
+
+</html>
