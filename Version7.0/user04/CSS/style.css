@@ -1,43 +1,76 @@
-.body-wideMargin {
-    margin: 50px;
-    font-size: 100%;
-    line-height: 1.5;
-    font-family: Roboto;
-}
-
-button {
-    padding: 5px;
-}
-
-ol {
-    list-style-type: decimal-leading-zero;
-}
-
-ol ol {
-    margin-left: 0.9em;
-}
-
-ol li {
-    line-height: 1.5;
-}
-
-li li {
-    list-style-type: lower-alpha;
-}
-
-li li li {
-    list-style-type: square;
-}
-
-li li li li {
-    list-style-type: circle;
-}
-
-h1 {
-    font-family: "Fjalla One", sans-serif;
-    font-size: 2em;
-    text-transform: uppercase;
-    font-weight: 400;
-    border-bottom: 1px solid black;
-    margin-bottom: 1em;
-}
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  a {
+    color: #00bfff;
+  }
+  
+  a:hover {
+    color: #66ccff;
+  }
+  
+  .navbar {
+    border-bottom: 2px solid #333;
+  }
+  
+  .navbar-brand, .nav-link {
+    font-weight: bold;
+  }
+  
+  header {
+    background: linear-gradient(145deg, #1a1a1a, #333);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  }
+  
+  main h2 {
+    color: #00bfff;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.3em;
+  }
+  
+  ul li, ol li {
+    margin-bottom: 0.5em;
+  }
+  
+  .table th, .table td {
+    vertical-align: middle;
+  }
+  
+  .card {
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.03);
+  }
+  
+  form input, form textarea {
+    background-color: #1e1e1e;
+    color: #fff;
+    border: 1px solid #444;
+  }
+  
+  form input:focus, form textarea:focus {
+    border-color: #00bfff;
+    box-shadow: 0 0 5px rgba(0, 191, 255, 0.5);
+  }
+  
+  .btn-primary {
+    background-color: #00bfff;
+    border-color: #00bfff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0099cc;
+    border-color: #0099cc;
+  }
+  
+  footer {
+    border-top: 2px solid #333;
+  }
+  
