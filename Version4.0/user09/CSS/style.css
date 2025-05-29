@@ -1,21 +1,81 @@
-table {
-	font-family: "Marker Felt", "Comic Sans MS", fantasy;
-	color: #003366;
+.button {
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	padding: 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+.button1 {
+	border-radius: 8px;
+}
+
+.button2 {
+	border-radius: 30%;
+}
+
+.red {
+	background-color: #ff0000;
+}
+
+td{
+	padding:20px;
+}
+
+table{
 	margin-left: auto;
 	margin-right: auto;
-	text-align: left;
-	border-collapse: collapse;
-	cellspacing: 0px;
 }
 
-tr {
-	border: 1px solid #ffffff;
-	text-align: center;
-	background-color:#9FB6CD; 
+h1, h2, h3, h4, h5, h6{
+	text-align:center;
 }
-
-th {
-	text-align: center;
-	color: #ffffff;
-	background-color: #003366;
-}
+.button-glow {
+    background-color: #1e90ff;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #1e90ff;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .button-glow:hover {
+    box-shadow: 0 0 20px #1e90ff;
+  }
+  
+  .button-outline {
+    background-color: transparent;
+    color: #28a745;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: 2px solid #28a745;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .button-outline:hover {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .button-gradient {
+    background: linear-gradient(45deg, #ff6b6b, #f06595);
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .button-gradient:hover {
+    transform: scale(1.05);
+  }
