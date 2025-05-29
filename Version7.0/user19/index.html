@@ -39,12 +39,13 @@
     <main>
         <div id="built-in-functions">
             <!-- ALERT-->
+            <h1 onMouseover="alert('GO Sabers!');" value="Click Me!">Shakopee High School</h1>
             <script>
                 alert('Go Sabers!');
             </script>
             <!--PRINT-->
             <script>
-                function printWindow(){
+                function printWindow() {
                     window.print();
                 }
             </script>
@@ -175,6 +176,7 @@
             function firstSelector() {
                 document.querySelector("li").style.backgroundColor = "#dc3545";
             }
+
             function secondSelector() {
                 var x = document.querySelectorAll("li");
                 var i;
@@ -182,6 +184,7 @@
                     x[i].style.backgroundColor = "#17a2b8";
                 }
             }
+
             function thirdSelector() {
                 document.querySelector("ol ol li").style.backgroundColor = "#6c757d";
             }
@@ -191,7 +194,7 @@
             const input = document.querySelector('input');
             const button = document.getElementById('aggregating-list');
 
-            button.onclick = function () {
+            button.onclick = function() {
                 let myItem = input.value;
                 input.value = '';
 
@@ -205,7 +208,7 @@
                 listBtn.textContent = 'Delete';
                 list.appendChild(listItem);
 
-                listBtn.onclick = function (e) {
+                listBtn.onclick = function(e) {
                     list.removeChild(listItem);
                 }
 
