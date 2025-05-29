@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Version 5.0
+    Name:
+    Date Completed:
+-->
+
+<head>
+    <title>JavaScript</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="SHS WebDev JavaScript Practice">
+
+    <!-- CSS -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <!-- Custom -->
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <!-- JavaScript -->
+    <!-- These are needed to get the responsive menu to work -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="JS/script.js"></script>
+    
+
+    <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Put your .js files here ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
+
+    <!-- Custom styles for this template -->
+    <style type="text/css">
+
+    </style>
+</head>
+
+<body>
+    <!---------------------------------- Begin the nav-bar ------------->
+    <div class="menu">
+        <nav class="navbar navbar-expand-md p-2 navbar-dark bg-dark">
+            <a href="http://shakonet.isd720.com/WebDev" class="navbar-brand">WebDev</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Edit These Items in your Menu ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="#" class="nav-item nav-link">About Me</a>
+                    <a href="#" class="nav-item nav-link disabled" tabindex="-1">Music</a>
+                    <a href="#" class="nav-item nav-link disabled" tabindex="-1">Lists</a>
+                    <a href="games.html" class="nav-item nav-link" tabindex="-1">Games</a>
+                    <a href="bootstrap.html" class="nav-item nav-link" tabindex="-1">Bootstrap</a>
+                    <a href="script.html" class="nav-item nav-link active" tabindex="-1">JavaScript</a>
+                    <a href="mailto:sample@gmail.com?Subject=Hello" class="nav-item nav-link disabled" tabindex="-1">Contact</a>
+                    <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Edit These Items in your Menu ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
+                </div>
+                <div class="navbar-nav ms-auto">
+                    <a href="#" class="nav-item nav-link disabled">Login</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!---------------------------------- End the nav-bar ------------->
+
+    <main class="m-3" id="content">
+        <h1 class="text-left my-3">My JavaScript Examples</h1>
+        <!-- Edit this line for the title of your page -->
+        <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Put your content below this line ↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
+        
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-4 text-center p-3 bg-warning">
+                    <p id="textChange">My name is User 19</p>
+                    <button type="button" class="btn btn-dark mt-2" onclick="changeText()">Click if you like</button>
+                </div>
+                
+                <div class="col-sm-4" style="background-color:orange;">PUT YOUR CODE HERE</div>
+                <div class="col-sm-4" style="background-color:yellow;">PUT YOUR CODE HERE</div>
+        
+            </div>
+        </div>
+        <div class="row text-center mt-4">
+            <!-- Feature 1: Text Change (already added earlier) -->
+            <div class="col-sm-3">
+                <p id="textChange">My name is User 19</p>
+                <button class="btn btn-dark mt-2" onclick="changeText()">Click if you like</button>
+            </div>
+        
+            <!-- Feature 2: Click to Change Text -->
+            <div class="col-sm-3">
+                <p id="demoClick">Click me to change</p>
+                <button class="btn btn-primary mt-2" onclick="changeDemo()">Change</button>
+            </div>
+        
+            <!-- Feature 3: Hover Over Message -->
+            <div class="col-sm-3">
+                <p onmouseover="hoverMessage()" id="hoverMsg">Hover over me</p>
+            </div>
+        
+            <!-- Feature 4: Greet User -->
+            <div class="col-sm-3">
+                <input type="text" id="nameBox" class="form-control mb-2" placeholder="Enter your name">
+                <button onclick="greetUser()" class="btn btn-success">Greet Me</button>
+                <p id="greetingMsg"></p>
+            </div>
+        </div>
+        
+        <div class="row text-center mt-4">
+            <!-- Feature 5: Background Color Changer -->
+            <div class="col-sm-3">
+                <button onclick="changeBgColor()" class="btn btn-info">Change BG Color</button>
+                <div id="bgBox" class="p-3 mt-2" style="background-color: lightgray;">Watch my color change</div>
+            </div>
+        
+            <!-- Feature 6: Show Current Time -->
+            <div class="col-sm-3">
+                <button onclick="showTime()" class="btn btn-warning">Show Current Time</button>
+                <p id="timeDisplay"></p>
+            </div>
+        
+            <!-- Feature 7: Image Toggle -->
+            <div class="col-sm-3">
+                <img id="toggleImg" src="https://via.placeholder.com/100" alt="Toggle" class="img-fluid mb-2">
+                <br>
+                <button onclick="toggleImage()" class="btn btn-secondary">Toggle Image</button>
+            </div>
+        
+            <!-- Feature 8: Alert Box -->
+            <div class="col-sm-3">
+                <button onclick="showAlert()" class="btn btn-danger">Show Alert</button>
+            </div>
+        </div>
+        
+    </main>
+    <!--↑↑↑↑↑↑↑↑↑↑ Make sure all your content is above this line ↑↑↑↑↑↑↑↑↑↑-->
+
+
+    <!---------------------------------- Begin the footer ------------->
+    <footer class="small text-center" id="footer">
+        <p>
+            Webpage made by <a href="index.html" target="_blank">[your name]</a>
+        </p>
+    </footer>
+    <!---------------------------------- End the footer ------------->
+    <script src="JS/script.js"></script>
+
+</body>
+
+</html>
