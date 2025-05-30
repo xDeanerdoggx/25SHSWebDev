@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="SHS WebDev JavaScript Practice">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <!-- Custom -->
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+        #cheerleaderText { font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <nav class="navbar navbar-expand-md p-2 navbar-dark bg-dark">
+            <a href="http://shakonet.isd720.com/WebDev" class="navbar-brand">WebDev</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="#" class="nav-item nav-link">About Me</a>
+                    <a href="#" class="nav-item nav-link disabled">Music</a>
+                    <a href="#" class="nav-item nav-link disabled">Lists</a>
+                    <a href="games.html" class="nav-item nav-link">Games</a>
+                    <a href="bootstrap.html" class="nav-item nav-link">Bootstrap</a>
+                    <a href="script.html" class="nav-item nav-link active">JavaScript</a>
+                    <a href="mailto:sample@gmail.com?Subject=Hello" class="nav-item nav-link disabled">Contact</a>
+                </div>
+                <div class="navbar-nav ms-auto">
+                    <a href="#" class="nav-item nav-link disabled">Login</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <main class="m-3" id="content">
+        <h1 class="text-left my-3">My JavaScript Examples</h1>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <p id="textChange">My name is User ##</p>
+                    <button onclick="changeText()" class="btn btn-primary">Change Text</button>
+                    <button onclick="showAlert()" class="btn btn-secondary">Show Alert</button>
+                    <button onclick="changeBgColor()" class="btn btn-success">Change Background</button>
+                    <button onclick="toggleText()" class="btn btn-warning">Toggle Text</button>
+                    <p id="hiddenText">You can hide or show this text!</p>
+                    <button onclick="showTime()" class="btn btn-info">Show Time</button>
+                    <p id="timeDisplay">Current Time:</p>
+                    <p id="hoverText" onmouseover="mouseOverText()" onmouseout="mouseOutText()">Hover over me!</p>
+                    <input type="number" id="num1" placeholder="First number">
+                    <input type="number" id="num2" placeholder="Second number">
+                    <button onclick="addNumbers()" class="btn btn-dark">Add Numbers</button>
+                    <p id="sumResult"></p>
+                    <img id="myImage" src="https://via.placeholder.com/150" onclick="changeImage()" style="cursor:pointer;">
+                    <hr>
+                    <button onclick="startImageSnake()" class="btn btn-primary">Start Image Snake</button>
+                    <button onclick="makePageEditable()" class="btn btn-secondary">Make Page Editable</button>
+                    <button onclick="youMustLoveMe()" class="btn btn-success">You Must Love Me</button>
+                    <button onclick="jokingError()" class="btn btn-danger">Show Joking Error</button>
+                    <pre id="cheerleaderText">Go Team!</pre>
+                    <button onclick="startCheerleader()" class="btn btn-warning">Start Cheerleader</button>
+                    <textarea id="fakeTyping" rows="4" cols="50"></textarea>
+                    <button onclick="startFakeTyping()" class="btn btn-info">Start Fake Typing</button>
+                    <button onclick="shakeWindow()" class="btn btn-dark">Shake Window</button>
+                    <input type="text" id="name1" placeholder="Your Name">
+                    <input type="text" id="name2" placeholder="Their Name">
+                    <button onclick="loveTester()" class="btn btn-light">Test Love</button>
+                    <p id="loveResult"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="small text-center" id="footer">
+        <p>Webpage made by <a href="index.html" target="_blank">[your name]</a></p>
+    </footer>
+
+    <script>
+        function changeText() { document.getElementById("textChange").innerText = "You clicked the button!"; }
+        function showAlert() { alert("Hello! This is a JavaScript alert!"); }
+        function changeBgColor() { document.body.style.backgroundColor = "#f0e68c"; }
+        function toggleText() {
+            const el = document.getElementById("hiddenText");
+            el.style.display = (el.style.display === "none") ? "block" : "none";
+        }
+        function showTime() {
+            const now = new Date();
+            document.getElementById("timeDisplay").innerText = "Current Time: " + now.toLocaleTimeString();
+        }
+        function mouseOverText() {
+            document.getElementById("hoverText").innerText = "Thanks for hovering!";
+        }
+        function mouseOutText() {
+            document.getElementById("hoverText").innerText = "Hover over me!";
+        }
+        function addNumbers() {
+            const a = parseFloat(document.getElementById("num1").value);
+            const b = parseFloat(document.getElementById("num2").value);
+            const sum = a + b;
+            document.getElementById("sumResult").innerText = "Sum = " + sum;
+        }
+        function changeImage() {
+            document.getElementById("myImage").src = "https://via.placeholder.com/150/0000FF/FFFFFF?text=New+Image";
+        }
+        function startImageSnake() {
+            let R = 0, x1 = .1, y1 = .05, x2 = .25, y2 = .24, x3 = 1.6, y3 = .24;
+            let x4 = 300, y4 = 200, x5 = 300, y5 = 200;
+            const DI = document.getElementsByTagName("img");
+            const DIL = DI.length;
+            function A() {
+                for (let i = 0; i < DIL; i++) {
+                    let DIS = DI[i].style;
+                    DIS.position = 'absolute';
+                    DIS.left = (Math.sin(R * x1 + i * x2 + x3) * x4 + x5) + "px";
+                    DIS.top = (Math.cos(R * y1 + i * y2 + y3) * y4 + y5) + "px";
+                }
+                R++;
+            }
+            let tag = setInterval(A, 5);
+            document.onmousedown = function () {
+                clearInterval(tag);
+                for (let i = 0; i < DIL; i++) {
+                    DI[i].style.position = "static";
+                }
+            };
+        }
+        function makePageEditable() {
+            document.body.contentEditable = 'true';
+            document.designMode = 'on';
+        }
+        function youMustLoveMe() {
+            let response;
+            do {
+                response = prompt("Do you love me? (yes/no)");
+            } while (response.toLowerCase() !== "yes");
+            alert("I love you too!");
+        }
+        function jokingError() {
+            alert("Error: You've been pranked!");
+        }
+        function startCheerleader() {
+            const text = document.getElementById("cheerleaderText");
+            let size = 10;
+            let growing = true;
+            setInterval(() => {
+                text.style.fontSize = size + "px";
+                if (growing) {
+                    size += 2;
+                    if (size >= 30) growing = false;
+                } else {
+                    size -= 2;
+                    if (size <= 10) growing = true;
+                }
+            }, 100);
+        }
+        function startFakeTyping() {
+            const textarea = document.getElementById("fakeTyping");
+            const message = "This is a simulated typing effect.";
+            let index = 0;
+            textarea.value = "";
+            const interval = setInterval(() => {
+                textarea.value += message[index];
+                index++;
+                if (index >= message.length) clearInterval(interval);
+            }, 100);
+        }
+        function shakeWindow() {
+            let x = 0;
+            const interval = setInterval(() => {
+                window.moveBy(5, (x % 2 === 0) ? 5 : -5);
+                x++;
+                if (x > 10) clearInterval(interval);
+            }, 100);
+        }
+        function loveTester() {
+            const name1 = document.getElementById("name1").value;
+            const name2 = document.getElementById("name2").value;
+            if (name1 && name2) {
+                const compatibility = Math.floor(Math.random() * 100) + 1;
+                document.getElementById("loveResult").innerText = `${name1} and ${name2} have a ${compatibility}% compatibility!`;
+            } else {
+                alert("Please enter both names.");
+            }
+        }
+    </script>
+</body>
+</html>

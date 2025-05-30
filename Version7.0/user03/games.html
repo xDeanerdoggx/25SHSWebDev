@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reaction Time Test</title>
+  <script language="JavaScript">
+
+  var startTime = new Date();
+  var endTime = new Date();
+  var startPressed = false;
+  var bgChangeStarted = false;
+  var maxWait = 20;
+  var timerID;
+
+  function disableButtons(startDisabled, stopDisabled) {
+    document.response.start.disabled = startDisabled;
+    document.response.stop.disabled = stopDisabled;
+  }
+
+  function remark(responseTime) {
+    var responseString = "";
+    if (responseTime < 0.20)
+      responseString = "Well done!";
+    else if (responseTime < 0.30)
+      responseString = "Nice!";
+    else if (responseTime < 0.40)
+      responseString = "Could be better...";
+    else if (responseTime < 0.50)
+      responseString = "Keep practicing!";
+    else if (responseTime < 0.80)
+      responseString = "Have you been day dreaming again?";
+    else
+      responseString = "Did you fall asleep?";
+    return responseString;
+  }
+
+  function displayResult(responseTime) {
+    const resultDiv = document.getElementById('result');
+    const message = `Your response time is: ${responseTime.toFixed(3)} seconds. ${remark(responseTime)}`;
+    resultDiv.textContent = message;
+  }
+
+  function resetTest() {
+    document.body.style.background = "white";
+    disableButtons(false, true);
+    startPressed = false;
+    bgChangeStarted = false;
+    clearTimeout(timerID);
+    const resultDiv = document.getElementById('result');
+    if (resultDiv) resultDiv.textContent = "";
+  }
+
+  function startTest() {
+    document.body.style.background = document.response.bgColorChange.options[document.response.bgColorChange.selectedIndex].text;
+    bgChangeStarted = true;
+    startTime = new Date();
+  }
+
+  function stopTest() {
+    if (bgChangeStarted) {
+      endTime = new Date();
+      var responseTime = (endTime.getTime() - startTime.getTime()) / 1000;
+      resetTest();
+      displayResult(responseTime);
+    } else {
+      if (!startPressed) {
+        alert("Press start first to start test");
+      } else {
+        clearTimeout(timerID);
+        resetTest();
+        alert("Cheater! You pressed too early!");
+      }
+    }
+  }
+
+  var randMULTIPLIER = 0x015a4e35;
+  var randINCREMENT = 1;
+  var today = new Date();
+  var randSeed = today.getSeconds();
+
+  function randNumber() {
+    randSeed = (randMULTIPLIER * randSeed + randINCREMENT) % (1 << 31);
+    return ((randSeed >> 15) & 0x7fff) / 32767;
+  }
+
+  function startit() {
+    if (startPressed) {
+      alert("Already started. Press stop to stop");
+      return;
+    }
+    disableButtons(true, false); // disable start, enable stop
+    startPressed = true;
+    timerID = setTimeout(startTest, 6000 * randNumber());
+  }
+
+  </script>
+</head>
+<body>
+
+<p>Test your Response time!</p>
+Click on "Start" first, and wait until the background color changes. As soon as it changes, hit "stop!"
+
+<form name="response">
+  Change background color in: 
+  <select name="bgColorChange">
+    <option selected>deeppink</option>
+    <option>aliceblue</option>
+    <option>crimson</option>
+    <option>darkkhaki</option>
+    <option>cadetblue</option>
+    <option>darkorchid</option>
+    <option>coral</option>
+  </select>
+  <input type="button" name="start" value="start" onClick="startit()">
+  <input type="button" name="stop" value="stop" onClick="stopTest()" disabled>
+</form>
+
+<div id="result" style="margin-top:20px; font-weight:bold;"></div>
+
+</body>
+</html>
