@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Version 5.0
+    Name:
+    Date Completed:
+-->
+
+<head>
+    <title>JavaScript</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="SHS WebDev JavaScript Practice">
+
+    <!-- CSS -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <!-- Custom -->
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <!-- JavaScript -->
+    <!-- These are needed to get the responsive menu to work -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="JS/script.js"></script>
+
+    <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Put your .js files here ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
+
+    <!-- Custom styles for this template -->
+    <style type="text/css">
+
+    </style>
+</head>
+
+<body>
+    <!---------------------------------- Begin the nav-bar ------------->
+    <div class="menu">
+        <nav class="navbar navbar-expand-md p-2 navbar-dark bg-dark">
+            <a href="http://shakonet.isd720.com/WebDev" class="navbar-brand">WebDev</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Edit These Items in your Menu ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="#" class="nav-item nav-link">About Me</a>
+                    <a href="#" class="nav-item nav-link disabled" tabindex="-1">Music</a>
+                    <a href="#" class="nav-item nav-link disabled" tabindex="-1">Lists</a>
+                    <a href="games.html" class="nav-item nav-link" tabindex="-1">Games</a>
+                    <a href="bootstrap.html" class="nav-item nav-link" tabindex="-1">Bootstrap</a>
+                    <a href="script.html" class="nav-item nav-link active" tabindex="-1">JavaScript</a>
+                    <a href="mailto:sample@gmail.com?Subject=Hello" class="nav-item nav-link disabled" tabindex="-1">Contact</a>
+                    <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Edit These Items in your Menu ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
+                </div>
+                <div class="navbar-nav ms-auto">
+                    <a href="#" class="nav-item nav-link disabled">Login</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!---------------------------------- End the nav-bar ------------->
+
+    <main class="m-3" id="content">
+        <h1 class="text-left my-3">My JavaScript Examples</h1>
+        <!-- Edit this line for the title of your page -->
+        <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Put your content below this line ↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-4" style="background-color:yellow;">
+                    <center>
+                        <p id="textChange"> My name is EJ</p>
+                    </center>
+                    <center><button type="button" onclick="changeText()">Click if you like</button></center>
+                    <script>
+                        function changeText() {
+                            document.getElementById("textChange").innerHTML = "Thanks for liking my Webpage";
+                        }
+                        var space = " ";
+                        var pos = 0;
+                        var msg = "User 19";
+
+                        function Scroll() {
+                            document.title = msg.substring(pos, msg.length) + space + msg.substring(0, pos);
+
+                            pos++;
+                            if (pos > msg.length) pos = 0;
+                            window.setTimeout("Scroll()", 0);
+                        }
+                        Scroll();
+                        javascript: function Shw(n) {
+                            if (self.moveBy) {
+                                for (i = 35; i > 0; i--) {
+                                    for (j = n; j > 0; j--) {
+                                        self.moveBy(1, i);
+                                        self.moveBy(i, 0);
+                                        self.moveBy(0, -i);
+                                        self.moveBy(-i, 0);
+                                    }
+                                }
+                            }
+                        }
+                        Shw(6)
+                    </script>
+                    <script>
+                        function myFunction() {
+                            const x = document.getElementById("fname");
+                            x.value = x.value.toUpperCase();
+                        }
+                    </script>
+                    </head>
+
+                    <body>
+                        <h1>JavaScript HTML Events</h1>
+                        <h2>The onblur Attribute</h2>
+
+                        Enter your name: <input type="text" id="fname" onblur="myFunction()">
+
+                        <p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+
+                </div>
+                <div class="col-sm-4" style="background-color:orange;">
+                    <script>
+                        function preferedBrowser() {
+                            prefer = document.forms[0].browsers.value;
+                            alert("You prefer browsing internet with " + prefer);
+                        }
+                    </script>
+                    </head>
+
+                    <body>
+                        <h1>JavaScript HTML Events</h1>
+                        <h2>The onchange Attribute</h2>
+
+                        <form>
+                            Choose which browser you prefer:
+                            <select id="browsers" onchange="preferedBrowser()">
+                        <option value="Chrome">Chrome</option>
+                        <option value="Internet Explorer">Internet Explorer</option>
+                        <option value="Firefox">Firefox</option>
+                      </select>
+                        </form>
+                        <br>
+                        <h2>Instructions for life:</h2>
+
+                        <ul>
+                            <li>Eat</li>
+                            <li>Sleep</li>
+                            <li>Repeat</li>
+                        </ul>
+                        <script>
+                            const listItems = document.querySelectorAll("li");
+
+                            function toggleDone(e) {
+                                if (!e.target.className) {
+                                    e.target.className = "done";
+                                } else {
+                                    e.target.className = "";
+                                }
+                            }
+
+                            listItems.forEach((item) => {
+                                item.addEventListener("click", toggleDone);
+                            });
+                        </script>
+                        <style>
+                            .done {
+                                color: darkseagreen;
+                                text-decoration: line-through solid black 2px;
+                            }
+                        </style>
+
+
+                </div>
+                <div class="col-sm-4" style="background-color:yellow;">
+
+
+                    <p id="demo">JavaScript can change the style of an HTML element.</p>
+
+                    <button type="button" onclick="document.getElementById('demo').style.fontSize='35px'">Click Me!</button>
+                    <br><br>
+
+                    <p>JavaScript can show hidden HTML elements.</p>
+
+                    <p id="demo2" style="display:none">Hello JavaScript!</p>
+
+                    <button type="button" onclick="document.getElementById('demo2').style.display='block'">Click Me!</button>
+
+                    <br><br>
+
+                    <h1 onmouseover="style.color='red'" onmouseout="style.color='black'">Mouse over this text</h1>
+                </div>
+            </div>
+        </div>
+        <script>
+            function printPage() {
+                window.print();
+            }
+        </script>
+        </head>
+
+        <body>
+
+            <input type="button" value="Print this page" onclick="printPage()" />
+    </main>
+    <!--↑↑↑↑↑↑↑↑↑↑ Make sure all your content is above this line ↑↑↑↑↑↑↑↑↑↑-->
+
+
+    <!---------------------------------- Begin the footer ------------->
+    <footer class="small text-center" id="footer">
+        <p>
+            Webpage made by <a href="index.html" target="_blank">[your name]</a>
+        </p>
+    </footer>
+    <!---------------------------------- End the footer ------------->
+    </body>
+
+</html>
