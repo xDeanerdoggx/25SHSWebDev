@@ -7,7 +7,7 @@
 
 <head>
 
-    <title>Music for Web Dev User ## </title>
+    <title>Music for Web Dev User ##</title>
 
     <!-- Meta -->
     <meta charset="utf-8">
@@ -23,21 +23,50 @@
     <!-- Animate -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <!-- Custom -->
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <!-- Добавляем favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
     <!-- JavaScript -->
-    <!-- These are needed to get the responsive menu to work -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Custom styles for this template -->
-    <style type="text/css">
-        footer {
-            font-size: 12px;
-            text-align: center;
+    <!-- Исправленный CSS -->
+    <style>
+        /* Убираем неверный стиль и добавляем стили для таблицы */
+        #songs {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        #songs th, #songs td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #songs th {
+            background-color: #343a40;
+            color: white;
+            text-align: left;
+        }
+
+        #songs tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #songs tr:hover {
+            background-color: #ddd;
+        }
+
+        #songs img {
+            max-width: 100px;
+            height: auto;
         }
     </style>
+
 </head>
 
 <body>
@@ -51,24 +80,23 @@
 
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav me-auto">
-                    <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Edit These Items in your NavBar ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
+                    <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ NavBar с активным пунктом Music ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link active">Home</a>
+                        <a href="index.html" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
                         <a href="aboutMe.html" class="nav-link">About Me</a>
                     </li>
                     <li class="nav-item">
-                        <a href="music.html" class="nav-link">Music</a>
+                        <a href="music.html" class="nav-link active">Music</a>
                     </li>
                     <li class="nav-item">
                         <a href="list.html" class="nav-link">Lists</a>
                     </li>
                     <li class="nav-item">
-                        <a href="mailto:sample@gmail.com?Subject=Hello" class="nav-link disabled"
-                            tabindex="-1">Contact</a>
+                        <a href="mailto:sample@gmail.com?Subject=Hello" class="nav-link disabled" tabindex="-1">Contact</a>
                     </li>
-                    <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Edit These Items in your NavBar ↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
+                    <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ NavBar ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
                 </ul>
                 <form class="d-flex">
                     <button class="btn btn-primary" type="button">Login</button>
@@ -81,9 +109,7 @@
     <main class="container-fluid mt-3">
 
         <h1 class="text-left my-3" tabindex="0">Music</h1>
-        <!-- Edit this line for the title of your page -->
 
-        <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Put your content below this line ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
         <h2>My Top 5 Favorite Songs</h2>
         <table id="songs">
             <thead>
@@ -94,47 +120,45 @@
                     <th>Album Art</th>
                 </tr>
             </thead>
-            <tr>
-                <td>1</td>
-                <td>Rush</td>
-                <td>Fly By Night</td>
-                <td>
-                    <img src="images/a bird.jpeg">
-                </td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>BNL</td>
-                <td>One Week</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Dave Matthews Band</td>
-                <td>Grey Street</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Modest Mouse</td>
-                <td>One Chance</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>New Radicals</td>
-                <td>Someday We'll Know</td>
-                <td></td>
-            </tr>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Rush</td>
+                    <td>Fly By Night</td>
+                    <td><img src="images/a bird.jpeg" alt="Fly By Night Album Art"></td>
+                </tr>
+                <tr style="background-color: gold; color: black;">
+                    <td>2</td>
+                    <td>BNL</td>
+                    <td>One Week</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Dave Matthews Band</td>
+                    <td>Grey Street</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Modest Mouse</td>
+                    <td>One Chance</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>New Radicals</td>
+                    <td>Someday We'll Know</td>
+                    <td></td>
+                </tr>
+            </tbody>
         </table>
     </main>
-    <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Make sure all your content is above this line ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
-
 
     <!---------------------------------- Begin the footer ------------->
-    <footer>
+    <footer class="mt-4">
         <div>
-            Music can be found here <a href="https://music.amazon.com"> Amazon Music</a>
+            Music can be found here <a href="https://music.amazon.com" target="_blank" rel="noopener noreferrer">Amazon Music</a>
         </div>
     </footer>
     <!---------------------------------- End the footer ------------->
