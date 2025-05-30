@@ -1,21 +1,82 @@
-table {
-	font-family: "Marker Felt", "Comic Sans MS", fantasy;
-	color: #003366;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: left;
-	border-collapse: collapse;
-	cellspacing: 0px;
+/* Part I: Base button class */
+.button {
+    background-color: lightblue;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
 }
 
-tr {
-	border: 1px solid #ffffff;
-	text-align: center;
-	background-color:#9FB6CD; 
+/* Button subclass: large radius */
+.button-largeRadius {
+    border-radius: 20px;
+    font-weight: bold;
 }
 
-th {
-	text-align: center;
-	color: #ffffff;
-	background-color: #003366;
+/* Button subclass: small radius */
+.button-smallRadius {
+    border-radius: 2px;
+    font-style: italic;
+}
+
+/* Red background class */
+.red {
+    background-color: red;
+    color: white;
+}
+
+/* Custom buttons (for new buttons you added in step 10) */
+.button-glow {
+    background-color: #ff6600;
+    color: white;
+    box-shadow: 0 0 10px #ff6600;
+}
+
+.button-outline {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+.button-shadow {
+    background-color: #4444ff;
+    color: white;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+}
+
+/* Part II: Title and subclasses */
+.title {
+    color: red;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.title-large {
+    font-size: 2rem;
+}
+
+.title-small {
+    font-size: 0.5rem;
+}
+
+/* Part III: ID selectors */
+#hireButtons {
+    margin-top: 20px;
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#footerTable {
+    background-color: #222;
+    padding: 10px;
+    color: white;
+    border-top: 3px solid red;
+}
+
+/* Part IV: Universal selector */
+* {
+    text-align: right;
+    border: 2px solid black;
 }
