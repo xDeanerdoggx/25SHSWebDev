@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+
+    nav {
+      background-color: #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    #gallery {
+      padding: 40px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      background-color: #fff;
+    }
+
+    #gallery > p {
+      width: 100%;
+      text-align: center;
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .container {
+      width: 220px;
+      height: 300px;
+      perspective: 1000px;
+    }
+
+    .flipper {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+
+    .container:hover .flipper {
+      transform: rotateY(180deg);
+    }
+
+    .front, .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .front {
+      background-color: #fff;
+      z-index: 2;
+    }
+
+    .front img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .caption {
+      text-align: center;
+      padding: 10px;
+      font-weight: bold;
+      background-color: #f8f8f8;
+    }
+
+    .back {
+      background-color: #1e1e1e;
+      color: white;
+      transform: rotateY(180deg);
+      padding: 15px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .back a {
+      color: #00ffff;
+      text-decoration: none;
+      margin-bottom: 10px;
+    }
+
+    .back a:hover {
+      text-decoration: underline;
+    }
+
+    .description {
+      font-size: 14px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+  </nav>
+
+  <!-- Gallery Section -->
+  <div id="gallery">
+    <p>Hover over the images to reveal the name and description</p>
+
+    <!-- Motherboard -->
+    <div class="container">
+      <div class="flipper">
+        <div class="front">
+          <img src="https://www.axiomtek.com/Download/Ptype3/en-US/ATX_Motherboard.jpg" alt="ATX Motherboard" />
+          <p class="caption">Computer Part</p>
+        </div>
+        <div class="back">
+          <a href="https://en.wikipedia.org/wiki/Motherboard" target="_blank">
+            <h1>Motherboard</h1>
+          </a>
+          <p class="description">The motherboard is the central hub that connects all parts of a computer.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CPU -->
+    <div class="container">
+      <div class="flipper">
+        <div class="front">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Intel_CPU_Pentium_4.jpg/800px-Intel_CPU_Pentium_4.jpg" alt="CPU" />
+          <p class="caption">Computer Part</p>
+        </div>
+        <div class="back">
+          <a href="https://en.wikipedia.org/wiki/Central_processing_unit" target="_blank">
+            <h1>CPU</h1>
+          </a>
+          <p class="description">The CPU is the brain of the computer, performing all the calculations and tasks.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RAM -->
+    <div class="container">
+      <div class="flipper">
+        <div class="front">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Computer_memory_module_2.jpg/640px-Computer_memory_module_2.jpg" alt="RAM" />
+          <p class="caption">Computer Part</p>
+        </div>
+        <div class="back">
+          <a href="https://en.wikipedia.org/wiki/Random-access_memory" target="_blank">
+            <h1>RAM</h1>
+          </a>
+          <p class="description">RAM provides temporary storage for data and helps programs run faster.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- GPU -->
+    <div class="container">
+      <div class="flipper">
+        <div class="front">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Geforce_8800_ultra.jpg" alt="GPU" />
+          <p class="caption">Computer Part</p>
+        </div>
+        <div class="back">
+          <a href="https://en.wikipedia.org/wiki/Graphics_processing_unit" target="_blank">
+            <h1>GPU</h1>
+          </a>
+          <p class="description">The GPU renders images and videos, essential for gaming and video editing.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SSD -->
+    <div class="container">
+      <div class="flipper">
+        <div class="front">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/SSD_M.2.jpg/640px-SSD_M.2.jpg" alt="SSD" />
+          <p class="caption">Computer Part</p>
+        </div>
+        <div class="back">
+          <a href="https://en.wikipedia.org/wiki/Solid-state_drive" target="_blank">
+            <h1>SSD</h1>
+          </a>
+          <p class="description">An SSD is a fast storage device that helps the system load quickly and run smoothly.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Your Name. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+
+
+
