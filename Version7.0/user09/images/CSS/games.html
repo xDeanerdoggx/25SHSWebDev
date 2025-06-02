@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Game Center</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    .game { border: 2px solid #ccc; border-radius: 10px; padding: 15px; margin-bottom: 20px; }
+    button { padding: 10px 20px; margin: 5px; }
+  </style>
+</head>
+<body>
+  <h1>Mini Games</h1>
+
+  <!-- GAME 1: Reaction Timer -->
+  <div class="game">
+    <h2>Reaction Timer</h2>
+    <form name="response">
+      <label>Background color:</label>
+      <select name="bgColorChange">
+        <option selected>deeppink</option>
+        <option>aliceblue</option>
+        <option>coral</option>
+      </select>
+      <input type="button" value="Start" onclick="startit()">
+      <input type="button" value="Stop" onclick="stopTest()">
+    </form>
+  </div>
+
+  <!-- GAME 2: Click Counter -->
+  <div class="game">
+    <h2>Click the Button!</h2>
+    <p>Clicks: <span id="clickCount">0</span></p>
+    <button onclick="clickGame()">Click Me!</button>
+  </div>
+
+  <!-- GAME 3: Guess the Number -->
+  <div class="game">
+    <h2>Guess the Number (1–10)</h2>
+    <input type="number" id="guessInput" placeholder="Enter a number" />
+    <button onclick="checkGuess()">Guess</button>
+    <p id="guessFeedback"></p>
+  </div>
+
+  <script>
+    // Game 1: Reaction Timer
+    let startTime, endTime, startPressed = false, bgChangeStarted = false, timerID;
+    function startTest() {
+      document.body.style.background = document.response.bgColorChange.value;
+      bgChangeStarted = true;
+      startTime = new Date();
+    }
+
+    function stopTest() {
+      if (bgChangeStarted) {
+        endTime = new Date();
+        const reaction = (endTime - startTime) / 1000;
+        document.body.style.background = "white";
+        alert("Your time: " + reaction + "s\n" + reactionRemark(reaction));
+        bgChangeStarted = false;
+        startPressed = false;
+      } else if (!startPressed) {
+        alert("Click Start first.");
+      } else {
+        clearTimeout(timerID);
+        alert("Too early! Don't cheat.");
+        startPressed = false;
+      }
+    }
+
+    function startit() {
+      if (startPressed) {
+        alert("Already started.");
+        return;
+      }
+      startPressed = true;
+      timerID = setTimeout(startTest, 5000 * Math.random());
+    }
+
+    function reactionRemark(time) {
+      if (time < 0.15) return "Lightning fast!";
+      if (time < 0.3) return "Well done!";
+      if (time < 0.6) return "Decent!";
+      return "Too slow!";
+    }
+
+    // Game 2: Click Counter
+    let count = 0;
+    function clickGame() {
+      count++;
+      document.getElementById("clickCount").textContent = count;
+    }
+
+    // Game 3: Guess the Number
+    const secret = Math.floor(Math.random() * 10) + 1;
+    let attempts = 0;
+    function checkGuess() {
+      const guess = parseInt(document.getElementById("guessInput").value);
+      attempts++;
+      const feedback = document.getElementById("guessFeedback");
+      if (guess === secret) {
+        feedback.textContent = `Correct! It was ${secret}. You took ${attempts} attempts.`;
+      } else if (guess < secret) {
+        feedback.textContent = "Too low. Try again.";
+      } else {
+        feedback.textContent = "Too high. Try again.";
+      }
+    }
+  </script>
+</body>
+</html>
