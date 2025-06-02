@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Custom Page</title>
+    <style>
+        body {
+            font-family: 'Verdana', sans-serif;
+            background-color: #f0f8ff; /* Light blue */
+            transition: background-color 0.5s ease;
+        }
+
+        ul li {
+            color: red;
+        }
+
+        .emphasis {
+            color: green;
+        }
+
+        .header-title {
+            font-size: 36px;
+            color: darkblue;
+        }
+
+        table {
+            width: 60%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table, th, td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="header-title">Welcome to Jack's Awesome jQuery Page!</h1>
+
+    <ul>
+        <li>Jack Stensrud thinks jQuery is really weird and kind of hard to make</li>
+        <li>But he's getting the hang of it!</li>
+    </ul>
+
+    <!-- Table -->
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Favorite Tool</th>
+        </tr>
+        <tr>
+            <td>Jack</td>
+            <td>jQuery</td>
+        </tr>
+        <tr>
+            <td>Alex</td>
+            <td>Bootstrap</td>
+        </tr>
+    </table>
+
+    <!-- Buttons -->
+    <button id="lightBtn">Light Mode</button>
+    <button id="darkBtn">Dark Mode</button>
+
+    <!-- jQuery -->
+    <script src="jquery.js/jquery-3.7.1.js"></script>
+    <script>
+        // Add class to li elements
+        $('ul li').addClass('emphasis');
+
+        // Button click functions
+        $('#lightBtn').click(function() {
+            $('body').css('background-color', '#f0f8ff');
+        });
+
+        $('#darkBtn').click(function() {
+            $('body').css('background-color', '#222');
+        });
+    </script>
+</body>
+</html>
