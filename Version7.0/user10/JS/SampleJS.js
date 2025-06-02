@@ -1,0 +1,73 @@
+// Scrolls the page title
+var space = " ";
+var pos = 0;
+var msg = "User 19";
+
+function Scroll() {
+  document.title = msg.substring(pos, msg.length) + space + msg.substring(0, pos);
+  pos++;
+  if (pos > msg.length) pos = 0;
+  setTimeout(Scroll, 200);
+}
+Scroll();
+
+// Feature 1: Change text and add class
+function changeText() {
+  let element = document.getElementById("textChange");
+  element.innerHTML = "Thanks for liking my Webpage";
+  element.classList.add("newStyle");
+}
+
+// Feature 2: Mouse hover changes text
+function mouseOver() {
+  document.getElementById("hoverText").innerHTML = "You're hovering!";
+}
+
+function mouseOut() {
+  document.getElementById("hoverText").innerHTML = "Hover over me!";
+}
+
+// Feature 3: Double click shows alert
+function doubleClick() {
+  alert("You double-clicked!");
+}
+
+// Feature 4: Change background color
+function changeBackground() {
+  document.body.style.backgroundColor = "#e0f7fa";
+}
+
+// Feature 5: Increase font size
+function increaseFont() {
+  document.body.style.fontSize = "larger";
+}
+
+// Feature 6: Toggle paragraph visibility
+function toggleVisibility() {
+  const element = document.getElementById("hideMe");
+  element.style.display = (element.style.display === "none") ? "block" : "none";
+}
+
+// Feature 7: Swap image on click
+function swapImage() {
+  let img = document.getElementById("imageSwap");
+  img.src = img.src.includes("100")
+    ? "https://via.placeholder.com/150"
+    : "https://via.placeholder.com/100";
+}
+
+// Feature 8: Simple alert
+function showAlert() {
+  alert("This is a JavaScript alert!");
+}
+
+// Feature 9: Form validation
+function validateForm() {
+  let name = document.getElementById("nameField").value;
+  if (name === "") {
+    alert("Please enter your name.");
+    return false;
+  }
+  alert("Thank you, " + name + "!");
+  return true;
+}
