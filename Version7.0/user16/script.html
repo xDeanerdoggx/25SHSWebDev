@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--Version 5.0
-    Name:
-    Date Completed:
+    Name: Chase
+    Date Completed: 2025-05-30
 -->
 
 <head>
@@ -23,19 +23,10 @@
     <link rel="stylesheet" href="CSS/style.css">
 
     <!-- JavaScript -->
-    <!-- These are needed to get the responsive menu to work -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="JS/script.js"></script>
-
-    <script src="JS/script.js"></script>
-    <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Put your .js files here ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
-
-    <!-- Custom styles for this template -->
-    <style type="text/css">
-    
-    </style>
 </head>
 
 <body>
@@ -49,7 +40,6 @@
 
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav">
-                    <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Edit These Items in your Menu ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
                     <a href="index.html" class="nav-item nav-link">Home</a>
                     <a href="#" class="nav-item nav-link">About Me</a>
                     <a href="#" class="nav-item nav-link disabled" tabindex="-1">Music</a>
@@ -58,7 +48,6 @@
                     <a href="bootstrap.html" class="nav-item nav-link" tabindex="-1">Bootstrap</a>
                     <a href="script.html" class="nav-item nav-link active" tabindex="-1">JavaScript</a>
                     <a href="mailto:sample@gmail.com?Subject=Hello" class="nav-item nav-link disabled" tabindex="-1">Contact</a>
-                    <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Edit These Items in your Menu ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
                 </div>
                 <div class="navbar-nav ms-auto">
                     <a href="#" class="nav-item nav-link disabled">Login</a>
@@ -70,41 +59,56 @@
 
     <main class="m-3" id="content">
         <h1 class="text-left my-3">My JavaScript Examples</h1>
-        <!-- Edit this line for the title of your page -->
-        <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Put your content below this line ↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-4" style="background-color:yellow;">	
-                    <center><p id="textChange"> My name is User ##</p></center></div>
-                <div class="col-sm-4" style="background-color:orange;"><center><button type="button" onclick="changeText()">Click if you like</button></center></div>
-                <div class="col-sm-4" style="background-color:yellow;">
-                    <center>
-                        <button onclick="changeBackground()">Change Background</button><br><br>
-                        <button onclick="showTime()">Show Time</button><br><br>
-                        <button onclick="countClicks()">Click Counter</button><span id="clickCounter"> 0</span><br><br>
-                        <input type="text" id="userInput" placeholder="Type something"><button onclick="showInput()">Show</button><br><span id="outputText"></span><br><br>
-                        <button onclick="toggleVisibility()">Toggle Box</button><div id="hiddenBox" style="display:none;">🎉 Surprise!</div><br><br>
-                        <button onclick="changeImage()">Change Image</button><br>
-                        <img id="sampleImage" src="https://via.placeholder.com/100" alt="Sample"><br><br>
-                        <p id="hoverText" onmouseover="changeOnHover()" onmouseout="resetText()">Hover over this text!</p>
 
-                    </center>
+        <div class="container-fluid">
+            <!-- Row 1: Text change -->
+            <div class="row my-2">
+                <div class="col-sm-4 text-center" style="background-color:yellow;">
+                    <p id="textChange">My name is User ##</p>
                 </div>
-                
+                <div class="col-sm-4 text-center" style="background-color:orange;">
+                    <button type="button" onclick="changeText()">Click if you like</button>
+                </div>
+                <div class="col-sm-4 text-center" style="background-color:yellow;">
+                    (Feature 1)
                 </div>
             </div>
-        </div>
-    </main>
-    <!--↑↑↑↑↑↑↑↑↑↑ Make sure all your content is above this line ↑↑↑↑↑↑↑↑↑↑-->
 
+            <!-- Row 2: Mouseover effect -->
+            <div class="row my-2">
+                <div class="col-sm-12 text-center">
+                    <button 
+                        onmouseover="changeColorOnHover(this)" 
+                        onmouseout="revertColor(this)" 
+                        style="background-color: orange;">
+                        Hover Over Me
+                    </button>
+                    (Feature 2)
+                </div>
+            </div>
 
-    <!---------------------------------- Begin the footer ------------->
-    <footer class="small text-center" id="footer">
-        <p>
-            Webpage made by <a href="index.html" target="_blank">[your name]</a>
-        </p>
-    </footer>
-    <!---------------------------------- End the footer ------------->
-</body>
+            <!-- Row 3: Image change -->
+            <div class="row my-2">
+                <div class="col-sm-12 text-center">
+                    <img id="myImage" src="https://via.placeholder.com/150" alt="Image">
+                    <br><button onclick="changeImage()">Change Image</button>
+                    (Feature 3)
+                </div>
+            </div>
 
-</html>
+            <!-- Row 4: Show date -->
+            <div class="row my-2">
+                <div class="col-sm-12 text-center">
+                    <button onclick="showDate()">Show Current Date</button>
+                    <p id="dateDisplay"></p>
+                    (Feature 4)
+                </div>
+            </div>
+
+            <!-- Row 5: Toggle text -->
+            <div class="row my-2">
+                <div class="col-sm-12 text-center">
+                    <button onclick="toggleText()">Toggle Text</button>
+                    <p id="togglePara">Now you see me!</p>
+                    (Feature 5)
+                </div>
