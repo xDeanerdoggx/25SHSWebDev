@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Demo</title>
+    <script src="JS/script.js" defer></script>
+</head>
+<body>
+
+    <center>
+        <p id="textChange">My name is User 25</p>
+        <button type="button" onclick="changeText()">Click if you like</button>
+    </center>
+
+    <hr>
+
+    <!-- Greet user -->
+    <div>
+        <input type="text" id="nameInput" oninput="greetUser()" placeholder="Type your name" />
+        <p id="greeting"></p>
+    </div>
+
+    <!-- Hover effect -->
+    <div>
+        <p id="hoverText" onmouseover="hoverEffect()" onmouseout="resetHover()">Hover text will change</p>
+    </div>
+
+    <!-- Change background color -->
+    <div>
+        <button onclick="changeColor()">Change Background Color</button>
+    </div>
+
+    <!-- Toggle image display -->
+    <div>
+        <button onclick="toggleImage()">Show/Hide Image</button><br>
+        <img src=Cutecat.jpg alt="Cute Cat" width="300">
+
+    </div>
+
+    <!-- Add two numbers -->
+    <div>
+        <input type="number" id="number1" placeholder="Enter number 1" />
+        <input type="number" id="number2" placeholder="Enter number 2" />
+        <button onclick="addNumbers()">Add</button>
+        <p id="sumResult"></p>
+    </div>
+
+</body>
+</html>
