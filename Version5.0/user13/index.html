@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Version 5.0
+    Name: [Danylo Kovalenko]
+    Date Completed: [6.1.2025]
+-->
+
+<head>
+    <title>Bootstrap Examples</title>
+
+    <!-- Homepage meta data -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="SHS WebDev Version 5.0 - Index Bootstrap Examples">
+
+    <!-- CSS -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Custom -->
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <!-- Internal CSS Overrides -->
+    <style>
+        .table-striped > tbody > tr:nth-of-type(odd) > * {
+            --bs-table-color-type: var(--bs-table-striped-color);
+            --bs-table-bg-type: rgba(255, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body class="container py-4">
+    <h1 class="mb-4">Bootstrap 5 Examples</h1>
+
+    <!-- Bootstrap Grid Examples -->
+    <div class="row mb-3">
+        <div class="col-md-6 bg-info text-white p-3">.col-md-6</div>
+        <div class="col-md-6 bg-primary text-white p-3">.col-md-6</div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-md-4 bg-warning text-dark p-3">.col-md-4</div>
+        <div class="col-md-8 bg-success text-white p-3">.col-md-8</div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-md-3 bg-danger text-white p-3">.col-md-3</div>
+        <div class="col-md-9 bg-secondary text-white p-3">.col-md-9</div>
+    </div>
+
+    <!-- Auto Layout -->
+    <div class="row mb-3">
+        <div class="col bg-light border p-3">Auto 1</div>
+        <div class="col bg-light border p-3">Auto 2</div>
+        <div class="col bg-light border p-3">Auto 3</div>
+    </div>
+
+    <!-- Flexible Layout -->
+    <div class="row mb-3">
+        <div class="col-md-4 col-sm-12 bg-dark text-white p-3">Flexible 1</div>
+        <div class="col-md-4 col-sm-12 bg-secondary text-white p-3">Flexible 2</div>
+        <div class="col-md-4 col-sm-12 bg-dark text-white p-3">Flexible 3</div>
+    </div>
+
+    <!-- Striped Table -->
+    <h2>Striped Table</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Row</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Clark</td>
+                <td>Kent</td>
+                <td>clarkkent@mail.com</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>John</td>
+                <td>Carter</td>
+                <td>johncarter@mail.com</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Peter</td>
+                <td>Parker</td>
+                <td>peterparker@mail.com</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- List Group -->
+    <h2>List Group with Links</h2>
+    <div class="list-group mb-4">
+        <a href="#" class="list-group-item list-group-item-action active">
+            <i class="fa fa-home"></i> Home
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+            <i class="fa fa-camera"></i> Pictures <span class="badge bg-secondary float-end">145</span>
+        </a>
+        <a href="https://www.spotify.com/" target="_blank" class="list-group-item list-group-item-action">
+            <i class="fa fa-music"></i> Music <span class="badge bg-secondary float-end">50</span>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+            <i class="fa fa-film"></i> Videos <span class="badge bg-secondary float-end">8</span>
+        </a>
+    </div>
+
+    <!-- Button linking to form.html -->
+    <a href="form.html" class="btn btn-success btn-lg" role="button" aria-pressed="true">Form Page</a>
+</body>
+</html>
