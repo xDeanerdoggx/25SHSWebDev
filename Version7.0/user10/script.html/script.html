@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Version 7.0
+    Name: [Your Name]
+    Date Completed: [Date]
+-->
+
+<head>
+    <title>JavaScript</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="SHS WebDev JavaScript Practice">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    <!-- Link to your external JS file -->
+    <script src="JS/script.js"></script>
+
+    <style>
+        .newStyle {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="menu">
+        <nav class="navbar navbar-expand-md p-2 navbar-dark bg-dark">
+            <a href="http://shakonet.isd720.com/WebDev" class="navbar-brand">WebDev</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="#" class="nav-item nav-link">About Me</a>
+                    <a href="#" class="nav-item nav-link disabled">Music</a>
+                    <a href="#" class="nav-item nav-link disabled">Lists</a>
+                    <a href="games.html" class="nav-item nav-link">Games</a>
+                    <a href="bootstrap.html" class="nav-item nav-link">Bootstrap</a>
+                    <a href="script.html" class="nav-item nav-link active">JavaScript</a>
+                    <a href="mailto:sample@gmail.com?Subject=Hello" class="nav-item nav-link disabled">Contact</a>
+                </div>
+                <div class="navbar-nav ms-auto">
+                    <a href="#" class="nav-item nav-link disabled">Login</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Page Content -->
+    <main class="m-3" id="content">
+        <h1 class="text-left my-3">My JavaScript Examples</h1>
+
+        <div class="container-fluid">
+            <!-- Feature 1: Text Change -->
+            <div class="row my-3">
+                <div class="col-sm-4 bg-warning text-center p-3">
+                    <p id="textChange">My name is User ##</p>
+                    <button onclick="changeText()">Click if you like</button>
+                </div>
+
+                <!-- Feature 2: Mouse Over -->
+                <div class="col-sm-4 bg-orange text-center p-3">
+                    <p id="hoverText" onmouseover="mouseOver()" onmouseout="mouseOut()">Hover over me!</p>
+                </div>
+
+                <!-- Feature 3: Double Click -->
+                <div class="col-sm-4 bg-warning text-center p-3">
+                    <p ondblclick="doubleClick()">Double-click me!</p>
+                </div>
+            </div>
+
+            <!-- Additional Features Placeholder -->
+            <div class="row my-3">
+                <div class="col-sm-4 bg-light text-center p-3">
+                    <button onclick="changeBackground()">Change Background</button>
+                </div>
+                <div class="col-sm-4 bg-light text-center p-3">
+                    <button onclick="increaseFont()">Increase Font Size</button>
+                </div>
+                <div class="col-sm-4 bg-light text-center p-3">
+                    <button onclick="toggleVisibility()">Toggle Visibility</button>
+                    <p id="hideMe">Now you see me!</p>
+                </div>
+            </div>
+
+            <div class="row my-3">
+                <div class="col-sm-4 bg-light text-center p-3">
+                    <img id="imageSwap" src="https://via.placeholder.com/100" onclick="swapImage()" alt="Click to swap">
+                </div>
+                <div class="col-sm-4 bg-light text-center p-3">
+                    <button onclick="showAlert()">Show Alert</button>
+                </div>
+                <div class="col-sm-4 bg-light text-center p-3">
+                    <form onsubmit="return validateForm()">
+                        <input type="text" id="nameField" placeholder="Enter your name">
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="small text-center" id="footer">
+        <p>Webpage made by <a href="index.html" target="_blank">[Your Name]</a></p>
+    </footer>
+</body>
+</html>
+
+ 
