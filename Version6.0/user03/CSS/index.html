@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Theme Toggle Example</title>
+    <style>
+        body {
+            background-color: lightblue;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            margin: 20px auto;
+        }
+
+        th, td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        td {
+            background-color: white;
+        }
+
+        .buttons {
+            text-align: center;
+            margin: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .light-btn {
+            background-color: #f0f0f0;
+        }
+
+        .dark-btn {
+            background-color: #333;
+            color: white;
+        }
+    </style>
+
+    <!-- jQuery from CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+    <h2 style="text-align:center;">Student Table</h2>
+
+    <!-- Buttons -->
+    <div class="buttons">
+        <button class="light-btn" id="lightMode">Light Mode</button>
+        <button class="dark-btn" id="darkMode">Dark Mode</button>
+    </div>
+
+    <!-- Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>How I Would Rate Their Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Alice</td>
+                <td>C-</td>
+            </tr>
+            <tr>
+                <td>Bob</td>
+                <td>A+</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- jQuery to handle theme change -->
+    <script>
+        $(document).ready(function(){
+            $('td').css('color', 'blue');
+
+            $('#lightMode').click(function() {
+                $('body').css({
+                    'background-color': 'lightblue',
+                    'color': 'black'
+                });
+            });
+
+            $('#darkMode').click(function() {
+                $('body').css({
+                    'background-color': '#121212',
+                    'color': 'white'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
