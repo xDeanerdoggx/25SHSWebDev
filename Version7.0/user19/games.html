@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Games Web Dev</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .tab-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .tabs {
+            display: flex;
+            background: #333;
+        }
+        
+        .tab {
+            padding: 15px 25px;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .tab.active {
+            background: #4CAF50;
+        }
+        
+        .tab:hover:not(.active) {
+            background: #555;
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 20px;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .game-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        
+        .game-controls {
+            margin-bottom: 15px;
+        }
+        
+        .game-controls button {
+            padding: 8px 15px;
+            margin: 0 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        canvas {
+            border: 2px solid #333;
+            background: white;
+        }
+        
+        .score-display {
+            margin-top: 15px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        #responseTest {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        #responseTest p {
+            margin-bottom: 15px;
+        }
+        
+        #pongCanvas {
+            background: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tab-container">
+        <div class="tabs">
+            <div class="tab active" onclick="openTab('response')">Response Test</div>
+            <div class="tab" onclick="openTab('snake')">Snake Game</div>
+            <div class="tab" onclick="openTab('pong')">Pong Game</div>
+        </div>
+
+        <!-- Response Time Test -->
+        <div id="response" class="tab-content active">
+            <div id="responseTest">
+                <p>Test your Response time!</p>
+                <p>Click on "Start" first, and wait until the background color changes. As soon as it changes, hit "stop!"</p>
+
+                <form name="response">
+                    Change background color in:
+                    <select name="bgColorChange">
+                        <option selected>deeppink
+                        <option>aliceblue
+                        <option>crimson
+                        <option>darkkhaki
+                        <option>cadetblue
+                        <option>darkorchid
+                        <option>coral
+                    </select>
+                    <input type="button" value="start" onClick="startit()">
+                    <input type="button" value="stop" onClick="stopTest()">
+                </form>
+            </div>
+        </div>
+
+        <!-- Snake Game -->
+        <div id="snake" class="tab-content">
+            <div class="game-container">
+                <h1>Snake Game</h1>
+                <div class="game-controls">
+                    <button id="startBtn">Start Game</button>
+                    <button id="stopBtn" disabled>Stop Game</button>
+                </div>
+                <canvas width="400" height="400" id="snakeCanvas"></canvas>
+                <div class="score-display">Score: <span id="score">0</span></div>
+            </div>
+        </div>
+
+        <!-- Pong Game -->
+        <div id="pong" class="tab-content">
+            <div class="game-container">
+                <h1>Pong Game</h1>
+                <canvas width="750" height="585" id="pongCanvas"></canvas>
+                <div class="game-controls">
+                    <p>Player 1: W (up), S (down) | Player 2: Arrow keys</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tab functionality
+        function openTab(tabName) {
+            const tabs = document.getElementsByClassName('tab');
+            const tabContents = document.getElementsByClassName('tab-content');
+
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('active');
+                tabContents[i].classList.remove('active');
+            }
+
+            document.getElementById(tabName).classList.add('active');
+            event.currentTarget.classList.add('active');
+
+            // Pause snake game when switching tabs
+            if (tabName !== 'snake' && snakeGameRunning) {
+                snakeStopGame();
+            }
+        }
+
+        // Response Time Test Game
+        var startTime = new Date();
+        var endTime = new Date();
+        var startPressed = false;
+        var bgChangeStarted = false;
+        var maxWait = 20;
+        var timerID;
+
+        function startTest() {
+            document.body.style.background = document.response.bgColorChange.options[document.response.bgColorChange.selectedIndex].text;
+            bgChangeStarted = true;
+            startTime = new Date();
+        }
+
+        function remark(responseTime) {
+            var responseString = "";
+            if (responseTime < 0.20)
+                responseString = "Well done!";
+            if (responseTime >= 0.20 && responseTime < 0.30)
+                responseString = "Nice!";
+            if (responseTime >= 0.40 && responseTime < 0.50)
+                responseString = "Could be better...";
+            if (responseTime >= 0.50 && responseTime < 0.80)
+                responseString = "Keep practicing!";
+            if (responseTime >= 0.80 && responseTime < 1.1)
+                responseString = "Have you been day dreaming again?";
+            if (responseTime >= 1.1)
+                responseString = "Did you fall asleep?";
+            return responseString;
+        }
+
+        function stopTest() {
+            if (bgChangeStarted) {
+                endTime = new Date();
+                var responseTime = (endTime.getTime() - startTime.getTime()) / 1000;
+
+                document.body.style.background = "#f5f5f5";
+                alert("Your response time is: " + responseTime + " seconds " + "\n" + remark(responseTime));
+                startPressed = false;
+                bgChangeStarted = false;
+            } else {
+                if (!startPressed) {
+                    alert("press start first to start test");
+                } else {
+                    clearTimeout(timerID);
+                    startPressed = false;
+                    alert("cheater! you pressed too early!");
+                }
+            }
+        }
+
+        var randMULTIPLIER = 0x015a4e35;
+        var randINCREMENT = 1;
+        var today = new Date();
+        var randSeed = today.getSeconds();
+
+        function randNumber() {
+            randSeed = (randMULTIPLIER * randSeed + randINCREMENT) % (1 << 31);
+            return ((randSeed >> 15) & 0x7fff) / 32767;
+        }
+
+        function startit() {
+            if (startPressed) {
+                alert("Already started. Press stop to stop");
+                return;
+            } else {
+                startPressed = true;
+                timerID = setTimeout('startTest()', 6000 * randNumber());
+            }
+        }
+
+        // Snake Game
+        const snakeCanvas = document.getElementById('snakeCanvas');
+        const snakeContext = snakeCanvas.getContext('2d');
+        const scoreElement = document.getElementById('score');
+
+        const grid = 16;
+        let count = 0;
+        let score = 0;
+        let snakeGameRunning = false;
+        let snakeAnimationFrameId = null;
+
+        const snake = {
+            x: 160,
+            y: 160,
+            dx: grid,
+            dy: 0,
+            cells: [],
+            maxCells: 4
+        };
+
+        let foods = [];
+        const foodCount = 5;
+        const foodColors = ['#FF5252', '#4CAF50', '#2196F3', '#FFC107', '#9C27B0'];
+
+        function snakeInitGame() {
+            snake.x = 160;
+            snake.y = 160;
+            snake.cells = [];
+            snake.maxCells = 4;
+            snake.dx = grid;
+            snake.dy = 0;
+            score = 0;
+            scoreElement.textContent = score;
+            snakeInitFoods();
+        }
+
+        function snakeInitFoods() {
+            foods = [];
+            for (let i = 0; i < foodCount; i++) {
+                snakeAddNewFood();
+            }
+        }
+
+        function snakeAddNewFood() {
+            foods.push({
+                x: getRandomInt(0, 25) * grid,
+                y: getRandomInt(0, 25) * grid,
+                color: foodColors[Math.floor(Math.random() * foodColors.length)],
+                value: Math.floor(Math.random() * 2) + 1
+            });
+        }
+
+        function snakeLoop() {
+            if (!snakeGameRunning) return;
+
+            snakeAnimationFrameId = requestAnimationFrame(snakeLoop);
+
+            if (++count < 4) {
+                return;
+            }
+
+            count = 0;
+            snakeContext.clearRect(0, 0, snakeCanvas.width, snakeCanvas.height);
+
+            snake.x += snake.dx;
+            snake.y += snake.dy;
+
+            if (snake.x < 0) {
+                snake.x = snakeCanvas.width - grid;
+            } else if (snake.x >= snakeCanvas.width) {
+                snake.x = 0;
+            }
+
+            if (snake.y < 0) {
+                snake.y = snakeCanvas.height - grid;
+            } else if (snake.y >= snakeCanvas.height) {
+                snake.y = 0;
+            }
+
+            snake.cells.unshift({
+                x: snake.x,
+                y: snake.y
+            });
+
+            if (snake.cells.length > snake.maxCells) {
+                snake.cells.pop();
+            }
+
+            foods.forEach(food => {
+                snakeContext.fillStyle = food.color;
+                snakeContext.fillRect(food.x, food.y, grid - 1, grid - 1);
+            });
+
+            snakeContext.fillStyle = '#2E7D32';
+            snake.cells.forEach(function(cell, index) {
+                snakeContext.fillRect(cell.x, cell.y, grid - 1, grid - 1);
+
+                foods.forEach((food, foodIndex) => {
+                    if (cell.x === food.x && cell.y === food.y) {
+                        snake.maxCells += food.value;
+                        score += food.value;
+                        scoreElement.textContent = score;
+
+                        foods.splice(foodIndex, 1);
+                        snakeAddNewFood();
+                    }
+                });
+
+                for (var i = index + 1; i < snake.cells.length; i++) {
+                    if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {
+                        snakeStopGame();
+                        alert('Game Over! Your score: ' + score);
+                        snakeInitGame();
+                    }
+                }
+            });
+        }
+
+        function snakeStartGame() {
+            if (snakeGameRunning) return;
+
+            snakeGameRunning = true;
+            document.getElementById('startBtn').disabled = true;
+            document.getElementById('stopBtn').disabled = false;
+            snakeInitGame();
+            snakeLoop();
+        }
+
+        function snakeStopGame() {
+            snakeGameRunning = false;
+            document.getElementById('startBtn').disabled = false;
+            document.getElementById('stopBtn').disabled = true;
+            if (snakeAnimationFrameId) {
+                cancelAnimationFrame(snakeAnimationFrameId);
+                snakeAnimationFrameId = null;
+            }
+        }
+
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (!snakeGameRunning) return;
+
+            if (e.which === 37 && snake.dx === 0) {
+                snake.dx = -grid;
+                snake.dy = 0;
+            } else if (e.which === 38 && snake.dy === 0) {
+                snake.dy = -grid;
+                snake.dx = 0;
+            } else if (e.which === 39 && snake.dx === 0) {
+                snake.dx = grid;
+                snake.dy = 0;
+            } else if (e.which === 40 && snake.dy === 0) {
+                snake.dy = grid;
+                snake.dx = 0;
+            } else if (e.which === 32) {
+                if (snakeGameRunning) {
+                    snakeStopGame();
+                } else {
+                    snakeStartGame();
+                }
+            }
+        });
+
+        document.getElementById('startBtn').addEventListener('click', snakeStartGame);
+        document.getElementById('stopBtn').addEventListener('click', snakeStopGame);
+
+        snakeInitGame();
+
+        // Pong Game
+        const pongCanvas = document.getElementById('pongCanvas');
+        const pongContext = pongCanvas.getContext('2d');
+        const pongGrid = 15;
+        const paddleHeight = pongGrid * 5;
+        const maxPaddleY = pongCanvas.height - pongGrid - paddleHeight;
+
+        let paddleSpeed = 6;
+        let ballSpeed = 5;
+
+        const leftPaddle = {
+            x: pongGrid * 2,
+            y: pongCanvas.height / 2 - paddleHeight / 2,
+            width: pongGrid,
+            height: paddleHeight,
+            dy: 0
+        };
+
+        const rightPaddle = {
+            x: pongCanvas.width - pongGrid * 3,
+            y: pongCanvas.height / 2 - paddleHeight / 2,
+            width: pongGrid,
+            height: paddleHeight,
+            dy: 0
+        };
+
+        const ball = {
+            x: pongCanvas.width / 2,
+            y: pongCanvas.height / 2,
+            width: pongGrid,
+            height: pongGrid,
+            resetting: false,
+            dx: ballSpeed,
+            dy: -ballSpeed
+        };
+
+        function collides(obj1, obj2) {
+            return obj1.x < obj2.x + obj2.width &&
+                obj1.x + obj1.width > obj2.x &&
+                obj1.y < obj2.y + obj2.height &&
+                obj1.y + obj1.height > obj2.y;
+        }
+
+        function pongLoop() {
+            requestAnimationFrame(pongLoop);
+            pongContext.clearRect(0, 0, pongCanvas.width, pongCanvas.height);
+
+            leftPaddle.y += leftPaddle.dy;
+            rightPaddle.y += rightPaddle.dy;
+
+            if (leftPaddle.y < pongGrid) {
+                leftPaddle.y = pongGrid;
+            } else if (leftPaddle.y > maxPaddleY) {
+                leftPaddle.y = maxPaddleY;
+            }
+
+            if (rightPaddle.y < pongGrid) {
+                rightPaddle.y = pongGrid;
+            } else if (rightPaddle.y > maxPaddleY) {
+                rightPaddle.y = maxPaddleY;
+            }
+
+            pongContext.fillStyle = 'white';
+            pongContext.fillRect(leftPaddle.x, leftPaddle.y, leftPaddle.width, leftPaddle.height);
+            pongContext.fillRect(rightPaddle.x, rightPaddle.y, rightPaddle.width, rightPaddle.height);
+
+            if (!ball.resetting) {
+                ball.x += ball.dx;
+                ball.y += ball.dy;
+            }
+
+            if (ball.y < pongGrid) {
+                ball.y = pongGrid;
+                ball.dy *= -1;
+            } else if (ball.y + pongGrid > pongCanvas.height - pongGrid) {
+                ball.y = pongCanvas.height - pongGrid * 2;
+                ball.dy *= -1;
+            }
+
+            if ((ball.x < 0 || ball.x > pongCanvas.width) && !ball.resetting) {
+                ball.resetting = true;
+                setTimeout(() => {
+                    ball.resetting = false;
+                    ball.x = pongCanvas.width / 2;
+                    ball.y = pongCanvas.height / 2;
+                    ball.dx = ballSpeed * (ball.x < 0 ? 1 : -1);
+                    ball.dy = -ballSpeed;
+                }, 400);
+            }
+
+            if (collides(ball, leftPaddle)) {
+                ball.dx *= -1;
+                ball.x = leftPaddle.x + leftPaddle.width;
+            } else if (collides(ball, rightPaddle)) {
+                ball.dx *= -1;
+                ball.x = rightPaddle.x - ball.width;
+            }
+
+            pongContext.fillRect(ball.x, ball.y, ball.width, ball.height);
+            pongContext.fillStyle = 'lightgrey';
+            pongContext.fillRect(0, 0, pongCanvas.width, pongGrid);
+            pongContext.fillRect(0, pongCanvas.height - pongGrid, pongCanvas.width, pongCanvas.height);
+
+            for (let i = pongGrid; i < pongCanvas.height - pongGrid; i += pongGrid * 2) {
+                pongContext.fillRect(pongCanvas.width / 2 - pongGrid / 2, i, pongGrid, pongGrid);
+            }
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.which === 38) {
+                rightPaddle.dy = -paddleSpeed;
+            } else if (e.which === 40) {
+                rightPaddle.dy = paddleSpeed;
+            }
+
+            if (e.which === 87) {
+                leftPaddle.dy = -paddleSpeed;
+            } else if (e.which === 83) {
+                leftPaddle.dy = paddleSpeed;
+            }
+        });
+
+        document.addEventListener('keyup', function(e) {
+            if (e.which === 38 || e.which === 40) {
+                rightPaddle.dy = 0;
+            }
+
+            if (e.which === 83 || e.which === 87) {
+                leftPaddle.dy = 0;
+            }
+        });
+
+        pongLoop();
+    </script>
+</body>
+
+</html>
