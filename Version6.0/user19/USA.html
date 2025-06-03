@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Version 4.0
+        Name:
+        Date Completed:
+    -->
+
+<head>
+
+    <title>UFA</title>
+    <link rel="icon" href="images/usaUlti.png" type="image/x-icon">
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="SHS WebDev Version 4.0 - Gallery">
+
+    <!-- CSS -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Custom -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/gallery.css">
+
+    <!-- JavaScript -->
+    <!-- These are needed to get the responsive menu to work -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Custom styles for this template -->
+    <style type="text/css">
+        footer {
+            font-size: 12px;
+            text-align: center;
+        }
+        
+        #rainbow {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!---------------------------------- Begin the nav-bar ------------->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand">Ultimate Frisbee</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav me-auto">
+                    <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Edit These Items in your NavBar ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="USA.html" class="nav-link active">USA-Ultimate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="UFA.html" class="nav-link active">UFA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="MNU.html" class="nav-link active">MN-Ultimate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="shako.html" class="nav-link active" tabindex="-1">Shakopee Ultimate</a>
+                    </li>
+                    <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Edit These Items in your NavBar ↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!---------------------------------- End the nav-bar ------------------------------------->
+
+    <main class="container-fluid mt-3">
+        <div class="center">
+            <img src="images/usaUlti.png" alt="USA Img">
+        </div>
+        <h4>USA Ultimate is a not-for-profit organization that serves as the governing body of the sport of ultimate (also known as ultimate Frisbee) in the United States. It was founded in 1979 as the Ultimate Players Association, but rebranded itself as
+            USA Ultimate on May 25, 2010. The United States Olympic Committee, empowered to govern amateur sport in the USA per the Ted Stevens Olympic and Amateur Sports Act of 1978, officially recognized USA Ultimate as a Recognized Sport Organization
+            on June 10, 2014.</h4>
+        <hr>
+        <h1 class="center">Learn More Below!</h1>
+
+
+        <!--FROM USAULTIMATE https://usaultimate.org/ -->
+        <style>
+            /* Main Navigation Styles */
+            
+            .nav-container {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                font-family: 'Open Sans', Arial, sans-serif;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+            
+            .nav-column {
+                flex: 1;
+                min-width: 200px;
+                margin: 0 10px 30px;
+            }
+            
+            .nav-group {
+                margin-bottom: 25px;
+            }
+            
+            .nav-header {
+                font-weight: 700;
+                font-size: 18px;
+                color: #2c3e50;
+                margin-bottom: 15px;
+                padding-bottom: 5px;
+                border-bottom: 2px solid #e74c3c;
+            }
+            
+            .nav-header a {
+                color: inherit;
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+            
+            .nav-header a:hover {
+                color: #e74c3c;
+            }
+            
+            .nav-links {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            
+            .nav-link {
+                margin-bottom: 8px;
+            }
+            
+            .nav-link a {
+                color: #34495e;
+                text-decoration: none;
+                font-size: 15px;
+                transition: all 0.2s;
+                display: block;
+                padding: 5px 0;
+            }
+            
+            .nav-link a:hover {
+                color: #e74c3c;
+                padding-left: 5px;
+            }
+            /* Footer Styles */
+            
+            .footer {
+                background: #2c3e50;
+                color: white;
+                padding: 30px 0;
+                text-align: center;
+                font-size: 14px;
+            }
+            
+            .footer-utilities {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+                flex-wrap: wrap;
+            }
+            
+            .utility-links a {
+                color: white;
+                margin: 0 10px;
+                text-decoration: none;
+            }
+            
+            .social-links {
+                display: flex;
+                gap: 15px;
+            }
+            
+            .social-links img {
+                height: 24px;
+                filter: brightness(0) invert(1);
+                transition: transform 0.3s;
+            }
+            
+            .social-links img:hover {
+                transform: scale(1.1);
+            }
+            
+            @media (max-width: 768px) {
+                .nav-column {
+                    min-width: 100%;
+                    margin-bottom: 20px;
+                }
+                .footer-utilities {
+                    flex-direction: column;
+                    gap: 20px;
+                }
+            }
+        </style>
+        </head>
+
+        <body>
+
+            <div class="nav-container">
+                <!-- Youth Column -->
+                <div class="nav-column">
+                    <div class="nav-group">
+                        <div class="nav-header"><a href="https://usaultimate.org/youth/">Youth</a></div>
+                        <ul class="nav-links">
+                            <li class="nav-link"><a href="https://usaultimate.org/youth/how-to-play/">How to Play</a></li>
+                            <li class="nav-link"><a href="https://usaultimate.org/youth/camps-clinics/">Camps & Clinics</a></li>
+                            <li class="nav-link"><a href="https://usaultimate.org/youth/how-to-compete/">How to Compete</a></li>
+                            <li class="nav-link"><a href="https://gum.usaultimate.org/">GUM: Girls' Ultimate Movement</a></li>
+                            <li class="nav-link"><a href="https://usaultimate.org/youth/school-based-events/">School-Based Events</a></li>
+                            <li class="nav-link"><a href="https://usaultimate.org/youth/club-events/">Club Events</a></li>
+                            <li class="nav-link"><a href="https://usaultimate.org/youth/club-championships/">Youth Club Championships</a></li>
+                            <li class="nav-link"><a href="https://usaultimate.org/athlete-safety/">Athlete Safety</a></li>
+                            <li class="nav-link"><a href="https://usaultimate.org/youth/parents/">Parents</a></li>
+                            <li class="nav-link"><a href="https://usaultimate.org/youth/team-organizers/">Team Organizers</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- College Column -->
+                <div class="nav-column">
+                    <div class="nav-group">
+                        <div class="nav-header"><a href="https://usaultimate.org/college/">College</a></div>
+                        <ul class="nav-links">
+                            <li class="nav-link"><a href="https://usaultimate.org/college/schedule/">Schedule</a></li>
+                            <li class="nav-link"><a href="https://usaultimate.org/college/rankings/">Rankings</a></li>
+                            <li class="nav-link"><a href="https://usaultimate.org/college/d1-awards/">D-I Awards</a></li>
+                            <li class="nav-link"><a href="https://usaultimate.org/college/d3-awards/">D-III Awards</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-group">
+                        <div class="nav-header"><a href="https://usaultimate.org/club/">Club</a></div>
+                        <ul class="nav-links">
+                            <li class="nav-link"><a href="https://usaultimate.org/club/schedule/">Schedule</a></li>
+                            <li class="nav-link"><a href="https://usaultimate.org/club/rankings/">Rankings</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Team USA Column -->
+                <div class="nav-column">
+                    <div class="nav-group">
+                        <div class="nav-header"><a href="https://usaultimate.org/team-usa/">Team USA</a></div>
+                        <ul class="nav-links">
+                            <li class="nav-link"><a href="https://usaultimate.org/team-usa/world-games/">World Games</a></li>
+                            <li class="nav-link"><a href="https://usaultimate.org/team-usa/world-championships/">World Championships</a></li>
+                            <li class="nav-link"><a href="https://usaultimate.org/team-usa/u24/">U24</a></li>
+                            <li class="nav-link"><a href="https://usaultimate.org/team-usa/u20/">U20</a></li>
+                            <li class="nav-link"><a href="https://usaultimate.org/team-usa/beach/">Beach</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-group">
+                        <div class="nav-header"><a href="https://usaultimate.org/masters-ultimate/">Masters</a></div>
+                    </div>
+
+                    <div class="nav-group">
+                        <div class="nav-header"><a href="https://usaultimate.org/beach-ultimate/">Beach</a></div>
+                    </div>
+                </div>
+
+                <!-- Discover Column -->
+                <div class="nav-column">
+                    <div class="nav-group">
+                        <div class="nav-header"><a href="https://usaultimate.org/discover-ultimate/">Discover</a></div>
+                        <ul class="nav-links">
+                            <li class="nav-link"><a href="https://usaultimate.org/watch/">Watch</a></li>
+                            <li class="nav-link"><a href="https://usaultimate.org/news/">News</a></li>
+                            <li class="nav-link"><a href="https://usaultimate.org/spirit-of-the-game/">Spirit of the Game</a></li>
+                            <li class="nav-link"><a href="https://usaultimate.org/equity-diversity-inclusion/">Equity, Diversity & Inclusion</a></li>
+                            <li class="nav-link"><a href="https://usaultimate.org/rules/">Rules of Ultimate</a></li>
+                        </ul>
+                    </div>
+
+
+
+                    <div class="nav-group">
+                        <div class="nav-header"><a href="https://play.usaultimate.org/">Events & Teams</a></div>
+                        <ul class="nav-links">
+                            <li class="nav-link"><a href="https://usaultimate.org/host-a-championship-event/">Bid for an Event</a></li>
+                            <li class="nav-link"><a href="https://play.usaultimate.org/events/tournament/">Event Calendar</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- About Column -->
+                <div class="nav-column">
+                    <div class="nav-group">
+                        <div class="nav-header"><a href="https://usaultimate.org/about/">About</a></div>
+                        <ul class="nav-links">
+                            <li class="nav-link"><a href="https://usaultimate.org/membership/">Membership</a></li>
+                            <li class="nav-link"><a href="https://usaultimate.org/programs/">Programs & Services</a></li>
+                            <li class="nav-link"><a href="https://usaultimate.org/coaches/">Coaches</a></li>
+                            <li class="nav-link"><a href="https://usaultimate.org/observers/">Observers</a></li>
+                            <li class="nav-link"><a href="https://usaultimate.org/sanctioning/">Sanctioning</a></li>
+
+                            <li class="nav-link"><a href="https://usaultimate.org/affiliate-program/">Affiliate Program</a></li>
+                            <li class="nav-link"><a href="https://usaultimate.org/state-based-organizations/">State-Based Organizations</a></li>
+                            <li class="nav-link"><a href="https://usaultimate.org/media-services/">Media Services</a></li>
+                            <li class="nav-link"><a href="https://usaultimate.org/strategicplan2024/">Strategic Plan</a></li>
+                            <li class="nav-link"><a href="https://usaultimate.org/about/contacts/">Contacts</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <div class="footer-utilities">
+                    <div class="copyright">
+                        <p>© 2024 USA Ultimate. All Rights Reserved.</p>
+                    </div>
+
+                    <div class="utility-links">
+                        <a href="https://usaultimate.org/site-map/">Site Map</a>
+                        <a href="https://usaultimate.org/privacy-policy/">Privacy Policy</a>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/usaultimate/"><img src="https://usaultimate.org/wp-content/uploads/2019/11/icon-facebook-red.svg" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/usaultimate/"><img src="https://usaultimate.org/wp-content/uploads/2019/11/icon-instagram-red.svg" alt="Instagram"></a>
+                        <a href="https://twitter.com/usaultimate/"><img src="https://usaultimate.org/wp-content/uploads/2019/11/icon-twitter-red.svg" alt="Twitter"></a>
+                        <a href="https://www.youtube.com/user/usaultimate/"><img src="https://usaultimate.org/wp-content/uploads/2019/11/icon-youtube-red.svg" alt="YouTube"></a>
+                    </div>
+                </div>
+            </footer>
+
+        </body>
+
+</html>
+<!-- Edit this line for the title of your page -->
+
+<!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Put your content below this line ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
+
+<!---------------------------------- Begin the footer ------------->
+
+<!---------------------------------- End the footer ------------->
+</body>
+
+</html>

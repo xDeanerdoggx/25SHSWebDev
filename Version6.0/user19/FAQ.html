@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset=utf-8>
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            width: 500px;
+            margin: auto;
+            text-align: center;
+            background-color: gray;
+        }
+        
+        dd {
+            margin: 0;
+            padding: 1em 0;
+        }
+        
+        dt {
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.5em;
+            line-height: 2em;
+            background: #e3e3e3;
+            border-bottom: 1px solid #c5c5c5;
+            border-top: 1px solid white;
+        }
+        
+        dt:first-child {
+            border-top: none;
+        }
+        
+        dt:nth-last-child(2) {
+            border-bottom: none;
+        }
+        
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="text-align: center;">Where FAQ?</h1>
+
+
+    <dl>
+        <dt>What Country?</dt>
+        <dd>United States</dd>
+        <dt>What State?</dt>
+        <dd>Minnesota</dd>
+        <dt>What County?</dt>
+        <dd>Scott</dd>
+        <dt>What City?</dt>
+        <dd>Shakopee</dd>
+        <dt>Where In Shakopee?</dt>
+        <dd>100 17th Ave W, Shakopee, MN 55379</dd>
+    </dl>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+    <script>
+        (function() {
+
+            $('dd').filter(':nth-child(n+4)').addClass('hide');
+
+            $('dl').on('mouseenter', 'dt', function() {
+                $(this)
+                    .next()
+                    .slideDown(200)
+                    .siblings('dd')
+                    .slideUp(200);
+            });
+        })();
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("p").dblclick(function() {
+                $(this).hide();
+            });
+        });
+    </script>
+
+
+    <p>If you double-click on me, I will disappear.</p>
+    <p>Click me away!</p>
+    <p>Click me too!</p>
+    <br>
+    <script>
+        $(document).ready(function() {
+            $("input").focus(function() {
+                $(this).css("background-color", "yellow");
+            });
+            $("input").blur(function() {
+                $(this).css("background-color", "green");
+            });
+        });
+    </script>
+    </head>
+
+    <body>
+
+        Name: <input type="text" name="fullname"><br> Email: <input type="text" name="email">
+    </body>
+
+</html>
