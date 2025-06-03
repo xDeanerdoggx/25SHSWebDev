@@ -1,52 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Games - Davin's Website</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <title>Games</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+    button {
+      font-size: 18px;
+      padding: 10px 20px;
+      margin: 10px;
+    }
+  </style>
 </head>
 <body>
-  <header class="bg-dark text-white p-3 text-center">
-    <h1>Games</h1>
-    <p>Kick back with some outdoor-style fun</p>
-  </header>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Home</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="music.html">Music</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
-          <li class="nav-item"><a class="nav-link" href="trapshooting.html">Trap Shooting</a></li>
-          <li class="nav-item"><a class="nav-link active" href="games.html">Games</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <h1>JavaScript Games</h1>
 
-  <main class="container my-5">
-    <h2>Try Out These Games</h2>
-    <p>Here are a few hunting or shooting games to keep you entertained:</p>
+  <!-- 🎮 Reaction Test Game -->
+  <h2>Reaction Test Game</h2>
+  <p>Click "Start" and wait for the background color to change. Then hit "Stop" as fast as you can!</p>
 
-    <ul>
-      <li><a href="https://www.crazygames.com/game/deer-hunter" target="_blank">🎯 Deer Hunter</a> - A classic-style hunting game.</li>
-      <li><a href="https://www.crazygames.com/game/bottle-shoot" target="_blank">🥤 Bottle Shoot</a> - Practice your aim by smashing bottles.</li>
-      <li><a href="https://www.crazygames.com/game/shooting-range" target="_blank">🔫 Shooting Range</a> - Test your accuracy on the range.</li>
-    </ul>
+  <form name="response">
+    Change background color to:
+    <select name="bgColorChange">
+      <option selected>deeppink</option>
+      <option>crimson</option>
+      <option>darkkhaki</option>
+      <option>cadetblue</option>
+      <option>darkorchid</option>
+    </select>
+    <input type="button" value="Start" onclick="startit()">
+    <input type="button" value="Stop" onclick="stopTest()">
+  </form>
 
-    <img src="../user27/images/image.png" alt="Forest background" class="img-fluid mt-4" />
-  </main>
+  <!-- 🧠 Rock, Paper, Scissors -->
+  <h2>Rock Paper Scissors</h2>
+  <p>Choose your move:</p>
+  <button onclick="play('rock')">Rock</button>
+  <button onclick="play('paper')">Paper</button>
+  <button onclick="play('scissors')">Scissors</button>
+  <p id="rpsResult"></p>
 
-  <footer class="bg-dark text-white text-center p-3 mt-5">
-    &copy; 2025 Davin's Website
-  </footer>
+  <!-- 🧮 Number Guessing Game -->
+  <h2>Guess the Number (1-10)</h2>
+  <input type="number" id="guess" placeholder="Enter number 1-10">
+  <button onclick="checkGuess()">Guess</button>
+  <p id="guessMessage"></p>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // ======================
+    // 🎮 Reaction Test Game
+    // ======================
+    var startTime = new Date();
+    var endTime = new Date();
+    var startPressed = false;
+    var bgChangeStarted = false;
+    var timerID;
+
+    function startTest() {
+      document.body.style.background = document.response.bgColorChange.value;
+      bgChangeStarted = true;
+      startTime = new Date();
+    }
+
+    function remark(responseTime) {
+      if (responseTime < 0.20) return "🔥 Fast!";
+      if (responseTime < 0.40) return "😊 Nice!";
+      if (responseTime < 0.60) return "😐 Okay...";
+      return "🐢 Too slow!";
+    }
+
+    function stopTest() {
+      if (bgChangeStarted) {
+        endTime = new Date();
+        var responseTime = (endTime.getTime() - startTime.getTime()) / 1000;
+        document.body.style.background = "#f0f0f0";
+        alert("Your reaction time: " + responseTime + "s\n" + remark(responseTime));
+        startPressed = false;
+        bgChangeStarted = false;
+      } else {
+        if (!startPressed) alert("Press Start first!");
+        else {
+          clearTimeout(timerID);
+          startPressed = false;
+          alert("Too soon! Try again.");
+        }
+      }
+    }
+
+    function randNumber() {
+      return Math.random();
+    }
+
+    function startit() {
+      if (startPressed) {
+        alert("Already started.");
+        return;
+      }
+      startPressed = true;
+      timerID = setTimeout(startTest, 3000 + 3000 * randNumber()); // 🎯 Change 1: Wait time randomized better
+    }
+
+    // ======================
+    // 🧠 Rock Paper Scissors
+    // ======================
+    function play(userChoice) {
+      const choices = ["rock", "paper", "scissors"];
+      const computer = choices[Math.floor(Math.random() * 3)];
+      let result = "";
+
+      if (userChoice === computer) result = "It's a draw!";
+      else if (
+        (userChoice === "rock" && computer === "scissors") ||
+        (userChoice === "scissors" && computer === "paper") ||
+        (userChoice === "paper" && computer === "rock")
+      ) result = "You win!";
+      else result = "Computer wins!";
+
+      // 🎯 Change 2: Show what both picked
+      document.getElementById("rpsResult").innerText = `You: ${userChoice} | Computer: ${computer} → ${result}`;
+    }
+
+    // ======================
+    // 🧮 Number Guessing Game
+    // ======================
+    const secretNumber = Math.floor(Math.random() * 10) + 1;
+    let guessAttempts = 0;
+
+    function checkGuess() {
+      const userGuess = parseInt(document.getElementById("guess").value);
+      guessAttempts++;
+      if (userGuess === secretNumber) {
+        document.getElementById("guessMessage").innerText = `🎉 Correct in ${guessAttempts} attempts!`;
+      } else {
+        // 🎯 Change 3: Hint system added
+        const hint = userGuess < secretNumber ? "Too low!" : "Too high!";
+        document.getElementById("guessMessage").innerText = `${hint} Try again.`;
+      }
+    }
+  </script>
+
 </body>
 </html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Fun Page</title>
+  <script src="JS/script.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .thank-you {
+      color: green;
+      font-weight: bold;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container text-center mt-5">
+    <div class="row">
+      <div class="col">
+        <p id="textChange">My name is User ##</p>
+        <button type="button" onclick="changeText()">Click if you like</button>
+      </div>
+    </div>
+
+    <!-- Add more JS features below in rows -->
+    <div class="row mt-4">
+      <div class="col">
+        <button onclick="changeBackground()">Change Background</button>
+      </div>
+      <div class="col">
+        <button onclick="showTime()">Show Time</button>
+        <p id="timeDisplay"></p>
+      </div>
+      <div class="col">
+        <button onclick="hideText()">Hide Text</button>
+        <button onclick="showText()">Show Text</button>
+      </div>
+      <div class="col">
+        <input type="text" id="nameInput" placeholder="Enter name">
+        <button onclick="greetUser()">Greet</button>
+        <p id="greetDisplay"></p>
+      </div>
+    </div>
+  </div>
+    <script>
+        // 1. Change text and add class
+        function changeText() {
+            var text = document.getElementById("textChange");
+            text.innerHTML = "Thanks for liking my Webpage!";
+            text.className = "thank-you";
+        }
+
+        // 2. Change background color
+        function changeBackground() {
+            document.body.style.backgroundColor = "#d0f0c0"; // light green
+        }
+
+        // 3. Display the current time
+        function showTime() {
+            let now = new Date();
+            document.getElementById("timeDisplay").innerHTML = now.toLocaleTimeString();
+        }
+
+        // 4. Hide and show text
+        function hideText() {
+            document.getElementById("textChange").style.display = "none";
+        }
+        function showText() {
+            document.getElementById("textChange").style.display = "block";
+        }
+
+        // 5. Greet user based on input
+        function greetUser() {
+            let name = document.getElementById("nameInput").value;
+            document.getElementById("greetDisplay").innerHTML = "Hello, " + name + "!";
+        }
+
+        // 6. Scrolling title effect
+        var space = " ";
+        var pos = 0;
+        var msg = "User 19";
+
+        function Scroll() {
+            document.title = msg.substring(pos, msg.length) + space + msg.substring(0, pos);
+            pos++;
+            if (pos > msg.length) pos = 0;
+            window.setTimeout(Scroll, 200);
+        }
+        Scroll();
+
+        // 7. Alert box on page load
+        window.onload = function() {
+            alert("Welcome to my dynamic JavaScript page!");
+        };
+
+        // 8. Change text color randomly
+        function changeTextColor() {
+            const colors = ["red", "blue", "purple", "orange"];
+            document.getElementById("textChange").style.color =
+                colors[Math.floor(Math.random() * colors.length)];
+        }
+    </script>
+    <button onclick="changeTextColor()">Random Text Color</button>
+</body>
+</html>
