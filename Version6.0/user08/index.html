@@ -56,6 +56,35 @@
             <p class="welcome">Welcome to the Dunguons and Dragons Character Creation Website (Player Handbook Only)</p>
         </div>
     </body>
+    <dl>
+        <dt>Do you like martal combat?</dt>
+        <dd>Try fighter, monk, rouge, or barbarian</dd>
+        <dt>Do you like spellcasting?</dt>
+        <dd>Try sorcerer, warlock, or wizard</dd>
+        <dt>Do you like both?</dt>
+        <dd>Try bard, cleric, druid, paladin, or ranger</dd>
+    </dl>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    
+    <script>
+    
+    (function() {
+        
+        $('dd').filter(':nth-child(n+4)').addClass('hide');
+    
+        $('dl').on('mouseenter', 'dt', function() {
+            $(this)
+                .next()
+                    .slideDown(200)
+                    .siblings('dd')
+                        .slideUp(200);
+        });
+    })();
+    
+    
+    </script>
     <main class="container-fluid mt-3">
 
         <!-- Edit this line for the title of your page -->

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <style>
+            .yell {
+                font-weight: bold;
+                font-size: small;
+            }
+            .hi {
+                background-color: aquamarine;
+            }
+        </style>
+        <script>
+            $(document).ready(function () {
+                $('li:first-child').addClass('yell');
+                $('li:last-child').addClass('hi');
+            });
+        </script>
+    </head>
+    <body>
+        <ul>
+            <li>lerroy jenkins</li>
+            <li>lerroy jenkins 2</li>
+            <li>lerroy jenkins 3</li>
+        </ul>
+
+    </body>
+</html> 
