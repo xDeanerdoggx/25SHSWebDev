@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styling with Buttons</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      transition: background-color 0.5s, color 0.5s;
+    }
+
+    .day-theme {
+      background-color: #f0f0f0;
+      color: #333;
+    }
+
+    .night-theme {
+      background-color: #333;
+      color: #f0f0f0;
+    }
+
+    .serif-font {
+      font-family: 'Georgia', serif;
+    }
+
+    .sans-serif-font {
+      font-family: 'Arial', sans-serif;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid #333;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+
+    .table-light {
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .table-dark {
+      background-color: #333;
+      color: #f9f9f9;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body class="day-theme sans-serif-font">
+
+  <h1>Styling My Website</h1>
+  <p>Click the buttons below to change the background, font, and table styles.</p>
+
+  <button id="dayButton">Day Mode</button>
+  <button id="nightButton">Night Mode</button>
+  <button id="serifFont">Serif Font</button>
+  <button id="sansSerifFont">Sans-Serif Font</button>
+  <button id="lightTable">Light Table</button>
+  <button id="darkTable">Dark Table</button>
+
+  <br>
+  <br>
+
+  <button id="dayButtonHover">light Mode-hover</button>
+  <button id="nightButtonHover">dark Mode-hover</button>  
+
+  <table id="exampleTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>City</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>25</td>
+        <td>New York</td>
+      </tr>
+      <tr>
+        <td>Jane</td>
+        <td>30</td>
+        <td>Los Angeles</td>
+      </tr>
+      <tr>
+        <td>Sam</td>
+        <td>22</td>
+        <td>Chicago</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#dayButton').click(function() {
+  $('body').removeClass('night-theme').addClass('day-theme');
+  $('#exampleTable').removeClass('table-dark').addClass('table-light');
+});
+
+$('#nightButton').click(function() {
+  $('body').removeClass('day-theme').addClass('night-theme');
+  $('#exampleTable').removeClass('table-light').addClass('table-light'); // still light
+});
+
+
+      $('#serifFont').click(function() {
+        $('body').removeClass('sans-serif-font').addClass('serif-font');
+      });
+
+      $('#sansSerifFont').click(function() {
+        $('body').removeClass('serif-font').addClass('sans-serif-font');
+      });
+
+      $('#lightTable').click(function() {
+        $('#exampleTable').removeClass('table-dark').addClass('table-light');
+      });
+
+      $('#darkTable').click(function() {
+        $('#exampleTable').removeClass('table-light').addClass('table-dark');
+      });
+
+      $('#dayButtonHover').hover(function() {
+        $('body').removeClass('night-theme').addClass('day-theme');
+      });
+
+      $('#nightButtonHover').hover(function() {
+        $('body').removeClass('day-theme').addClass('night-theme');
+      });
+
+      $('td').click(function(){
+        alert('You clicked a table data!');
+      })
+    });
+  </script>
+
+</body>
+</html>
