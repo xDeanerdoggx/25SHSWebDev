@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<title></title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<style> body{
+    width: 500px;
+        
+        margin: auto;
+        text-align: center;
+    }
+    
+    dl{
+    
+    }
+    
+    dd{
+    margin: 0;	    
+    padding: 1em 0;
+    }
+    
+    dt{
+    cursor: pointer;    	    
+    font-weight: bold;    
+    font-size : 1.5em;    
+    line-height: 2em;    
+    background: #e3e3e3;    
+    border-bottom: 1px solid #c5c5c5;    
+    border-top: 1px solid white;}
+    
+    dt:first-child { border-top: none; }
+    
+    dt:nth-last-child(2) { border-bottom: none; }
+    .hide { display: none;}
+    </style>
+<body>
+
+<dl>
+	<dt>Hello?</dt>
+	<dd>Do you love me?</dd>
+	<dt>Who's the brightest star you see?</dt>
+	<dd>It's me!</dd>
+	<dt>What's your name?</dt>
+	<dd>The Truth.</dd>
+	<dt>Do you know the Library?</dt>
+	<dd> Angela and her sickly sweet librarians are fools, every last one of them. They should never have crossed me. </dd>
+	<dt>Do you know the Hunters?</dt>
+	<dd>How could I forget thoese hopless souls?</dd>
+    <dt>The remnant trio?</dt>
+	<dd>Yuri is weak-hearted, Aya is a forgetful airhead, and Tomah deserved that <a href="Fool.html"> everything </a> happend to him.  </dd>
+    <dt>The Valiente siblings?</dt>
+	<dd>Aida is an addition fuled junkie, and Hugo is an annoying traitor who deserves to rot.</dd>
+    <dt>The Pequod?</dt>
+	<dd>Stubb is an arrogant idiot, Queequeg is a traitor, Starbuck is a flavorless doormat, and Pip is a disappointing runt.</dd>
+    <dt>The Parade?</dt>
+	<dd>Romero is a violent freak, and the bloodfiends are dreamless fools.</dd>
+    <dt>The Manager and the Guide?</dt>
+	<dd>Samjo is a blank canvus that isn’t worth anything, and Pilot was supossed to be the one. </dd>
+</dl>
+
+<img src="images/Subject of Observation.png">
+
+<script src="jquery-3.7.1.min.js"></script>
+
+
+<script>
+
+(function() {
+	
+	$('dd').filter(':nth-child(n+4)').addClass('hide');
+
+	$('dl').on('mouseenter', 'dt', function() {
+		$(this)
+			.next()
+				.slideDown(200)
+				.siblings('dd')
+					.slideUp(200);
+	});
+})();
+
+</script>
+
+</body>
+</html>

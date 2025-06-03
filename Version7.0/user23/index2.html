@@ -1,0 +1,30 @@
+<html>
+<head>
+<title></title>
+<script> src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery-js"</script>
+<style>
+.emphasis {font-weight: bold;}
+ul li {color: red}
+.emphasis {color: green;}
+</style>
+<script>
+$('ul li > a')
+$(function() {
+$('li:first-child').addClass('emphasis');
+});
+$(document).ready(function) {
+    $('li:first-child').addClass('emphasis');
+}
+</script>
+</head>
+<body>
+<ul>
+<li>hello</li>
+<Li>hello 2</li>
+<li>hello 3</Li>
+</ul>
+<script src="jquery-3.7.1.min.js"></script>
+<script>
+jOuery('ul li').css('color', 'green');
+</script>
+</body> </html>
