@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reaction Test Game</title>
+</head>
+<body>
+
+<p>Test your Response time!</p>
+<form name="response">
+  Change background color in: 
+  <select name="bgColorChange">
+    <option selected>deeppink</option>
+    <option>aliceblue</option>
+    <option>crimson</option>
+    <option>darkkhaki</option>
+    <option>cadetblue</option>
+    <option>darkorchid</option>
+    <option>coral</option>
+  </select>
+  <input type="button" value="start" onClick="startit()">
+  <input type="button" value="stop" onClick="stopTest()">
+  <input type="button" value="reset" onClick="resetGame()">
+</form>
+
+<script>
+var startTime=new Date();
+var endTime=new Date();
+var startPressed=false;
+var bgChangeStarted=false;
+var maxWait=20;
+var timerID;
+var attemptCount = 0;
+var totalTime = 0;
+
+function startTest() {
+  document.body.style.background=document.response.bgColorChange.options[document.response.bgColorChange.selectedIndex].text;
+  bgChangeStarted=true;
+  startTime=new Date();
+}
+
+function remark(responseTime) {
+  if (responseTime < 0.20) return "Well done!";
+  if (responseTime < 0.30) return "Nice!";
+  if (responseTime < 0.50) return "Could be better...";
+  if (responseTime < 0.80) return "Keep practicing!";
+  if (responseTime < 1.1) return "Daydreaming?";
+  return "Did you fall asleep?";
+}
+
+function stopTest() {
+  if (bgChangeStarted) {
+    endTime = new Date();
+    var responseTime = (endTime.getTime() - startTime.getTime()) / 1000;
+    attemptCount++;
+    totalTime += responseTime;
+    var avg = (totalTime / attemptCount).toFixed(3);
+    document.body.style.background = "white";
+    alert("Your response time: " + responseTime.toFixed(3) + " sec\n" + remark(responseTime) + "\nAverage: " + avg + " sec");
+    startPressed = false;
+    bgChangeStarted = false;
+  } else {
+    if (!startPressed) alert("Press start first.");
+    else {
+      clearTimeout(timerID);
+      startPressed = false;
+      alert("Too early! Cheater!");
+    }
+  }
+}
+
+function resetGame() {
+  attemptCount = 0;
+  totalTime = 0;
+  alert("Game reset!");
+}
+
+var randMULTIPLIER=0x015a4e35;
+var randINCREMENT=1;
+var today=new Date();
+var randSeed=today.getSeconds();
+
+function randNumber() {
+  randSeed = (randMULTIPLIER * randSeed + randINCREMENT) % (1 << 31);
+  return((randSeed >> 15) & 0x7fff) / 32767;
+}
+
+function startit() {
+  if(startPressed) {
+    alert("Already started.");
+    return;
+  } else {
+    startPressed = true;
+    timerID = setTimeout('startTest()', 6000 * randNumber());
+  }
+}
+</script>
+
+<!-- Game 2: Embedded Placeholder -->
+<h2>Mini Game 2: Snake</h2>
+<iframe src="https://playsnake.org/" width="400" height="300"></iframe>
+
+<!-- Game 3: Embedded Placeholder -->
+<h2>Mini Game 3: Flappy Bird</h2>
+<iframe src="https://flappybird.io/" width="400" height="300"></iframe>
+
+</body>
+</html>
