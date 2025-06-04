@@ -87,24 +87,25 @@
         </div>
         <div class="row text-center mt-4">
             <!-- Feature 1: select -->
+            <!DOCTYPE html>
             <html>
-                <head>
-                <script>
-                function myFunction() {
-                  document.getElementById("demo").innerHTML = "You selected some text";
-                }
-                </script>
-                </head>
-                <body>
-                <h1>JavaScript HTML Events</h1>
-                <h2>The onselect Attribute</h2>
-                
-                Some text: <input type="text" value="Hello world!" onselect="myFunction()">
-                <p id="demo"></p>
-                
-                </body>
-                </html>
-        
+            <head>
+            <script>
+            function myFunction() {
+              document.getElementById("demo").innerHTML = "You selected some text";
+            }
+            </script>
+            </head>
+            <body>
+            <h1>JavaScript HTML Events</h1>
+            <h2>The onselect Attribute</h2>
+            
+            Some text: <input type="text" value="Hello world!" onselect="myFunction()">
+            <p id="demo"></p>
+            
+            </body>
+            </html>
+            
             <!-- Feature 2: keyup attribute -->
             <html>
                 <body>
@@ -157,19 +158,32 @@
                 <p id="timeDisplay"></p>
             </div>
         
-            <!-- Feature 7: Image Toggle -->
-            <div class="col-sm-3">
-                <img id="toggleImg" src="https://via.placeholder.com/100" alt="Toggle" class="img-fluid mb-2">
-                <br>
-                <button onclick="toggleImage()" class="btn btn-secondary">Toggle Image</button>
-            </div>
-        
-            <!-- Feature 8: Alert Box -->
-            <div class="col-sm-3">
-                <button onclick="showAlert()" class="btn btn-danger">Show Alert</button>
-            </div>
-        </div>
-        
+            <!-- Feature 7: dropdown valule -->
+            <html>
+                <head>
+                <script>
+                function preferedBrowser() {
+                  prefer = document.forms[0].browsers.value;
+                  alert("You prefer browsing internet with " + prefer);
+                }
+                </script>
+                </head>
+                <body>
+                <h1>JavaScript HTML Events</h1>
+                <h2>The onchange Attribute</h2>
+                
+                <form>
+                Choose which browser you prefer:
+                  <select id="browsers" onchange="preferedBrowser()">
+                    <option value="Chrome">Chrome</option>
+                    <option value="Internet Explorer">Internet Explorer</option>
+                    <option value="Firefox">Firefox</option>
+                  </select>
+                </form>
+                
+                </body>
+                </html>
+                
     </main>
     <!--↑↑↑↑↑↑↑↑↑↑ Make sure all your content is above this line ↑↑↑↑↑↑↑↑↑↑-->
 
