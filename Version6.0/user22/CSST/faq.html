@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>FAQ - Odin's Game Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Frequently Asked Questions</h1>
+
+<dl>
+  <dt>What platforms does Stardew Valley run on?</dt>
+  <dd>It runs on PC, Mac, consoles, and mobile.</dd>
+
+  <dt>How do I boost FPS in Rust?</dt>
+  <dd>Use potato settings, lower resolution, and close background apps.</dd>
+
+  <dt>Can I run Steam games on a school MacBook?</dt>
+  <dd>Yes, with tools like Whisky and Wine.</dd>
+
+  <dt>What’s your favorite game?</dt>
+  <dd>Rainbow Six Siege — hands down.</dd>
+
+  <dt>How can I contact you?</dt>
+  <dd>Use the contact form on the Portfolio page.</dd>
+</dl>
+
+<button id="toggleAll">Toggle All Answers</button>
+<button id="highlight">Highlight All Questions</button>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+  (function() {
+    $('dd').filter(':nth-child(n+4)').addClass('hide');
+
+    $('dl').on('mouseenter', 'dt', function() {
+      $(this)
+        .next()
+        .slideDown(200)
+        .siblings('dd')
+        .slideUp(200);
+    });
+
+    // Extra jQuery #1: Toggle all answers
+    $('#toggleAll').click(function() {
+      $('dd').slideToggle();
+    });
+
+    // Extra jQuery #2: Highlight all questions
+    $('#highlight').click(function() {
+      $('dt').css('background', '#ffd54f');
+    });
+  })();
+</script>
+
+</body>
+</html>
