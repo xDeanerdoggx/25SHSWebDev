@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reaction Timer Game</title>
+</head>
+<body>
+  <p>Test your Response time!</p>
+  Click on "Start" first, and wait until the background color changes. As soon as it changes, hit "stop!"
+
+  <form name="response">
+    Change background color in:
+    <select name="bgColorChange">
+      <option selected>deeppink</option>
+      <option>aliceblue</option>
+      <option>crimson</option>
+      <option>darkkhaki</option>
+      <option>cadetblue</option>
+      <option>darkorchid</option>
+      <option>coral</option>
+    </select>
+    <input type="button" value="start" onClick="startit()">
+    <input type="button" value="stop" onClick="stopTest()">
+    <input type="button" value="reset" onClick="resetGame()">
+  </form>
+
+  <script>
+    var startTime = new Date();
+    var endTime = new Date();
+    var startPressed = false;
+    var bgChangeStarted = false;
+    var maxWait = 20;
+    var timerID;
+    var totalTime = 0;
+    var attempts = 0;
+
+    function startTest() {
+      document.body.style.background = document.response.bgColorChange.options[document.response.bgColorChange.selectedIndex].text;
+      bgChangeStarted = true;
+      startTime = new Date();
+    }
+
+    function remark(responseTime) {
+      if (responseTime < 0.20) return "Well done!";
+      if (responseTime < 0.30) return "Nice!";
+      if (responseTime < 0.50) return "Could be better...";
+      if (responseTime < 0.80) return "Keep practicing!";
+      if (responseTime < 1.1) return "Daydreaming again?";
+      return "Did you fall asleep?";
+    }
+
+    function stopTest() {
+      if (bgChangeStarted) {
+        endTime = new Date();
+        var responseTime = (endTime.getTime() - startTime.getTime()) / 1000;
+
+        totalTime += responseTime;
+        attempts++;
+
+        var average = (totalTime / attempts).toFixed(2);
+        document.body.style.background = "white";
+
+        alert("Your response time is: " + responseTime + " seconds\n" +
+              "Average: " + average + " seconds\n" +
+              remark(responseTime));
+
+        startPressed = false;
+        bgChangeStarted = false;
+      } else {
+        if (!startPressed) {
+          alert("Press start first!");
+        } else {
+          clearTimeout(timerID);
+          startPressed = false;
+          alert("Too early! You pressed before the change.");
+        }
+      }
+    }
+
+    function resetGame() {
+      totalTime = 0;
+      attempts = 0;
+      alert("Game stats have been reset.");
+    }
+
+    var randMULTIPLIER = 0x015a4e35;
+    var randINCREMENT = 1;
+    var today = new Date();
+    var randSeed = today.getSeconds();
+
+    function randNumber() {
+      randSeed = (randMULTIPLIER * randSeed + randINCREMENT) % (1 << 31);
+      return ((randSeed >> 15) & 0x7fff) / 32767;
+    }
+
+    function startit() {
+      if (startPressed) {
+        alert("Already started. Press stop to stop");
+        return;
+      } else {
+        startPressed = true;
+        timerID = setTimeout('startTest()', 6000 * randNumber());
+      }
+    }
+  </script>
+</body>
+</html>
