@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Trap Team FAQ</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		body {
+			width: 500px;
+			margin: auto;
+			text-align: center;
+			font-family: Arial, sans-serif;
+			background-color: #f9f9f9;
+			color: #333;
+		}
+
+		dt {
+			cursor: pointer;
+			font-weight: bold;
+			font-size: 1.5em;
+			line-height: 2em;
+			background: #e3e3e3;
+			border-bottom: 1px solid #c5c5c5;
+			border-top: 1px solid white;
+			padding: 0.5em;
+		}
+
+		dt:first-child {
+			border-top: none;
+		}
+
+		dd {
+			margin: 0;
+			padding: 1em 0;
+			display: none;
+		}
+
+		.hide {
+			display: none;
+		}
+
+		button {
+			margin-top: 20px;
+			padding: 10px 20px;
+			font-size: 1em;
+			cursor: pointer;
+		}
+
+		.dark-mode {
+			background-color: #1e1e1e;
+			color: white;
+		}
+
+		.dark-mode dt {
+			background: #333;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+
+	<h2>Trap Shooting Team FAQ</h2>
+
+	<dl>
+		<dt>When are trap shooting practices?</dt>
+		<dd>Practices are every Tuesday and Thursday at 4:00 PM.</dd>
+
+		<dt>Do I need my own shotgun?</dt>
+		<dd>No, we have a few team shotguns available to borrow.</dd>
+
+		<dt>Is prior experience required?</dt>
+		<dd>No experience needed! We train beginners from scratch.</dd>
+
+		<dt>Where are meets held?</dt>
+		<dd>Meets are held at the county range or hosted by other schools.</dd>
+
+		<dt>How do I join the team?</dt>
+		<dd>Contact the coach or visit our sign-up page under the Join Us tab.</dd>
+	</dl>
+
+	<button id="toggleTheme">Toggle Dark Mode</button>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		(function () {
+			// Hide some answers initially
+			$('dd').filter(':nth-child(n+4)').addClass('hide');
+
+			// FAQ hover interaction
+			$('dl').on('mouseenter', 'dt', function () {
+				$(this)
+					.next()
+					.slideDown(200)
+					.siblings('dd')
+					.slideUp(200);
+			});
+
+			// jQuery Extra Feature #1: Dark mode toggle
+			$('#toggleTheme').click(function () {
+				$('body').toggleClass('dark-mode');
+			});
+
+			// jQuery Extra Feature #2: Fade in FAQ section
+			$('dl').hide().fadeIn(1000);
+		})();
+	</script>
+
+</body>
+</html>
