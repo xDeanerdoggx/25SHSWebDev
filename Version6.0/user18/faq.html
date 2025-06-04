@@ -105,12 +105,50 @@
     </ul>
   </nav>
 
+  <!doctype html>
+  <html>
+  <head>
+      <meta charset=utf-8>
+      <title></title>
+      <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+  
+  <dl>
+      <dt>How do we rank music?</dt>
+      <dd>Scores are based off of critics and personal ranking.</dd>
+      <dt>How do you find songs to rank?</dt>
+      <dd>I go based off of music that I listen to personally and trending songs.</dd>
+      <dt>What are songs you won't rank?</dt>
+      <dd>It depends on how controversial.</dd>
+      
+  </dl>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+  
+  <script>
+  
+  (function() {
+      
+      $('dd').filter(':nth-child(n+4)').addClass('hide');
+  
+      $('dl').on('mouseenter', 'dt', function() {
+          $(this)
+              .next()
+                  .slideDown(200)
+                  .siblings('dd')
+                      .slideUp(200);
+      });
+  })();
+  
+  
+  </script>
+  
+  </body>
+  </html>
+
   <!-- Bootstrap Search Bar -->
-  <div class="container my-3">
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="WIP">
-    </div>
-  </div>
 
   <!-- Album Grid -->
   <div class="container my-4">
@@ -122,58 +160,10 @@
       <!-- Copy and paste below block for each album -->
       <!-- Replace the content inside as needed -->
       <!-- BEGIN ALBUM CARDS -->
-      <div class="col-md-3 mb-4">
-        <div class="album-card">
-          <img src="https://static.emastered.com/images/blog-assets/6548.webp?v=Y_SUfG6" alt="Shoegaze">
-          <h3>Shoegaze</h3>
-          <p>Defined by lush textures, heavy use of effects, and dreamy vocals, shoegaze creates a wall-of-sound aesthetic that's both loud and ethereal.</p>
-        </div>
-      </div>
-      
-      <div class="col-md-3 mb-4">
-        <div class="album-card">
-          <img src="https://i.scdn.co/image/ab67616d0000b273cc89f9e85b537f63d10f1911" alt="Post-Rock">
-          <h3>Alternative Rock</h3>
-          <p>Alternative rock, also known as alt-rock, is a genre of rock music that emerged from the independent music underground in the 1970s.</p>
-        </div>
-      </div>
-      
-      <div class="col-md-3 mb-4">
-        <div class="album-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/The_Apostle_%28148475115%29.jpeg/500px-The_Apostle_%28148475115%29.jpeg" alt="Ambient">
-          <h3>Ambient</h3>
-          <p>Focused on atmosphere and tone over rhythm or structure, ambient music uses subtle textures to evoke mood and space.</p>
-        </div>
-      </div>
-      
-      <div class="col-md-3 mb-4">
-        <div class="album-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Allo_Darlin%27_onstage_IndiePopDays_01_-_Berlin_Sept_2010.jpg/500px-Allo_Darlin%27_onstage_IndiePopDays_01_-_Berlin_Sept_2010.jpg" alt="Grime">
-          <h3>Indie Pop</h3>
-          <p>Indie pop is a music genre and subculture that combines guitar pop with a DIY ethic in opposition to the style and tone of mainstream pop music.</p>
-        </div>
-      </div>
-      
-      <div class="col-md-3 mb-4">
-        <div class="album-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/DJDS_at_Glastonbury.jpeg/500px-DJDS_at_Glastonbury.jpeg" alt="No Wave">
-          <h3>Breakcore</h3>
-          <p>Breakcore is a style of electronic dance music that emerged from jungle, hardcore, and drum and bass in the mid-to-late 1990s.</p>
-        </div>
-      </div>
-      
-      <div class="col-md-3 mb-4">
-        <div class="album-card">
-          <img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da845f918a9cc8787ad7884d5008" alt="Hyperpop">
-          <h3>Hyperpop</h3>
-          <p>Hyperpop is chaotic, loud, and internet-native — blending pop tropes with glitchy production, autotune, and genre-hopping madness.</p>
-        </div>
-      </div>
       
       <!-- END ALBUM CARDS -->
     </div>
   </div>
-
   <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
