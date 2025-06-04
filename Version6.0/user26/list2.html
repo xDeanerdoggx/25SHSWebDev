@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Baseball Madlib</title>
+</head>
+<body>
+  <h2>Fill in your Madlib:</h2>
+  <form id="madlibForm">
+    Noun: <input type="text" id="noun"><br>
+    Adjective: <input type="text" id="adjective"><br>
+    Verb: <input type="text" id="verb"><br>
+    <button type="button" onclick="generateMadlib()">Submit</button>
+  </form>
+  <p id="output"></p>
+
+  <script>
+    function generateMadlib() {
+      const noun = document.getElementById("noun").value;
+      const adjective = document.getElementById("adjective").value;
+      const verb = document.getElementById("verb").value;
+
+      const result = `These are my output words: ${noun}, ${adjective}, ${verb}.`;
+      document.getElementById("output").innerText = result;
+    }
+  </script>
+</body>
+</html>
