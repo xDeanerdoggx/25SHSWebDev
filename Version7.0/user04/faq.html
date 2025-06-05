@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>FAQ - SHS Gaming Hub</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		body {
+			width: 80%;
+			margin: auto;
+			font-family: 'Segoe UI', sans-serif;
+			background-color: #111;
+			color: #eee;
+			text-align: center;
+		}
+		dl {
+			margin-top: 30px;
+		}
+		dt {
+			cursor: pointer;
+			font-weight: bold;
+			font-size: 1.5em;
+			line-height: 2em;
+			background: #222;
+			border-bottom: 1px solid #444;
+			border-top: 1px solid #000;
+		}
+		dt:hover {
+			background: #333;
+		}
+		dd {
+			margin: 0;
+			padding: 1em 0;
+			background-color: #1a1a1a;
+			display: none;
+		}
+		.hide {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>Frequently Asked Questions</h1>
+
+	<dl>
+		<dt>What games do you support?</dt>
+		<dd>We support Minecraft, Roblox, Fortnite, and more!</dd>
+
+		<dt>How do I join the club?</dt>
+		<dd>Click the Join button on our homepage and fill out the form.</dd>
+
+		<dt>Are there any weekly events?</dt>
+		<dd>Yes! We host game nights every Friday at 6 PM.</dd>
+
+		<dt>Is this club beginner friendly?</dt>
+		<dd>Absolutely. Everyone is welcome, no matter your skill level.</dd>
+	</dl>
+
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<!-- FAQ jQuery -->
+	<script>
+		(function () {
+			$('dd').filter(':nth-child(n+4)').addClass('hide');
+
+			$('dl').on('mouseenter', 'dt', function () {
+				$(this)
+					.next()
+					.slideDown(300)
+					.siblings('dd')
+					.slideUp(300);
+			});
+		})();
+	</script>
+
+	<!-- Additional jQuery Functions -->
+
+	<!-- Change background color on double-click -->
+	<script>
+		$('body').on('dblclick', function () {
+			$('body').css('background-color', '#1f1f1f');
+		});
+	</script>
+
+	<!-- Animate FAQ header on hover -->
+	<script>
+		$('h1').hover(
+			function () {
+				$(this).animate({ fontSize: '3em' }, 300);
+			},
+			function () {
+				$(this).animate({ fontSize: '2em' }, 300);
+			}
+		);
+	</script>
+
+</body>
+</html>
