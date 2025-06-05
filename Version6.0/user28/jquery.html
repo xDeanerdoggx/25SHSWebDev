@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="CSS/day.css">
+
+        <style>
+        /* ul li {background-color: aquamarine;} */
+        .emphasis {background-color: greenyellow}
+        .header {color: red}
+        .table-styling {
+	margin-left: auto;
+	margin-right: auto;
+    background-color: rgb(17, 155, 54);
+}
+.table-font {
+	font-style: italic;
+}
+
+       
+
+        </style>
+ <script>
+
+    $(document).ready(function () {
+        $('h1').addClass('header')
+        $('li:first-child').addClass('emphasis');
+        $('li:last-child').addClass('hi');
+        $('table').addClass('table-styling')
+        $('td').addClass('table-font')
+        var link = $('link');
+        $('button').on('click',function() {
+            var $this = $(this)
+            var stylesheet = $this.data('file')
+            link.attr('href', 'CSS/' + stylesheet + '.css')
+            $this.siblings('button').removeAttr('disabled').end().attr('disabled','disabled')
+        });
+
+    });
+   
+    </script>
+    </head>
+    <body>
+        <ul>
+            <h1>Welcome</h1>
+            <li>hi this is imran</li>
+            <li>i like pizza</li>
+            <li>i like cookies</li>
+            <button data-file="day">Day</button>
+            <button data-file="night">Night</button>
+            <button data-file="pair1">pair #1</button>
+            <button data-file="pair2">pair #2</button>
+        </ul>
+        <table>
+            <thead>
+                <tr>
+                    <th>Favorite Snack</th>
+                    <th>Favorite Meal</th>
+                    <th>Favorite Drink</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr class="row-cream-color">
+                <td>Hot Cheetos</td>
+                <td>Pizza</td>
+                <td>Coke</td>
+
+            <tr class="row-orange-color">
+                <td>BBQ Chips</td>
+                <td>Wings</td>
+                <td>Sprite</td>
+
+            </tr>
+            <tr class="row-cream-color">
+                <td>Cheez Its</td>
+                <td>Mac n Cheese</td>   
+                <td>Fanta</td>
+       
+            </tr>
+
+           </tbody>
+        </table>
+       
+    </body>
+</html> 
