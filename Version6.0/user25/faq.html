@@ -1,109 +1,122 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Trap Team FAQ</title>
-	<link rel="stylesheet" href="style.css">
-	<style>
-		body {
-			width: 500px;
-			margin: auto;
-			text-align: center;
-			font-family: Arial, sans-serif;
-			background-color: #f9f9f9;
-			color: #333;
-		}
+  <meta charset="utf-8">
+  <title>Trap Team FAQ</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      width: 500px;
+      margin: auto;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      color: #222;
+    }
 
-		dt {
-			cursor: pointer;
-			font-weight: bold;
-			font-size: 1.5em;
-			line-height: 2em;
-			background: #e3e3e3;
-			border-bottom: 1px solid #c5c5c5;
-			border-top: 1px solid white;
-			padding: 0.5em;
-		}
+    dl {}
 
-		dt:first-child {
-			border-top: none;
-		}
+    dt {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.5em;
+      line-height: 2em;
+      background: #cce5ff;
+      border-bottom: 1px solid #99ccff;
+      border-top: 1px solid white;
+      padding: 10px;
+    }
 
-		dd {
-			margin: 0;
-			padding: 1em 0;
-			display: none;
-		}
+    dd {
+      margin: 0;
+      padding: 1em 0;
+      background-color: #e6f2ff;
+    }
 
-		.hide {
-			display: none;
-		}
+    dt:first-child {
+      border-top: none;
+    }
 
-		button {
-			margin-top: 20px;
-			padding: 10px 20px;
-			font-size: 1em;
-			cursor: pointer;
-		}
+    dt:nth-last-child(2) {
+      border-bottom: none;
+    }
 
-		.dark-mode {
-			background-color: #1e1e1e;
-			color: white;
-		}
+    .hide {
+      display: none;
+    }
 
-		.dark-mode dt {
-			background: #333;
-			color: #fff;
-		}
-	</style>
+    #themeToggle {
+      margin-top: 20px;
+      padding: 10px 15px;
+      font-size: 1em;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .dark-mode {
+      background-color: #1e1e1e;
+      color: white;
+    }
+
+    .dark-mode dt {
+      background: #333;
+      color: white;
+    }
+
+    .dark-mode dd {
+      background-color: #444;
+    }
+  </style>
 </head>
 <body>
 
-	<h2>Trap Shooting Team FAQ</h2>
+  <h2>Trap Shooting Team – Frequently Asked Questions</h2>
 
-	<dl>
-		<dt>When are trap shooting practices?</dt>
-		<dd>Practices are every Tuesday and Thursday at 4:00 PM.</dd>
+  <dl>
+    <dt>When are practices held?</dt>
+    <dd>We practice Tuesdays and Thursdays at 4:00 PM at the county range.</dd>
 
-		<dt>Do I need my own shotgun?</dt>
-		<dd>No, we have a few team shotguns available to borrow.</dd>
+    <dt>Can I join if I'm a beginner?</dt>
+    <dd>Yes! No experience is required. We welcome all skill levels.</dd>
 
-		<dt>Is prior experience required?</dt>
-		<dd>No experience needed! We train beginners from scratch.</dd>
+    <dt>Is gear provided?</dt>
+    <dd>We have team shotguns and safety equipment available for use.</dd>
 
-		<dt>Where are meets held?</dt>
-		<dd>Meets are held at the county range or hosted by other schools.</dd>
+    <dt>How do I sign up?</dt>
+    <dd>You can sign up during the activity fair or speak with Coach Jensen.</dd>
 
-		<dt>How do I join the team?</dt>
-		<dd>Contact the coach or visit our sign-up page under the Join Us tab.</dd>
-	</dl>
+    <dt>Are there competitions?</dt>
+    <dd>Yes, we compete in meets with local schools and regional events.</dd>
+  </dl>
 
-	<button id="toggleTheme">Toggle Dark Mode</button>
+  <button id="themeToggle">Toggle Dark Mode</button>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script>
-		(function () {
-			// Hide some answers initially
-			$('dd').filter(':nth-child(n+4)').addClass('hide');
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    (function () {
+      // FAQ toggle effect (from starter code)
+      $('dd').filter(':nth-child(n+4)').addClass('hide');
 
-			// FAQ hover interaction
-			$('dl').on('mouseenter', 'dt', function () {
-				$(this)
-					.next()
-					.slideDown(200)
-					.siblings('dd')
-					.slideUp(200);
-			});
+      $('dl').on('mouseenter', 'dt', function () {
+        $(this)
+          .next()
+          .slideDown(200)
+          .siblings('dd')
+          .slideUp(200);
+      });
 
-			// jQuery Extra Feature #1: Dark mode toggle
-			$('#toggleTheme').click(function () {
-				$('body').toggleClass('dark-mode');
-			});
+      // ✅ Extra jQuery Function 1: Toggle dark mode
+      $('#themeToggle').click(function () {
+        $('body').toggleClass('dark-mode');
+      });
 
-			// jQuery Extra Feature #2: Fade in FAQ section
-			$('dl').hide().fadeIn(1000);
-		})();
-	</script>
+      // ✅ Extra jQuery Function 2: Fade-in animation for FAQ list
+      $('dl').hide().fadeIn(1000);
+    })();
+  </script>
 
 </body>
 </html>
