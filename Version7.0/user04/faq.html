@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>FAQ - Gaming Club</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      width: 90%;
+      margin: auto;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: white;
+    }
+
+    dl {
+      margin-top: 2rem;
+    }
+
+    dt {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.4em;
+      line-height: 2em;
+      background: #1f1f1f;
+      border-top: 1px solid #333;
+      border-bottom: 1px solid #444;
+    }
+
+    dd {
+      margin: 0;
+      padding: 1em;
+      background-color: #222;
+      display: none;
+    }
+
+    .hide { display: none; }
+  </style>
+</head>
+<body>
+
+<h1>Frequently Asked Questions</h1>
+
+<dl>
+  <dt>What time does the Gaming Club meet?</dt>
+  <dd>We meet every Friday from 3:30 PM to 5:30 PM in Room 101.</dd>
+
+  <dt>Do I need my own console or laptop?</dt>
+  <dd>Nope! We provide equipment, but you're welcome to bring your own.</dd>
+
+  <dt>Can beginners join?</dt>
+  <dd>Absolutely. Whether you’re a pro or just starting out, you’re welcome!</dd>
+
+  <dt>Is there a membership fee?</dt>
+  <dd>None at all! Gaming Club is completely free to join.</dd>
+</dl>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- FAQ jQuery + 2 Extra Functions -->
+<script>
+(function() {
+  // FAQ function
+  $('dd').filter(':nth-child(n+4)').addClass('hide');
+
+  $('dl').on('mouseenter', 'dt', function() {
+    $(this)
+      .next()
+      .slideDown(200)
+      .siblings('dd')
+      .slideUp(200);
+  });
+
+  // Extra Function 1: Change header color on click
+  $('h1').on('click', function() {
+    $(this).css('color', '#00ffcc');
+  });
+
+  // Extra Function 2: Toggle dark theme button
+  $('<button>Toggle Dark Mode</button>').appendTo('body').css({
+    marginTop: '20px',
+    padding: '10px',
+    fontSize: '1em',
+    backgroundColor: '#333',
+    color: 'white',
+    border: 'none',
+    borderRadius: '8px'
+  }).click(function() {
+    $('body').toggleClass('dark-theme');
+  });
+
+})();
+</script>
+
+<style>
+  .dark-theme {
+    background-color: #000;
+    color: #ccc;
+  }
+</style>
+
+</body>
+</html>
