@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="CSS/faq.css">
+
+    </head>
+    <body>
+        <dl>
+            <dt>What are your hours?</dt>
+            <dd>We are open 24/7.</dd>
+            <dt>What are your hours?</dt>
+            <dd>We are open 24/7.</dd>
+            <dt>What are your hours?</dt>
+            <dd>We are open 24/7.</dd>
+            <dt>What are your hours?</dt>
+            <dd>We are open 24/7.</dd>
+            <dt>What are your hours?</dt>
+            <dd>We are open 24/7.</dd>
+        </dl>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            (function() {
+           
+                $('dd').filter(':nth-child(n+4)').addClass('hide')
+                $('dl').on('mouseenter', 'dt', function(){
+                    $(this)
+                        .next()
+                            .slideDown(200)
+                            .siblings('dd')
+                                .slideUp(200);
+                            }); 
+            })();
+
+            (function() {
+
+                $('dl').on('click', 'dt', function(){
+                    $(this).siblings('dd').addClass('changeText')
+        });
+            })();
+            (function() {
+
+            $('dl').on('click', 'dt', function(){
+             $(this).addClass('changeColor')
+             });
+        })();   
+            
+        </script>
+    </body>
+</html> 
